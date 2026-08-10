@@ -1,0 +1,145 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "100 Links on Shrink-Swell Risks Data",
+  "description": "A curated collection of 100 links covering shrink-swell (expansive clay soil) risk data, including national datasets, research papers, regulatory resources, GIS portals, satellite monitoring tools, and climate projections. Covers UK (BGS GeoSure/GeoClimate), France (BRGM/G\u00e9orisques), USA (USGS/NRCS), Australia, and global sources.",
+  "keywords": [
+    "shrink-swell",
+    "expansive clay soil",
+    "subsidence",
+    "geohazard",
+    "clay mineralogy",
+    "soil risk",
+    "InSAR",
+    "soil moisture",
+    "climate change",
+    "building damage",
+    "retrait-gonflement",
+    "GeoSure",
+    "BRGM",
+    "BGS",
+    "USGS"
+  ],
+  "dateCreated": "2026-08-10",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "Person",
+    "name": "Claude (Anthropic)"
+  },
+  "hasPart": [
+    {
+      "@type": "DataCatalog",
+      "name": "BGS GeoSure Shrink-Swell",
+      "url": "https://www.bgs.ac.uk/datasets/bgs-geosure-shrink-swell/",
+      "description": "National hazard susceptibility map for Great Britain"
+    },
+    {
+      "@type": "DataCatalog",
+      "name": "BGS GeoClimate Shrink-Swell",
+      "url": "https://www.bgs.ac.uk/datasets/geoclimate-shrink-swell/",
+      "description": "Climate-adjusted shrink-swell hazard projections for Great Britain"
+    },
+    {
+      "@type": "DataCatalog",
+      "name": "GeoSure Shrink-Swell Deposits v8 (data.gov.uk)",
+      "url": "https://www.data.gov.uk/dataset/cfb275c6-e674-4193-8ed4-b74d60480566/geosure-shrink-swell-deposits-version-8",
+      "description": "Open government data release of BGS shrink-swell polygon dataset"
+    },
+    {
+      "@type": "DataCatalog",
+      "name": "G\u00e9orisques Retrait-Gonflement des Argiles 2026",
+      "url": "https://www.georisques.gouv.fr/donnees/bases-de-donnees/retrait-gonflement-des-argiles-version-2026",
+      "description": "French national clay shrink-swell exposure map, updated 2026"
+    },
+    {
+      "@type": "DataCatalog",
+      "name": "USGS Swelling Clays Map (IMAP 1940)",
+      "url": "https://pubs.usgs.gov/publication/i1940",
+      "description": "National swelling clay map of the conterminous United States at 1:7,500,000"
+    },
+    {
+      "@type": "DataCatalog",
+      "name": "USDA NRCS Web Soil Survey",
+      "url": "https://websoilsurvey.nrcs.usda.gov/",
+      "description": "Official US soil survey portal with linear extensibility (COLE) data"
+    },
+    {
+      "@type": "DataCatalog",
+      "name": "FAO Harmonized World Soil Database v1.2",
+      "url": "https://data.apps.fao.org/catalog/iso/2427214a-42dc-4862-b58a-00b73cbc7a6f",
+      "description": "Global 30 arc-second soil data including clay CEC for expansive soil screening"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Global Outlook for Climate-Driven Soil Shrink-Swell Subsidence",
+      "url": "https://www.researchsquare.com/article/rs-9955921/v1",
+      "datePublished": "2026",
+      "description": "250 m resolution global model calibrated on French insurance data; poleward risk expansion"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Global Distribution of Clay-Size Minerals (Ito & Wagai 2017)",
+      "url": "https://www.nature.com/articles/sdata2017103",
+      "datePublished": "2017",
+      "description": "Global smectite/kaolinite/illite maps at 2 arcminute grid resolution"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Clay Shrink-Swell Damage Model (Mzungu et al. 2025)",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2212420925004601",
+      "datePublished": "2025",
+      "description": "10,325 Generali insurance reports; damage severity scale for French buildings"
+    },
+    {
+      "@type": "GovernmentService",
+      "name": "UNDRR Shrink-Swell Subsidence Hazard Profile GH0310",
+      "url": "https://www.undrr.org/understanding-disaster-risk/terminology/hips/gh0310",
+      "description": "UN global hazard information profile linked to the Sendai Framework"
+    }
+  ],
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Global (with emphasis on UK, France, USA, Australia)"
+  },
+  "temporalCoverage": "1989/2026",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Shrink-Swell Soil Hazard"
+    },
+    {
+      "@type": "Thing",
+      "name": "Clay Mineralogy"
+    },
+    {
+      "@type": "Thing",
+      "name": "Geohazard Risk Assessment"
+    },
+    {
+      "@type": "Thing",
+      "name": "Climate Change Adaptation"
+    },
+    {
+      "@type": "Thing",
+      "name": "Subsidence Insurance"
+    },
+    {
+      "@type": "Thing",
+      "name": "InSAR Ground Deformation Monitoring"
+    },
+    {
+      "@type": "Thing",
+      "name": "Expansive Soils"
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "name": "shrink_swell_risks_data Markdown Content",
+      "description": "The unstructured markdown content related to this semantic dataset.",
+      "contentUrl": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/shrink_swell_risks_data_UNF-6_Kq4bhbZB2z4Vz5lgSYzALA_anonymous_20260810_083505.md",
+      "encodingFormat": "text/markdown"
+    }
+  ],
+  "url": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/shrink_swell_risks_data_UNF-6_Kq4bhbZB2z4Vz5lgSYzALA_anonymous_20260810_083505.md"
+}

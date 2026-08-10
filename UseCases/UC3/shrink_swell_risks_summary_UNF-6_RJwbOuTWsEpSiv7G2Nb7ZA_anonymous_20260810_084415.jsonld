@@ -1,0 +1,58 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/"
+  },
+  "@type": "Dataset",
+  "name": "Shrink-Swell Risks Summary",
+  "description": "A concise summary of risks associated with expansive clay soil shrink-swell hazards and their key drivers.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": [
+    "shrink-swell",
+    "expansive soils",
+    "subsidence",
+    "ground heave",
+    "clay soils",
+    "climate risk"
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "name": "shrink_swell_risks_summary.md",
+      "encodingFormat": "text/markdown",
+      "contentUrl": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/"
+    },
+    {
+      "@type": "cr:FileObject",
+      "name": "shrink_swell_risks_summary Markdown Content",
+      "description": "The unstructured markdown content related to this semantic dataset.",
+      "contentUrl": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/shrink_swell_risks_summary_UNF-6_RJwbOuTWsEpSiv7G2Nb7ZA_anonymous_20260810_084415.md",
+      "encodingFormat": "text/markdown"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "risk_category",
+      "description": "A category of shrink-swell hazard impact."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "risk_driver",
+      "description": "A physical, environmental, or built-environment factor that influences shrink-swell risk."
+    }
+  ],
+  "isBasedOn": [
+    {
+      "@type": "CreativeWork",
+      "name": "shrink_swell_risks_100_links_UNF-6_muoAJT56h48m78NjeSyuXg_anonymous_20260810_083908.md",
+      "url": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/shrink_swell_risks_100_links_UNF-6_muoAJT56h48m78NjeSyuXg_anonymous_20260810_083908.md"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "shrink_swell_risks_data_UNF-6_Kq4bhbZB2z4Vz5lgSYzALA_anonymous_20260810_083505.md",
+      "url": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/shrink_swell_risks_data_UNF-6_Kq4bhbZB2z4Vz5lgSYzALA_anonymous_20260810_083505.md"
+    }
+  ],
+  "url": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/shrink_swell_risks_summary_UNF-6_RJwbOuTWsEpSiv7G2Nb7ZA_anonymous_20260810_084415.md"
+}

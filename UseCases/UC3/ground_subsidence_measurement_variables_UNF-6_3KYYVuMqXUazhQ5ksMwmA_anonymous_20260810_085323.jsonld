@@ -1,0 +1,45 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/"
+  },
+  "@type": "Dataset",
+  "name": "Ground Subsidence Measurement Variables",
+  "description": "A measurement schema of geodetic, soil, hydroclimatic, vegetation, building, and uncertainty variables for evaluating shrink-swell-related ground subsidence.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": [
+    "ground subsidence",
+    "shrink-swell",
+    "expansive soils",
+    "InSAR",
+    "soil moisture"
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "name": "ground_subsidence_measurement_variables.md",
+      "encodingFormat": "text/markdown",
+      "contentUrl": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/"
+    },
+    {
+      "@type": "cr:FileObject",
+      "name": "ground_subsidence_measurement_variables Markdown Content",
+      "description": "The unstructured markdown content related to this semantic dataset.",
+      "contentUrl": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/ground_subsidence_measurement_variables_UNF-6_3KYYVuMqXUazhQ5ksMwmA_anonymous_20260810_085323.md",
+      "encodingFormat": "text/markdown"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "variable",
+      "description": "Name of a ground-subsidence measurement variable."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "suggested_unit",
+      "description": "Suggested unit or categorical representation for the variable."
+    }
+  ],
+  "url": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/ground_subsidence_measurement_variables_UNF-6_3KYYVuMqXUazhQ5ksMwmA_anonymous_20260810_085323.md"
+}

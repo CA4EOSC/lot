@@ -1,0 +1,136 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "100 Links on Shrink-Swell Risks Data",
+  "description": "A curated collection of 100 links covering shrink-swell (expansive clay soil) risks data worldwide, including datasets, research papers, regulatory resources, mapping portals, satellite monitoring tools, and engineering guidance. Topics include BGS GeoSure/GeoClimate (UK), BRGM retrait-gonflement (France), USGS swelling clay maps (USA), global clay mineralogy datasets, InSAR monitoring, FAO/HWSD soil databases, and climate change projections for shrink-swell hazard.",
+  "url": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/shrink_swell_risks_100_links_UNF-6_muoAJT56h48m78NjeSyuXg_anonymous_20260810_083908.md",
+  "keywords": [
+    "shrink-swell",
+    "expansive soils",
+    "clay soil hazard",
+    "subsidence",
+    "geohazard",
+    "soil swelling",
+    "retrait-gonflement",
+    "BGS GeoSure",
+    "BRGM",
+    "InSAR",
+    "soil moisture",
+    "climate change",
+    "natural hazard",
+    "geotechnical data",
+    "smectite",
+    "linear extensibility"
+  ],
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "British Geological Survey (BGS)",
+      "url": "https://www.bgs.ac.uk"
+    },
+    {
+      "@type": "Organization",
+      "name": "BRGM (Bureau de Recherches G\u00e9ologiques et Mini\u00e8res)",
+      "url": "https://www.brgm.fr"
+    },
+    {
+      "@type": "Organization",
+      "name": "USGS (United States Geological Survey)",
+      "url": "https://www.usgs.gov"
+    },
+    {
+      "@type": "Organization",
+      "name": "FAO (Food and Agriculture Organization)",
+      "url": "https://www.fao.org"
+    },
+    {
+      "@type": "Organization",
+      "name": "UNDRR (UN Office for Disaster Risk Reduction)",
+      "url": "https://www.undrr.org"
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "dateCreated": "2026-08-10",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Global (with focus on UK, France, USA, Australia)"
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Shrink-swell hazard susceptibility",
+      "description": "Potential for clay soils to shrink and swell causing ground movement and structural damage"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Clay mineralogy",
+      "description": "Distribution of smectite, kaolinite, illite and other clay minerals"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Linear extensibility (COLE)",
+      "description": "Coefficient of linear extensibility used as shrink-swell potential metric in US soil surveys"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Volume change potential (VCP)",
+      "description": "BGS metric for potential soil volume change due to moisture content variation"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Soil Water Index (SWI)",
+      "description": "Copernicus-derived soil moisture variable used in shrink-swell risk modelling"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Insurance subsidence claims",
+      "description": "Financial loss data from clay shrink-swell events used for model calibration"
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "BGS GeoSure Shrink-Swell v8 (data.gov.uk)",
+      "contentUrl": "https://www.data.gov.uk/dataset/cfb275c6-e674-4193-8ed4-b74d60480566/geosure-shrink-swell-deposits-version-8",
+      "encodingFormat": "Shapefile/GeoPackage"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "France RGA 2026 Map (G\u00e9orisques)",
+      "contentUrl": "https://www.georisques.gouv.fr/donnees/bases-de-donnees/retrait-gonflement-des-argiles-version-2026",
+      "encodingFormat": "Shapefile (Lambert 93)"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "USGS Swelling Clays Map IMAP 1940",
+      "contentUrl": "https://pubs.usgs.gov/publication/i1940",
+      "encodingFormat": "PDF/Map"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Global Clay Mineral Distribution (Nature Scientific Data)",
+      "contentUrl": "https://www.nature.com/articles/sdata2017103",
+      "encodingFormat": "NetCDF/GeoTIFF"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "FAO Harmonized World Soil Database v1.2",
+      "contentUrl": "https://data.apps.fao.org/catalog/iso/2427214a-42dc-4862-b58a-00b73cbc7a6f",
+      "encodingFormat": "Raster"
+    },
+    {
+      "@type": "cr:FileObject",
+      "name": "shrink_swell_risks_100_links Markdown Content",
+      "description": "The unstructured markdown content related to this semantic dataset.",
+      "contentUrl": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/shrink_swell_risks_100_links_UNF-6_muoAJT56h48m78NjeSyuXg_anonymous_20260810_083908.md",
+      "encodingFormat": "text/markdown"
+    }
+  ],
+  "isBasedOn": [
+    {
+      "@type": "CreativeWork",
+      "name": "shrink_swell_risks_data_UNF-6_Kq4bhbZB2z4Vz5lgSYzALA_anonymous_20260810_083505.md",
+      "url": "https://github.com/CA4EOSC/consortium/blob/main/UseCases/UC3/shrink_swell_risks_data_UNF-6_Kq4bhbZB2z4Vz5lgSYzALA_anonymous_20260810_083505.md"
+    }
+  ]
+}
