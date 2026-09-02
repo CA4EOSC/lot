@@ -1,0 +1,76 @@
+{
+    "@context": {
+        "http://www.w3.org/2000/01/rdf-schema#": "rdf",
+        "@vocab": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/0001/rdf-schema#"
+    },
+    "@type": "Policy",
+    "uid": "https://www.govdata.de/dl-de/zero-2-0",
+    "profile": "https://cdif.org/odrl:profile:DL-DE-ZERO-2.0",
+    "description": "Datenlizenz Deutschland – Zero – Version 2.0. Any use is permitted without restrictions or conditions.",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:DL-DE-ZERO-2.0.html",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ],
+            "odrl:action": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:use"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:copy"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:print"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:alter"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:process"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:present"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:transmit"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "cdif:merge"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:integrate"
+                }
+            ]
+        }
+    ]
+}

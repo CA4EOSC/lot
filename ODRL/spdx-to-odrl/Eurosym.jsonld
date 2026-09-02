@@ -1,0 +1,82 @@
+{
+  "@context": {
+    "http://www.w3.org/ns/odrl/2/": "odrl",
+    "https://cdif.org/odrl/": "cdif",
+    "https://spdx.org/licenses/": "spdx",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "odrl:": "http://www.w3.org/ns/odrl/2/",
+    "cdif:": "https://cdif.org/odrl/",
+    "spdx:": "https://spdx.org/licenses/",
+    "rdfs:": "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "@type": "odrl:Set",
+  "odrl:uid": "http://example.com/policy:Eurosym",
+  "odrl:profile": "https://cdif.org/odrl:profile:Eurosym",
+  "odrl:description": "License for Eurosym software, granting rights to use, copy, modify, merge, publish, distribute, and sublicense, subject to specific attribution and notice requirements.",
+  "odrl:permission": [
+    {
+      "@type": "odrl:Permission",
+      "odrl:action": [
+        "odrl:use",
+        "odrl:copy",
+        "odrl:modify",
+        "cdif:merge",
+        "odrl:publish",
+        "odrl:distribute",
+        "odrl:sublicense"
+      ],
+      "odrl:target": "spdx:Eurosym.html",
+      "odrl:duty": [
+        {
+          "@type": "odrl:Duty",
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:attributionNotice",
+            "cdif:sourceCodeAvailabilityNotice"
+          ]
+        },
+        {
+          "@type": "odrl:Duty",
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        },
+        {
+          "@type": "odrl:Duty",
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:noAdvertisingNotice"
+          ]
+        }
+      ]
+    }
+  ]
+}

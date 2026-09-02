@@ -1,0 +1,114 @@
+{
+  "@context": {
+    "http://www.w3.org/ns/odrl/2/": "odrl",
+    "https://cdif.org/odrl/": "cdif",
+    "https://spdx.org/licenses/": "spdx",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "odrl:Policy",
+  "odrl:uid": "https://cdif.org/odrl/policy/nrl-license",
+  "odrl:profile": "https://cdif.org/odrl:profile:NRL",
+  "odrl:target": "spdx:NRL.html",
+  "odrl:permission": [
+    {
+      "odrl:action": [
+        "odrl:use",
+        "odrl:copy",
+        "odrl:modify",
+        "cdif:merge",
+        "odrl:publish",
+        "odrl:distribute",
+        "odrl:sublicense",
+        "odrl:sell"
+      ],
+      "odrl:duty": [
+        {
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        },
+        {
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:acknowledgementNotice",
+            "cdif:attributionNotice"
+          ]
+        },
+        {
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        },
+        {
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        },
+        {
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:acknowledgementNotice",
+            "cdif:attributionNotice"
+          ]
+        },
+        {
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    }
+  ]
+}

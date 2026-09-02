@@ -1,0 +1,76 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Offer",
+    "uid": "https://cdif.org/odrl/policy:EFL-1.0",
+    "profile": "https://cdif.org/odrl:profile:EFL-1.0",
+    "permission": [
+        {
+            "target": "spdx:EFL-1.0.html",
+            "action": [
+                {
+                    "@id": "odrl:use"
+                },
+                {
+                    "@id": "odrl:reproduce"
+                },
+                {
+                    "@id": "odrl:modify"
+                },
+                {
+                    "@id": "odrl:distribute"
+                }
+            ],
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:distribution"
+                        }
+                    ],
+                    "target": [
+                        "cdif:licenseFile",
+                        "cdif:licenseText"
+                    ]
+                },
+                {
+                    "action": "cdif:publicRelease",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:dependency",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:modifiedVersion"
+                        }
+                    ],
+                    "target": [
+                        "cdif:publicReleaseNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}
