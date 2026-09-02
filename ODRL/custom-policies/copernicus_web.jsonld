@@ -1,0 +1,63 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Set",
+    "uid": "https://cdif.org/policy/copernicus_trade_marks_license",
+    "profile": "https://cdif.org/odrl:profile:copernicus_web",
+    "permission": [
+        {
+            "target": "https://cdif.org/dataset/copernicus_web",
+            "action": "odrl:use",
+            "assignee": "http://example.com/user/any_user",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyOrSubstantialPortion"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:usageConditions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:usageConditionsNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:compatibility"
+                        }
+                    ],
+                    "target": [
+                        "cdif:compatibilityNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}
