@@ -1,4 +1,4 @@
-# Ollama Models for Semantic Croissant
+# ODRL-powered Legal Interoperability
 
 **This is a Legal Interoperability Framework supported by ODRL policies, implemented as CDIF for access profile.**
 
