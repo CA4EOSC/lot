@@ -67,6 +67,20 @@ python convert_description_to_odrl.py copernicus --text "On Copernicus website t
 
 This will automatically extract the duties (e.g., `cdif:createAccount`, `cdif:consent`), structure them into an ODRL policy, run the self-healing SHACL loop, and save the result to `custom-policies/copernicus.jsonld`.
 
+## Web URL Policy Conversion
+
+The framework also provides a tool to fetch policy text directly from external websites, extract the readable text (ignoring HTML, navigation, and scripts), and convert it into a CDIF-compliant ODRL policy.
+
+The script `convert_url_to_odrl.py` accomplishes this using `beautifulsoup4` and automatically handles truncation for extremely long web pages to prevent LLM hallucination.
+
+**Example Usage (Copernicus Web License):**
+```bash
+python convert_url_to_odrl.py copernicus_web --url https://www.copernicus.eu/en/access-data/copyright-and-licences
+```
+
+The resulting validated policy will be saved to `custom-policies/copernicus_web.jsonld`.
+
+
 ## SPDX to ODRL Conversion Pipeline
 
 This directory also contains the infrastructure for converting raw software licenses into machine-readable [ODRL (Open Digital Rights Language)](https://www.w3.org/TR/odrl-model/) policies compliant with the CDIF specification.
