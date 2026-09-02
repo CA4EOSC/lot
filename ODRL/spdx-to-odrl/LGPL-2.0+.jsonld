@@ -1,0 +1,115 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/lgpl-2.0+",
+    "profile": "https://cdif.org/odrl:profile:LGPL-2.0+",
+    "target": "spdx:LGPL-2.0+.html",
+    "assigner": "http://www.freedesoft.org/Foundation/FreeSoftwareFoundation",
+    "permission": [
+        {
+            "target": "spdx:LGPL-2.0+.html",
+            "assigner": "http://www.freedesoft.org/Foundation/FreeSoftwareFoundation",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:LGPL-2.0+.html",
+            "assigner": "http://www.freedesoft.org/Foundation/FreeSoftwareFoundation",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:LGPL-2.0+.html",
+            "assigner": "http://www.freedesoft.org/Foundation/FreeSoftwareFoundation",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:LGPL-2.0+.html",
+            "assigner": "http://www.freedesoft.org/Foundation/FreeSoftwareFoundation",
+            "action": "cdif:merge"
+        },
+        {
+            "target": "spdx:LGPL-2.0+.html",
+            "assigner": "http://www.freedesoft.org/Foundation/FreeSoftwareFoundation",
+            "action": "cdif:sublicense"
+        },
+        {
+            "target": "spdx:LGPL-2.0+.html",
+            "assigner": "http://www.freedesoft.org/Foundation/FreeSoftwareFoundation",
+            "action": "odrl:sell"
+        }
+    ],
+    "duty": [
+        {
+            "description": "Must provide complete source code for the Library.",
+            "action": "cdif:provideSourceCode",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:sourceCodeCompleteness",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:allSourceCode"
+                }
+            ],
+            "target": [
+                "cdif:sourceCode",
+                "cdif:objectCode"
+            ]
+        },
+        {
+            "description": "Must include copyright notices, warranty disclaimers, and the full license text.",
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:noticePresence",
+                    "operator": "odrl:all",
+                    "rightOperand": {
+                        "@type": "Collection",
+                        "items": [
+                            {"@id": "cdif:copyrightNotice"},
+                            {"@id": "cdif:warrantyDisclaimer"},
+                            {"@id": "cdif:licenseCopy"}
+                        ]
+                    }
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:warrantyDisclaimer",
+                "cdif:licenseCopy"
+            ]
+        },
+        {
+            "description": "If modified, must carry prominent notices stating changes and the date of change.",
+            "action": "cdif:markModification",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:modificationNotice",
+                    "operator": "odrl:mustBePresent",
+                    "rightOperand": {}
+                }
+            ],
+            "target": [
+                "cdif:modifiedFile"
+            ]
+        },
+        {
+            "description": "The entire work must be licensed at no charge to all third parties.",
+            "action": "cdif:licenseWholeWork",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:licensingCost",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:zeroCost"
+                }
+            ],
+            "target": [
+                "cdif:derivativeWork"
+            ]
+        }
+    ]
+}

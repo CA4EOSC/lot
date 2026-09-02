@@ -1,0 +1,66 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Agreement",
+  "uid": "http://example.com/policy:CNRI-Jython",
+  "profile": "https://cdif.org/odrl:profile:CNRI-Jython",
+  "assigner": "http://example.com/party:CNRI",
+  "assignee": "http://example.com/party:Licensee",
+  "permission": [
+    {
+      "target": "spdx:CNRI-Jython-1.1.x",
+      "action": "odrl:reproduce"
+    },
+    {
+      "target": "spdx:CNRI-Jython-1.1.x",
+      "action": "odrl:analyze"
+    },
+    {
+      "target": "spdx:CNRI-Jython-1.1.x",
+      "action": "odrl:test"
+    },
+    {
+      "target": "spdx:CNRI-Jython-1.1.x",
+      "action": "odrl:perform"
+    },
+    {
+      "target": "spdx:CNRI-Jython-1.1.x",
+      "action": "odrl:display"
+    },
+    {
+      "target": "spdx:CNRI-Jython-1.1.x",
+      "action": "cdif:merge"
+    },
+    {
+      "target": "spdx:CNRI-Jython-1.1.x",
+      "action": "odrl:distribute"
+    },
+    {
+      "target": "spdx:CNRI-Jython-1.1.x",
+      "action": "odrl:use"
+    }
+  ],
+  "duty": [
+    {
+      "action": "cdif:includeNotice",
+      "constraint": [
+        {
+          "leftOperand": "cdif:scope",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:copyOrSubstantialPortions"
+        }
+      ],
+      "target": [
+        "cdif:copyrightNotice",
+        "cdif:permissionNotice"
+      ]
+    }
+  ]
+}

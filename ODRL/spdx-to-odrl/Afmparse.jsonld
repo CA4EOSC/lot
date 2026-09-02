@@ -1,0 +1,110 @@
+{
+    "@context": {
+        "http://www.w3.org/2000/01/rdf-schema#": "rdf",
+        "http://www.w3.org/2000/01/XMLSchema#": "xsd",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://purl.org/dc/terms/": "dc",
+        "http://www.w3.org/2200/0/ontology/": "odrl:action",
+        "http://www.w3.org/2001/XMLSchema#": "xsd"
+    },
+    "@type": "odrl:Policy",
+    "odrl:uid": "http://example.com/afmparse-license",
+    "odrl:profile": "https://cdif.org/odrl:profile:Afmparse",
+    "odrl:assigner": "Adobe Systems Incorporated",
+    "odrl:duty": [
+        {
+            "@type": "odrl:Duty",
+            "odrl:action": "cdif:includeNotice",
+            "odrl:constraint": [
+                {
+                    "@type": "odrl:Constraint",
+                    "odrl:leftOperand": "cdif:scope",
+                    "odrl:operator": "odrl:eq",
+                    "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "odrl:target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice",
+                "cdif:modificationNotice"
+            ]
+        }
+    ],
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:copy",
+            "odrl:target": "spdx:Afmparse.html",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice",
+                        "cdif:modificationNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:distribute",
+            "odrl:target": "spdx:Afmparse.html",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice",
+                        "cdif:modificationNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:use",
+            "odrl:target": "spdx:Afmparse.html",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice",
+                        "cdif:modificationNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

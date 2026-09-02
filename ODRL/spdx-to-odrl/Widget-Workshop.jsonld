@@ -1,0 +1,257 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Offer",
+  "uid": "https://cdif.org/odrl/policy:widget-workshop-license",
+  "profile": "https://cdif.org/odrl:profile:Widget-Workshop",
+  "target": "spdx:Widget-Workshop.html",
+  "permission": [
+    {
+      "target": "spdx:Widget-Workshop.html",
+      "action": "odrl:use",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:or",
+          "rightOperand": [
+            {
+              "@value": "non-commercial",
+              "@type": "xsd:string"
+            },
+            {
+              "@value": "commercial",
+              "@type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "leftOperand": "cdif:fee",
+          "operator": "odrl:eq",
+          "rightOperand": {
+            "@value": "none",
+            "@type": "xsd:string"
+          }
+        }
+      ]
+    },
+    {
+      "target": "spdx:Widget-Workshop.html",
+      "action": "odrl:copy",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:or",
+          "rightOperand": [
+            {
+              "@value": "non-commercial",
+              "@type": "xsd:string"
+            },
+            {
+              "@value": "commercial",
+              "@type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "leftOperand": "cdif:fee",
+          "operator": "odrl:eq",
+          "rightOperand": {
+            "@value": "none",
+            "@type": "xsd:string"
+          }
+        }
+      ]
+    },
+    {
+      "target": "spdx:Widget-Workshop.html",
+      "action": "odrl:modify",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:or",
+          "rightOperand": [
+            {
+              "@value": "non-commercial",
+              "@type": "xsd:string"
+            },
+            {
+              "@value": "commercial",
+              "@type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "leftOperand": "cdif:fee",
+          "operator": "odrl:eq",
+          "rightOperand": {
+            "@value": "none",
+            "@type": "xsd:string"
+          }
+        }
+      ]
+    },
+    {
+      "target": "spdx:Widget-Workshop.html",
+      "action": "cdif:merge",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:or",
+          "rightOperand": [
+            {
+              "@value": "non-commercial",
+              "@type": "xsd:string"
+            },
+            {
+              "@value": "commercial",
+              "@type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "leftOperand": "cdif:fee",
+          "operator": "odrl:eq",
+          "rightOperand": {
+            "@value": "none",
+            "@type": "xsd:string"
+          }
+        }
+      ]
+    },
+    {
+      "target": "spdx:Widget-Workshop.html",
+      "action": "odrl:publish",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:or",
+          "rightOperand": [
+            {
+              "@value": "non-commercial",
+              "@type": "xsd:string"
+            },
+            {
+              "@value": "commercial",
+              "@type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "leftOperand": "cdif:fee",
+          "operator": "odrl:eq",
+          "rightOperand": {
+            "@value": "none",
+            "@type": "xsd:string"
+          }
+        }
+      ]
+    },
+    {
+      "target": "spdx:Widget-Workshop.html",
+      "action": "odrl:distribute",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:or",
+          "rightOperand": [
+            {
+              "@value": "non-commercial",
+              "@type": "xsd:string"
+            },
+            {
+              "@value": "commercial",
+              "@type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "leftOperand": "cdif:fee",
+          "operator": "odrl:eq",
+          "rightOperand": {
+            "@value": "none",
+            "@type": "xsd:string"
+          }
+        }
+      ]
+    },
+    {
+      "target": "spdx:Widget-Workshop.html",
+      "action": "odrl:sublicense",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:or",
+          "rightOperand": [
+            {
+              "@value": "non-commercial",
+              "@type": "xsd:string"
+            },
+            {
+              "@value": "commercial",
+              "@type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "leftOperand": "cdif:fee",
+          "operator": "odrl:eq",
+          "rightOperand": {
+            "@value": "none",
+            "@type": "xsd:string"
+          }
+        }
+      ]
+    },
+    {
+      "target": "spdx:Widget-Workshop.html",
+      "action": "odrl:sell",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:or",
+          "rightOperand": [
+            {
+              "@value": "non-commercial",
+              "@type": "xsd:string"
+            },
+            {
+              "@value": "commercial",
+              "@type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "leftOperand": "cdif:fee",
+          "operator": "odrl:eq",
+          "rightOperand": {
+            "@value": "none",
+            "@type": "xsd:string"
+          }
+        }
+      ]
+    }
+  ],
+  "duty": [
+    {
+      "action": "cdif:includeNotice",
+      "constraint": [
+        {
+          "leftOperand": "cdif:scope",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:copyOrSubstantialPortions"
+        }
+      ],
+      "target": [
+        "cdif:copyrightNotice",
+        "cdif:permissionNotice"
+      ]
+    }
+  ]
+}

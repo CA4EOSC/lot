@@ -1,0 +1,53 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://purl.org/dc/terms/": "dc",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl:": "http://www.w3.org/ns/odrl/2/",
+        "cdif:": "https://cdif.org/odrl/",
+        "spdx:": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "odrl:Policy",
+    "odrl:uid": "http://example.com/antlr-pd-license",
+    "odrl:profile": "https://cdif.org/odrl/profile/antlr-pd",
+    "odrl:description": "This policy grants broad rights to use, modify, and distribute ANTLR source code and generated output, provided that appropriate credit and notices are maintained.",
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:ANTLR-PD.html",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:description": "The user must provide credit/acknowledgement in the documentation, research report, or commercial product, mentioning that ANTLR was used or incorporated. Furthermore, the original source code headers must remain intact.",
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ],
+            "odrl:action": [
+                "odrl:use",
+                "odrl:copy",
+                "odrl:modify",
+                "cdif:merge",
+                "odrl:publish",
+                "odrl:distribute",
+                "odrl:sublicense",
+                "odrl:sell"
+            ]
+        }
+    ]
+}

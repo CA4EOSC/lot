@@ -1,0 +1,227 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/2200/0/vocabulary/": "voc",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "https://cdif.org/odrl/policy/nist-pd-public-domain",
+    "odrl:profile": "https://cdif.org/odrl:profile:NIST-PD",
+    "odrl:description": "This software is dedicated to the public domain, meaning it is free of copyright restrictions.",
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:use",
+            "odrl:target": "spdx:Public Domain Dedication",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:copy",
+            "odrl:target": "spdx:Public Domain Dedication",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:modify",
+            "odrl:target": "spdx:Public Domain Dedication",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "cdif:merge",
+            "odrl:target": "spdx:Public Domain Dedication",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:publish",
+            "odrl:target": "spdx:Public Domain Dedication",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:distribute",
+            "odrl:target": "spdx:Public Domain Dedication",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:reproduce",
+            "odrl:target": "spdx:Public Domain Dedication",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:sell",
+            "odrl:target": "spdx:Public Domain Dedication",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:sublicense",
+            "odrl:target": "spdx:Public Domain Dedication",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:use",
+            "odrl:target": "spdx:Public Domain Dedication",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

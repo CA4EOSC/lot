@@ -1,0 +1,50 @@
+{
+    "@context": {
+        "http://www.w3.org/2001/XMLSchema#": "http://www.w3.org/2001/XMLSchema#",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:AGPL-3.0-only",
+    "profile": "https://cdif.org/odrl:profile:AGPL-3.0-only",
+    "target": "spdx:AGPL-3.0-only.html",
+    "permission": [
+        {
+            "target": "spdx:AGPL-3.0-only.html",
+            "assignee": "http://example.com/public",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:AGPL-3.0-only.html",
+            "assignee": "http://example.com/public",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:AGPL-3.0-only.html",
+            "assignee": "http://example.com/public",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:AGPL-3.0-only.html",
+            "assignee": "http://example.com/public",
+            "action": "odrl:use"
+        }
+    ],
+    "duty": [
+        {
+            "action": "odrl:distribute",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:isUsedOnNetworkServer",
+                    "operator": "odrl:eq",
+                    "rightOperand": "true"
+                }
+            ],
+            "target": [
+                "cdif:CorrespondingSource"
+            ]
+        }
+    ]
+}

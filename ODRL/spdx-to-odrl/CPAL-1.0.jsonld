@@ -1,0 +1,126 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl.jsonld": "odrl:",
+        "https://cdif.org/odrl/": "cdif:",
+        "https://spdx.org/licenses/": "spdx:",
+        "http://purl.org/dc/terms/": "dc:",
+        "odrl:": "http://www.w3.org/ns/odrl/2/",
+        "cdif:": "https://cdif.org/odrl/",
+        "spdx:": "https://spdx.org/licenses/",
+        "rdfs:": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/CPAL-1.0",
+    "profile": "https://cdif.org/odrl:profile:CPAL-1.0",
+    "target": "spdx:CPAL-1.0.html",
+    "description": "Common Public Attribution License Version 1.0 (CPAL) governing the use of Covered Code.",
+    "permission": [
+        {
+            "target": "spdx:CPAL-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:use",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:CPAL-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:reproduce",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:CPAL-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:modify",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:CPAL-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:display",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:CPAL-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:perform",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:CPAL-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:sublicense",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:CPAL-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:distribute",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:CPAL-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:sell",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:CPAL-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:make",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:CPAL-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:offer for sale",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:CPAL-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:dispose of",
+            "assignee": "http://example.com/you"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        },
+        {
+            "action": "cdif:makeSourceCodeAvailable",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:availabilityPeriod",
+                    "operator": "odrl:gte",
+                    "rightOperand": "cdif:timeDuration_12Months"
+                }
+            ],
+            "target": [
+                "cdif:sourceCodeVersion"
+            ]
+        },
+        {
+            "action": "cdif:documentModifications",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:documentationFile",
+                    "operator": "odrl:exists",
+                    "rightOperand": "cdif:dateOfChange"
+                }
+            ],
+            "target": [
+                "cdif:coveredCode"
+            ]}
+    ]
+}

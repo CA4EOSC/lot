@@ -1,0 +1,268 @@
+{
+    "@context": {
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://www.w3.org/2000/0001/XMLSchema#": "xsd",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#": "rdf",
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://purl.org/dc/terms/": "dc"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "https://cdif.org/odrl/policy/ferguson-twofish",
+    "odrl:profile": "https://cdif.org/odrl:profile:Ferguson-Twofish",
+    "odrl:description": "Perpetual license granting broad rights for the Ferguson-Twofish code.",
+    "odrl:duty": [
+        {
+            "@type": "cdif:Duty",
+            "odrl:action": "cdif:includeNotice",
+            "odrl:constraint": [
+                {
+                    "@type": "odrl:Constraint",
+                    "odrl:leftOperand": "cdif:scope",
+                    "odrl:operator": "odrl:eq",
+                    "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "odrl:description": "Must include the original copyright message in the source code of the derived work.",
+            "odrl:target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        }
+    ],
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:use",
+            "odrl:target": "spdx:Ferguson-Twofish.html",
+            "odrl:duty": [
+                {
+                    "@type": "cdif:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:description": "Must include the original copyright message in the source code of the derived work.",
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:copy",
+            "odrl:target": "spdx:Ferguson-Twofish.html",
+            "odrl:duty": [
+                {
+                    "@type": "cdif:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:description": "Must include the original copyright message in the source code of the derived work.",
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:modify",
+            "odrl:target": "spdx:Ferguson-Twofish.html",
+            "odrl:duty": [
+                {
+                    "@type": "cdif:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:description": "Must include the original copyright message in the source code of the derived work.",
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "cdif:merge",
+            "odrl:target": "spdx:Ferguson-Twofish.html",
+            "odrl:duty": [
+                {
+                    "@type": "cdif:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:description": "Must include the original copyright message in the source code of the derived work.",
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:publish",
+            "odrl:target": "spdx:Ferguson-Twofish.html",
+            "odrl:duty": [
+                {
+                    "@type": "cdif:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:description": "Must include the original copyright message in the source code of the derived work.",
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:distribute",
+            "odrl:target": "spdx:Ferguson-Twofish.html",
+            "odrl:duty": [
+                {
+                    "@type": "cdif:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:description": "Must include the original copyright message in the source code of the derived work.",
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:sublicense",
+            "odrl:target": "spdx:Ferguson-Twofish.html",
+            "odrl:duty": [
+                {
+                    "@type": "cdif:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:description": "Must include the original copyright message in the source code of the derived work.",
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:sell",
+            "odrl:target": "spdx:Ferguson-Twofish.html",
+            "odrl:duty": [
+                {
+                    "@type": "cdif:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:description": "Must include the original copyright message in the source code of the derived work.",
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:use",
+            "odrl:target": "spdx:Ferguson-Twofish.html",
+            "odrl:duty": [
+                {
+                    "@type": "cdif:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:description": "Must include the original copyright message in the source code of the derived work.",
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ],
+    "odrl:prohibition": [
+        {
+            "@type": "odrl:Prohibition",
+            "odrl:action": "odrl:distribute",
+            "odrl:constraint": [
+                {
+                    "@type": "odrl:Constraint",
+                    "odrl:leftOperand": "cdif:copyrightNotice",
+                    "odrl:operator": "odrl:notEq",
+                    "odrl:rightOperand": "cdif:copyrightNotice"
+                }
+            ],
+            "odrl:description": "Cannot distribute source code without the original copyright message.",
+            "odrl:target": "spdx:Ferguson-Twofish.html"
+        }
+    ]
+}

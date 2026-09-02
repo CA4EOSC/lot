@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "http://www.w3.org/ns/dcat#": "dcat",
+    "http://www.w3.org/ns/odrl/2/": "odrl",
+    "https://cdif.org/odrl/": "cdif",
+    "https://spdx.org/licenses/": "spdx",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "odrl:Set",
+  "odrl:uid": "https://cdif.org/odrl/pnmstitch",
+  "odrl:profile": "https://cdif.org/odrl:profile:pnmstitch",
+  "odrl:description": "License for pnmstitch source code, permitting redistribution and use with modifications, provided notices are retained.",
+  "odrl:permission": [
+    {
+      "@type": "odrl:Permission",
+      "odrl:action": "odrl:use",
+      "odrl:target": "spdx:pnmstitch.html",
+      "odrl:duty": [
+        {
+          "@type": "odrl:Duty",
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "odrl:Permission",
+      "odrl:action": "odrl:copy",
+      "odrl:target": "spdx:pnmstitch.html",
+      "odrl:duty": [
+        {
+          "@type": "odrl:Duty",
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "odrl:Permission",
+      "odrl:action": "odrl:modify",
+      "odrl:target": "spdx:pnmstitch.html",
+      "odrl:duty": [
+        {
+          "@type": "odrl:Duty",
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "odrl:Permission",
+      "odrl:action": "cdif:merge",
+      "odrl:target": "spdx:pnmstitch.html",
+      "odrl:duty": [
+        {
+          "@type": "odrl:Duty",
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "odrl:Permission",
+      "odrl:action": "odrl:publish",
+      "odrl:target": "spdx:pnmstitch.html",
+      "odrl:duty": [
+        {
+          "@type": "odrl:Duty",
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "odrl:Permission",
+      "odrl:action": "odrl:distribute",
+      "odrl:target": "spdx:pnmstitch.html",
+      "odrl:duty": [
+        {
+          "@type": "odrl:Duty",
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "odrl:Permission",
+      "odrl:action": "odrl:sublicense",
+      "odrl:target": "spdx:pnmstitch.html",
+      "odrl:duty": [
+        {
+          "@type": "odrl:Duty",
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "odrl:Permission",
+      "odrl:action": "odrl:sell",
+      "odrl:target": "spdx:pnmstitch.html",
+      "odrl:duty": [
+        {
+          "@type": "odrl:Duty",
+          "odrl:action": "cdif:includeNotice",
+          "odrl:constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:scope",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "odrl:target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    }
+  ],
+  "odrl:prohibition": [
+    {
+      "@type": "odrl:Prohibition",
+      "odrl:action": "odrl:addRestrictions",
+      "odrl:target": "spdx:pnmstitch.html",
+      "odrl:description": "Any restrictions or encumbrances added to this source code or derivatives is prohibited."
+    }
+  ]
+}

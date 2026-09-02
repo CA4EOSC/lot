@@ -1,0 +1,84 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:CC-BY-SA-3.0",
+    "profile": "https://cdif.org/odrl:profile:CC-BY-SA-3.0",
+    "target": "spdx:CC-BY-SA-3.0.html",
+    "permission": [
+        {
+            "@type": "Permission",
+            "target": "spdx:CC-BY-SA-3.0.html",
+            "assigner": "http://example.com/licensor",
+            "action": [
+                {
+                    "@type": "Action",
+                    "odrl:includedIn": "odrl:use",
+                    "odrl:action": "odrl:copy"
+                },
+                {
+                    "@type": "Action",
+                    "odrl:includedIn": "odrl:use",
+                    "odrl:action": "odrl:modify"
+                },
+                {
+                    "@type": "Action",
+                    "odrl:includedIn": "odrl:use",
+                    "odrl:action": "odrl:distribute"
+                },
+                {
+                    "@type": "Action",
+                    "odrl:includedIn": "odrl:use",
+                    "odrl:action": "odrl:perform"
+                },
+                {
+                    "@type": "Action",
+                    "odrl:includedIn": "odrl:use",
+                    "odrl:action": "cdif:merge"
+                },
+                {
+                    "@type": "Action",
+                    "odrl:includedIn": "odrl:use",
+                    "odrl:action": "odrl:sublicense"
+                }
+            ],
+            "duty": [
+                {
+                    "@type": "Duty",
+                    "action": [
+                        {
+                            "@type": "Action",
+                            "odrl:action": "cdif:includeNotice"
+                        },
+                        {
+                            "@type": "Action",
+                            "odrl:action": "cdif:shareAlike"
+                        }
+                    ],
+                    "constraint": [
+                        {
+                            "@type": "Constraint",
+                            "leftOperand": {
+                                "@id": "odrl:Adaptation"
+                            },
+                            "operator": "odrl:implies",
+                            "rightOperand": {
+                                "@id": "odrl:ShareAlike"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

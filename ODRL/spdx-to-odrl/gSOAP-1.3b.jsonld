@@ -1,0 +1,74 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://cdif.org/policy:gSOAP-1.3b",
+    "profile": "https://cdif.org/odrl:profile:gSOAP-1.3b",
+    "target": "spdx:gSOAP-1.3b.html",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:gSOAP-1.3b.html",
+            "assigner": "http://cdif.org/party:all",
+            "action": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:use"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:copy"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:modify"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:display"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:perform"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:sublicense"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:distribute"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:sell"
+                }
+            ]
+        }
+    ],
+    "duty": [
+        {
+            "@type": "odrl:Duty",
+            "action": "cdif:includeNotice",
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ],
+            "constraint": [
+                {
+                    "@type": "odrl:Constraint",
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "description": "Must include a copy of the gSOAP Public License with every distribution of Source Code."
+        }
+    ]
+}

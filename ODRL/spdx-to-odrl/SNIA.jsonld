@@ -1,0 +1,110 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/snia-public-license-v1.1",
+    "profile": "https://cdif.org/odrl:profile:SNIA",
+    "description": "The SNIA Public License (Version 1.1) grants broad rights for the use, modification, and distribution of Covered Code.",
+    "permission": [
+        {
+            "target": "spdx:SNIA.html",
+            "assigner": "http://example.com/initial-developer",
+            "assignee": "http://example.com/user",
+            "action": [
+                "odrl:use",
+                "odrl:reproduce",
+                "odrl:modify",
+                "odrl:display",
+                "odrl:perform",
+                "odrl:sublicense",
+                "odrl:distribute",
+                "odrl:make",
+                "odrl:sell",
+                "odrl:offer for sale",
+                "odrl:dispose"
+            ]
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:SNIA.html",
+            "assigner": "http://example.com/contributor",
+            "assignee": "http://example.com/user",
+            "action": "cdif:includeLicenseCopy",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeLocation",
+                            "operator": "odrl:eq",
+                            "rightOperand": {
+                                "@value": "Exhibit A notice must be duplicated in every Source Code file.",
+                                "@type": "xsd:string"
+                            }
+                        }
+                    ],
+                    "target": ["cdif:sourceCodeFile"]
+                },
+                {
+                    "action": "cdif:documentModification",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:documentationFile",
+                            "operator": "odrl:eq",
+                            "rightOperand": {
+                                "@value": "A file documenting changes and the date of change must be included.",
+                                "@type": "xsd:string"
+                            }
+                        },
+                        {
+                            "leftOperand": "cdif:developerAttribution",
+                            "operator": "odrl:eq",
+                            "rightOperand": {
+                                "@value": "A prominent statement must be included describing the origin of the Covered Code and naming the Initial Developer.",
+                                "@type": "xsd:string"
+                            }
+                        }
+                    ],
+                    "target": ["cdif:sourceCode", "cdif:executableVersion", "cdif:relatedDocumentation"]
+                }
+            ]
+        },
+        {
+            "target": "spdx:SNIA.html",
+            "assigner": "http://example.com/contributor",
+            "assignee": "http://example.com/user",
+            "action": "cdif:maintainSourceCodeAvailability",
+            "duty": [
+                {
+                    "action": "cdif:ensureAvailability",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:availabilityPeriod",
+                            "operator": "odrl:ge",
+                            "rightOperand": {
+                                "@value": "12 months",
+                                "@type": "xsd:string"
+                            }
+                        },
+                        {
+                            "leftOperand": "cdif:availabilityMechanism",
+                            "operator": "odrl:eq",
+                            "rightOperand": {
+                                "@value": "Source Code must remain available via an accepted Electronic Distribution Mechanism.",
+                                "@type": "xsd:string"
+                            }
+                        }
+                    ],
+                    "target": ["cdif:sourceCode"]
+                }
+            ]
+        }
+    ]
+}

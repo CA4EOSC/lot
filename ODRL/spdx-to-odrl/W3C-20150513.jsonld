@@ -1,0 +1,83 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Set",
+    "uid": "http://example.com/policy:W3C-20150513",
+    "profile": "https://cdif.org/odrl:profile:W3C-20150513",
+    "permission": [
+        {
+            "target": "spdx:W3C-20150513.html",
+            "action": "odrl:copy",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:W3C-20150513.html",
+            "action": "odrl:modify",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:W3C-20150513.html",
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:W3C-20150513.html",
+            "action": "odrl:use",
+            "description": "The name and trademarks of copyright holders may NOT be used in advertising or publicity pertaining to the work without specific, written prior permission."
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Offer",
+    "uid": "https://cdif.org/odrl/policy/gpl-2.0-with-gcc-exception",
+    "profile": "https://cdif.org/odrl:profile:GPL-2.0-with-GCC-exception",
+    "target": "spdx:GPL-2.0-with-GCC-exception.html",
+    "permission": [
+        {
+            "target": "spdx:GPL-2.0-with-GCC-exception.html",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-GCC-exception.html",
+            "action": "odrl:reproduce"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-GCC-exception.html",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-GCC-exception.html",
+            "action": "cdif:merge"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-GCC-exception.html",
+            "action": "odrl:publish"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-GCC-exception.html",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-GCC-exception.html",
+            "action": "odrl:sublicense"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-GCC-exception.html",
+            "action": "odrl:sell"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "dcterms": "http://purl.org/dc/terms/"
+    },
+    "@type": "Agreement",
+    "uid": "http://example.com/policy:CECILL-2.0",
+    "profile": "https://cdif.org/odrl:profile:CECILL-2.0",
+    "assigner": [
+        {
+            "@id": "http://example.com/org/CEA",
+            "@type": "Organization",
+            "rdfs:label": "Commissariat à l'Energie Atomique - CEA"
+        },
+        {
+            "@id": "http://example.com/org/CNRS",
+            "@type": "Organization",
+            "rdfs:label": "Centre National de la Recherche Scientifique - CNRS"
+        },
+        {
+            "@id": "http://example.com/org/INRIA",
+            "@type": "Organization",
+            "rdfs:label": "Institut National de Recherche en Informatique et en Automatique - INRIA"
+        }
+    ],
+    "assignee": {
+        "@id": "http://example.com/person:Licensee",
+        "@type": "Person",
+        "rdfs:label": "Licensee (Software User)"
+    },
+    "target": "spdx:CECILL-2.0.html",
+    "permission": [{
+        "target": "spdx:CECILL-2.0.html",
+        "assigner": "http://example.com/org/CEA",
+        "assignee": "http://example.com/person:Licensee",
+        "action": [
+            {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:use",
+                "rdfs:label": "Use the Software"
+            },
+            {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:copy",
+                "rdfs:label": "Copy the Software"
+            },
+            {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:modify",
+                "rdfs:label": "Modify the Software"
+            },
+            {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "cdif:merge",
+                "rdfs:label": "Merge with other code"
+            },
+            {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:publish",
+                "rdfs:label": "Publish the Software"
+            },
+            {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:distribute",
+                "rdfs:label": "Distribute the Software"
+            },
+            {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:sublicense",
+                "rdfs:label": "Sublicense the Software"
+            },
+            {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:sell",
+                "rdfs:label": "Sell the Software"
+            }
+        ],
+        "duty": [{
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        },
+        {
+            "action": "cdif:provideSourceCodeAccess",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:distributionType",
+                    "operator": "odrl:eq",
+                    "rightOperand": "ObjectCodeOnly"
+                }
+            ],
+            "target": [
+                "cdif:sourceCodeLocation"
+            ]
+        },
+        {
+            "action": "cdif:includeAgreementCopy",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:distributionType",
+                    "operator": "odrl:eq",
+                    "rightOperand": "Any"
+                }
+            ],
+            "target": [
+                "cdif:agreementCopy"
+            ]
+        }]
+    }]
+}

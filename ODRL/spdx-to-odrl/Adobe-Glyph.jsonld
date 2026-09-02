@@ -1,0 +1,144 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Offer",
+    "uid": "https://cdif.org/odrl/policy/adobe-glyph-license",
+    "profile": "https://cdif.org/odrl:profile:Adobe-Glyph",
+    "permission": [
+        {
+            "target": "spdx:Adobe-Glyph.html",
+            "action": "odrl:use",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Adobe-Glyph.html",
+            "action": "odrl:copy",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Adobe-Glyph.html",
+            "action": "odrl:publish",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Adobe-Glyph.html",
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Adobe-Glyph.html",
+            "action": "odrl:sublicense",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Adobe-Glyph.html",
+            "action": "odrl:sell",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:Adobe-Glyph.html",
+            "action": "odrl:modify",
+            "assigner": "http://example.com/any-party",
+            "description": "Modification, editing, or other alteration of this document is prohibited."
+        }
+    ]
+}

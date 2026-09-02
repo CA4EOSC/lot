@@ -1,0 +1,147 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:RHeCos-1.1",
+    "profile": "https://cdif.org/odrl:profile:RHeCos-1.1",
+    "target": "spdx:RHeCos-1.1.html",
+    "description": "Red Hat eCos Public License v1.1, governing the use of Covered Code.",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RHeCos-1.1.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:use"
+            },
+            "assigner": "http://example.com/InitialDeveloper",
+            "assignee": "http://example.com/You",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:sourceCodeAvailability",
+                            "operator": "odrl:mustBeMet",
+                            "rightOperand": {
+                                "@value": "True",
+                                "@type": "xsd:boolean"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:originalNotice",
+                        "cdif:licenseCopy"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RHeCos-1.1.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:reproduce"
+            },
+            "assigner": "http://example.com/InitialDeveloper",
+            "assignee": "http://example.com/You"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RHeCos-1.1.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:modify"
+            },
+            "assigner": "http://example.com/InitialDeveloper",
+            "assignee": "http://example.com/You"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RHeCos-1.1.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:display"
+            },
+            "assigner": "http://example.com/InitialDeveloper",
+            "assignee": "http://example.com/You"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RHeCos-1.1.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:perform"
+            },
+            "assigner": "http://example.com/InitialDeveloper",
+            "assignee": "http://example.com/You"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RHeCos-1.1.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:sublicense"
+            },
+            "assigner": "http://example.com/InitialDeveloper",
+            "assignee": "http://example.com/You"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RHeCos-1.1.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:distribute"
+            },
+            "assigner": "http://example.com/InitialDeveloper",
+            "assignee": "http://example.com/You"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RHeCos-1.1.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:utilize"
+            },
+            "assigner": "http://example.com/InitialDeveloper",
+            "assignee": "http://example.com/You"
+        }
+    ],
+    "obligation": [
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:RHeCos-1.1.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:includeNotice"
+            },
+            "assigner": "http://example.com/You",
+            "assignee": "http://example.com/You",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:sourceCodeAvailability",
+                            "operator": "odrl:mustBeMet",
+                            "rightOperand": {
+                                "@value": "True",
+                                "@type": "xsd:boolean"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:originalNotice",
+                        "cdif:licenseCopy"
+                    ]
+                }
+            ]
+        }
+    ]
+}

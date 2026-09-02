@@ -1,0 +1,49 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Offer",
+  "uid": "http://example.com/cornell-lossless-jpeg-license",
+  "profile": "https://cdif.org/odrl:profile:Cornell-Lossless-JPEG",
+  "assigner": "http://example.com/cornell-university",
+  "permission": [
+    {
+      "target": "http://example.com/cornell-lossless-jpeg-software",
+      "action": "odrl:use"
+    },
+    {
+      "target": "http://example.com/cornell-lossless-jpeg-software",
+      "action": "odrl:copy"
+    },
+    {
+      "target": "http://example.com/cornell-lossless-jpeg-software",
+      "action": "odrl:modify"
+    },
+    {
+      "target": "http://example.com/cornell-lossless-jpeg-software",
+      "action": "odrl:distribute"
+    }
+  ],
+  "duty": [
+    {
+      "action": "cdif:includeNotice",
+      "constraint": [
+        {
+          "leftOperand": "cdif:scope",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:allCopies"
+        }
+      ],
+      "target": [
+        "cdif:copyrightNotice",
+        "cdif:permissionNotice"
+      ]
+    }
+  ]
+}

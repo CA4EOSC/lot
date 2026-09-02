@@ -1,0 +1,118 @@
+{
+    "@context": {
+        "http://www.w3.org/2001/XMLSchema#": "http://www.w3.org/2001/XMLSchema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "dc": "http://purl.org/dc/terms/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/lgpl-3.0",
+    "profile": "https://cdif.org/odrl:profile:LGPL-3.0",
+    "dc:description": "GNU Lesser General Public License Version 3. This policy grants extensive rights to use, modify, and distribute the covered work while maintaining core free software principles.",
+    "target": "spdx:LGPL-3.0.html",
+    "permission": [
+        {
+            "@type": "Permission",
+            "target": "spdx:LGPL-3.0.html",
+            "action": "odrl:copy",
+            "assigner": "http://fsf.org/"
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:LGPL-3.0.html",
+            "action": "odrl:distribute",
+            "assigner": "http://fsf.org/"
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:LGPL-3.0.html",
+            "action": "odrl:modify",
+            "assigner": "http://fsf.org/"
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:LGPL-3.0.html",
+            "action": "odrl:use",
+            "assigner": "http://fsf.org/"
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:LGPL-3.0.html",
+            "action": "cdif:link",
+            "assigner": "http://fsf.org/"
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:LGPL-3.0.html",
+            "action": "cdif:combine",
+            "assigner": "http://fsf.org/"
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:LGPL-3.0.html",
+            "action": "cdif:sublicense",
+            "assigner": "http://fsf.org/"
+        }
+    ],
+    "prohibition": [
+        {
+            "@type": "Prohibition",
+            "target": "spdx:LGPL-3.0.html",
+            "action": "odrl:imposeRestriction",
+            "assigner": "http://fsf.org/",
+            "description": "Cannot impose further restrictions, license fees, or royalties that violate the core freedoms granted by this license."
+        }
+    ],
+    "obligation": [
+        {
+            "@type": "Obligation",
+            "target": "spdx:LGPL-3.0.html",
+            "action": "cdif:provideNotice",
+            "assigner": "http://fsf.org/",
+            "description": "Must provide prominent notice that the Library is used and that its use is covered by this License.",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:noticeRequirement",
+                    "operator": "odrl:and",
+                    "rightOperand": "cdif:noticeRequirement"
+                }
+            ],
+            "duty": [
+                {
+                    "@type": "Duty",
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "@type": "Duty",
+                    "action": "cdif:provideSourceCode",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:sourceCodeAvailability",
+                            "operator": "odrl:and",
+                            "rightOperand": "cdif:sourceCodeAvailability"
+                        }
+                    ],
+                    "target": [
+                        "cdif:CorrespondingSource",
+                        "cdif:InstallationInformation"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/odrl/policy:SPL-1.0",
+    "profile": "https://cdif.org/odrl:profile:SPL-1.0",
+    "target": "spdx:SPL-1.0.html",
+    "description": "The Sun Public License Version 1.0 governs the use of the Covered Code.",
+    "permission": [
+        {
+            "target": "spdx:SPL-1.0.html",
+            "assigner": "http://example.com/InitialDeveloper",
+            "assignee": "http://example.com/You",
+            "action": [
+                "odrl:use",
+                "odrl:reproduce",
+                "odrl:modify",
+                "odrl:display",
+                "odrl:perform",
+                "odrl:sublicense",
+                "odrl:distribute",
+                "odrl:sell",
+                "odrl:make",
+                "cdif:merge",
+                "cdif:combine"
+            ],
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:sourceCodeFile",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:requiredNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:maintainSourceCodeAvailability",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:availabilityPeriod",
+                            "operator": "odrl:ge",
+                            "rightOperand": {
+                                "@value": "12",
+                                "@type": "xsd:integer"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:sourceCodeVersion"
+                    ]
+                },
+                {
+                    "action": "cdif:documentModifications",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:modificationFile",
+                            "operator": "odrl:exists",
+                            "rightOperand": null
+                        }
+                    ],
+                    "target": [
+                        "cdif:modificationDate"
+                    ]
+                }
+            ]
+        }
+    ]
+}

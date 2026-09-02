@@ -1,0 +1,120 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/odrl/policy:ODbL-1.0",
+    "profile": "https://cdif.org/odrl:profile:ODbL-1.0",
+    "target": "spdx:ODbL-1.0.html",
+    "assigner": "https://cdif.org/person:Licensor",
+    "assignee": "https://cdif.org/person:You",
+    "permission": [
+        {
+            "target": "spdx:ODbL-1.0.html",
+            "assigner": "https://cdif.org/person:Licensor",
+            "assignee": "https://cdif.org/person:You",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:ODbL-1.0.html",
+            "assigner": "https://cdif.org/person:Licensor",
+            "assignee": "https://cdif.org/person:You",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:ODbL-1.0.html",
+            "assigner": "https://cdif.org/person:Licensor",
+            "assignee": "https://cdif.org/person:You",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:ODbL-1.0.html",
+            "assigner": "https://cdif.org/person:Licensor",
+            "assignee": "https://cdif.org/person:You",
+            "action": "odrl:merge"
+        },
+        {
+            "target": "spdx:ODbL-1.0.html",
+            "assigner": "https://cdif.org/person:Licensor",
+            "assignee": "https://cdif.org/person:You",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:ODbL-1.0.html",
+            "assigner": "https://cdif.org/person:Licensor",
+            "assignee": "https://cdif.org/person:You",
+            "action": "odrl:display"
+        },
+        {
+            "target": "spdx:ODbL-1.0.html",
+            "assigner": "https://cdif.org/person:Licensor",
+            "assignee": "https://cdif.org/person:You",
+            "action": "odrl:makeAvailable"
+        }
+    ],
+    "duty": [
+        {
+            "description": "Duty to include notices when publicly conveying the Database or Derivative Database (Section 4.2).",
+            "action": "cdif:includeNotice",
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:licenseNotice"
+            ],
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:PubliclyConveyed"
+                }
+            ]
+        },
+        {
+            "description": "Duty to include notice when publicly using a Produced Work (Section 4.3).",
+            "action": "cdif:includeNotice",
+            "target": [
+                "cdif:producedWorkNotice"
+            ],
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:PubliclyUsedProducedWork"
+                }
+            ]
+        },
+        {
+            "description": "Duty to ensure Derivative Databases comply with Share Alike terms (Section 4.4).",
+            "action": "cdif:shareAlike",
+            "target": [
+                "cdif:DerivativeDatabase"
+            ],
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:CompatibleLicense"
+                }
+            ]
+        },
+        {
+            "description": "Duty to provide access to the entire Derivative Database or alteration file (Section 4.6).",
+            "action": "cdif:provideAccess",
+            "target": [
+                "cdif:DerivativeDatabase",
+                "cdif:AlterationFile"
+            ],
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:AvailableAtReasonableCost"
+                }
+            ]
+        }
+    ]
+}

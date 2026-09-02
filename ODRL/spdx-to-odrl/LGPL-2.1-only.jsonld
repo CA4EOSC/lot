@@ -1,0 +1,87 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:LGPL-2.1-only",
+    "profile": "https://cdif.org/odrl:profile:LGPL-2.1-only",
+    "target": "spdx:LGPL-2.1-only.html",
+    "permission": [
+        {
+            "target": "spdx:LGPL-2.1-only.html",
+            "assigner": "http://example.com/free-software-foundation",
+            "action": [
+                "odrl:copy",
+                "odrl:distribute",
+                "odrl:modify",
+                "odrl:use",
+                "cdif:merge",
+                "odrl:sublicense",
+                "odrl:sell"
+            ],
+            "duty": [
+                {
+                    "action": "cdif:provideSourceCode",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:distributionContext",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:distributionType"
+                        }
+                    ],
+                    "target": [
+                        "cdif:completeSourceCode",
+                        "cdif:sourceCodeForModification"
+                    ]
+                },
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:distributionContext",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:distributionType"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseCopy",
+                        "cdif:disclaimerOfWarranty",
+                        "cdif:termsAndConditions"
+                    ]
+                },
+                {
+                    "action": "cdif:markModification",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:modificationContext",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:modificationType"
+                        }
+                    ],
+                    "target": [
+                        "cdif:prominentNoticeOfChange",
+                        "cdif:dateOfChange"
+                    ]
+                },
+                {
+                    "action": "cdif:provideObjectFiles",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:linkingContext",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:linkingType"
+                        }
+                    ],
+                    "target": [
+                        "cdif:completeObjectFiles"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Set",
+  "uid": "https://cdif.org/odrl/policy/Boehm-GC-without-fee",
+  "profile": "https://cdif.org/odrl:profile:Boehm-GC-without-fee",
+  "permission": [
+    {
+      "target": "spdx:Boehm-GC-without-fee.html",
+      "action": "odrl:use",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:Boehm-GC-without-fee.html",
+      "action": "odrl:copy",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:Boehm-GC-without-fee.html",
+      "action": "odrl:modify",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice",
+            "cdif:modificationNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:Boehm-GC-without-fee.html",
+      "action": "odrl:distribute",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice",
+            "cdif:modificationNotice"
+          ]
+        }
+      ]
+    }
+  ]
+}

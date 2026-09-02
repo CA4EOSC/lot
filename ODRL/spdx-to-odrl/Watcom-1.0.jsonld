@@ -1,0 +1,152 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/watcom-1.0",
+    "profile": "https://cdif.org/odrl:profile:Watcom-1.0",
+    "assigner": "http://example.com/sybase-contributors",
+    "assignee": "http://example.com/user",
+    "target": "spdx:Watcom-1.0.html",
+    "permission": [
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "action": "odrl:use",
+            "description": "Allows use of the Original Code for internal R&D and Personal Use."
+        },
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "action": "odrl:reproduce",
+            "description": "Allows reproduction of the Original Code."
+        },
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "action": "odrl:display",
+            "description": "Allows display of the Original Code."
+        },
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "action": "odrl:modify",
+            "description": "Allows modification of the Original Code."
+        },
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "action": "odrl:distribute",
+            "description": "Allows distribution of the Original Code."
+        },
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "action": "cdif:sublicense",
+            "description": "Allows sublicensing of the Covered Code, provided terms are no less protective than this license."
+        },
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "action": "cdif:copy",
+            "description": "General right to copy the code."
+        },
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "action": "cdif:merge",
+            "description": "General right to merge the code with other works (Larger Works)."
+        },
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "action": "cdif:publish",
+            "description": "General right to publish the code."
+        },
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "action": "cdif:sell",
+            "description": "General right to sell derived works."
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "assignee": "http://example.com/user",
+            "action": "cdif:retainNotice",
+            "duty": [
+                {
+                    "action": "cdif:retainNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyrightAndProprietaryNotice"
+                        },
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:licenseNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "assignee": "http://example.com/user",
+            "action": "cdif:makeSourceCodeAvailable",
+            "duty": [
+                {
+                    "action": "cdif:makeSourceCodeAvailable",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:deploymentType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:objectCodeOnly"
+                        }
+                    ],
+                    "target": [
+                        "cdif:sourceCodeAvailabilityNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Watcom-1.0.html",
+            "assigner": "http://example.com/sybase-contributors",
+            "assignee": "http://example.com/user",
+            "action": "cdif:makeSourceCodePublic",
+            "duty": [
+                {
+                    "action": "cdif:makeSourceCodePublic",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:deploymentDuration",
+                            "operator": "odrl:ge",
+                            "rightOperand": {
+                                "@value": "12",
+                                "@type": "xsd:integer"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:sourceCodePublicAvailability"
+                    ]
+                }
+            ]
+        }
+    ]
+}

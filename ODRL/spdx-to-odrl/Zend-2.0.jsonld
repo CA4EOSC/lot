@@ -1,0 +1,182 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://purl.org/dc/terms/": "dc",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://www.w3.org/2001/XMLSchema#": "xsd"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "https://cdif.org/odrl/policy/zend-2.0",
+    "odrl:profile": "https://cdif.org/odrl:profile:Zend-2.0",
+    "dc:description": "The Zend Engine License, version 2.00. Grants rights for redistribution and use in source and binary forms.",
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:Zend-2.0.html",
+            "odrl:action": "odrl:use",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": {
+                        "@type": "odrl:Constraint",
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                    },
+                    "odrl:target": "cdif:acknowledgmentNotice"
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:Zend-2.0.html",
+            "odrl:action": "odrl:copy",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": {
+                        "@type": "odrl:Constraint",
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                    },
+                    "odrl:target": "cdif:acknowledgmentNotice"
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:Zend-2.0.html",
+            "odrl:action": "odrl:modify",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": {
+                        "@type": "odrl:Constraint",
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                    },
+                    "odrl:target": "cdif:acknowledgmentNotice"
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:Zend-2.0.html",
+            "odrl:action": "cdif:merge",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": {
+                        "@type": "odrl:Constraint",
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                    },
+                    "odrl:target": "cdif:acknowledgmentNotice"
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:Zend-2.0.html",
+            "odrl:action": "odrl:publish",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": {
+                        "@type": "odrl:Constraint",
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                    },
+                    "odrl:target": "cdif:acknowledgmentNotice"
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:Zend-2.0.html",
+            "odrl:action": "odrl:distribute",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": {
+                        "@type": "odrl:Constraint",
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                    },
+                    "odrl:target": "cdif:acknowledgmentNotice"
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:Zend-2.0.html",
+            "odrl:action": "cdif:sublicense",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": {
+                        "@type": "odrl:Constraint",
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                    },
+                    "odrl:target": "cdif:acknowledgmentNotice"
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:Zend-2.0.html",
+            "odrl:action": "odrl:sell",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": {
+                        "@type": "odrl:Constraint",
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                    },
+                    "odrl:target": "cdif:acknowledgmentNotice"
+                }
+            ]
+        }
+    ],
+    "odrl:prohibition": [
+        {
+            "@type": "odrl:Prohibition",
+            "odrl:target": "spdx:Zend-2.0.html",
+            "odrl:action": "odrl:use",
+            "odrl:assignee": "http://example.com/party:any",
+            "odrl:assigner": "http://example.com/party:any",
+            "odrl:constraint": {
+                "@type": "odrl:Constraint",
+                "odrl:leftOperand": "cdif:name",
+                "odrl:operator": "odrl:ne",
+                "odrl:rightOperand": "Zend Technologies Ltd."
+            },
+            "odrl:remedy": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "cdif:mustNotEndorse",
+                    "odrl:target": "file:///mediaquantum/qlever/semantic-croissant/lot/ODRL/"
+                }
+            ]
+        }
+    ]
+}

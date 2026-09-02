@@ -1,0 +1,201 @@
+{
+    "@context": {
+        "http://www.w3.org/2000/01/rdf-schema#": "rdf",
+        "http://www.w3.org/2000/01/XMLSchema#": "xsd",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://example.com/": "ex"
+    },
+    "@type": "odrl:Set",
+    "uid": "http://example.com/policy:SOFA_License_2023",
+    "profile": "https://cdif.org/odrl/profile/SOFA",
+    "description": "SOFA Software License Policy for the Standards of Fundamental Astronomy Board of the International Astronomical Union.",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:use",
+            "odrl:target": "spdx:SOFA.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:copy",
+            "odrl:target": "spdx:SOFA.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:distribute",
+            "odrl:target": "spdx:SOFA.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:modify",
+            "odrl:target": "spdx:SOFA.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:merge",
+            "odrl:target": "spdx:SOFA.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:publish",
+            "odrl:target": "spdx:SOFA.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:sublicense",
+            "odrl:target": "spdx:SOFA.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:sell",
+            "odrl:target": "spdx:SOFA.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ]
+        }
+    ],
+    "prohibition": [
+        {
+            "@type": "odrl:Prohibition",
+            "odrl:action": "odrl:misrepresent",
+            "odrl:target": "spdx:SOFA.html",
+            "odrl:assigner": "http://example.com/user",
+            "odrl:description": "Prohibited misrepresentation of origin or filing of patents. The origin of SOFA components must not be misrepresented, and the user must not claim to have written the original software or file a patent application for SOFA software or algorithms."
+        },
+        {
+            "@type": "odrl:Prohibition",
+            "odrl:action": "odrl:misuse",
+            "odrl:target": "spdx:SOFA.html",
+            "odrl:assigner": "http://example.com/user",
+            "odrl:description": "Prohibited misuse or use for inappropriate tasks, or inappropriate modification."
+        }
+    ]
+}

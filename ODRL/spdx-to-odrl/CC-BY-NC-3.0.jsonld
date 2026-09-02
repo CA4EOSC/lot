@@ -1,0 +1,83 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:CC-BY-NC-3.0",
+    "profile": "https://cdif.org/odrl:profile:CC-BY-NC-3.0",
+    "target": "spdx:CC-BY-NC-3.0.html",
+    "description": "Creative Commons Attribution-NonCommercial 3.0 Unported License.",
+    "permission": [
+        {
+            "target": "spdx:CC-BY-NC-3.0.html",
+            "assigner": "http://creativecommons.org/",
+            "action": "odrl:copy",
+            "description": "Right to Reproduce the Work and incorporate it into Collections."
+        },
+        {
+            "target": "spdx:CC-BY-NC-3.0.html",
+            "assigner": "http://creativecommons.org/",
+            "action": "odrl:modify",
+            "description": "Right to create and Reproduce Adaptations, provided proper labeling is maintained."
+        },
+        {
+            "target": "spdx:CC-BY-NC-3.0.html",
+            "assigner": "http://creativecommons.org/",
+            "action": "odrl:distribute",
+            "description": "Right to Distribute the Work and Adaptations."
+        },
+        {
+            "target": "spdx:CC-BY-NC-3.0.html",
+            "assigner": "http://creativecommons.org/",
+            "action": "odrl:perform",
+            "description": "Right to Publicly Perform the Work and Adaptations."
+        },
+        {
+            "target": "spdx:CC-BY-NC-3.0.html",
+            "assigner": "http://creativecommons.org/",
+            "action": "cdif:merge",
+            "description": "Right to combine the Work with other works (Collection/Adaptation)."
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                },
+                {
+                    "leftOperand": "cdif:notice",
+                    "operator": "odrl:eq",
+                    "rightOperand": "http://creativecommons.org/licenses/by-nc-3.0/legalcode"
+                },
+                {
+                    "leftOperand": "cdif:attribution",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:requiredAttribution"
+                },
+                {
+                    "leftOperand": "cdif:nonCommercial",
+                    "operator": "odrl:eq",
+                    "rightOperand": "true"
+                },
+                {
+                    "leftOperand": "cdif:integrity",
+                    "operator": "odrl:eq",
+                    "rightOperand": "true"
+                }
+            ],
+            "target": [
+                "spdx:CC-BY-NC-3.0.html",
+                "cdif:requiredAttribution"
+            ]
+        }
+    ]
+}

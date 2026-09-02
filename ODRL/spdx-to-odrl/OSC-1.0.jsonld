@@ -1,0 +1,45 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#": "rdf",
+        "http://www.w3.org/2001/XMLSchema#": "xsd"
+    },
+    "@type": "odrl:Policy",
+    "odrl:uid": "https://cdif.org/odrl/policy/osc-1.0",
+    "odrl:profile": "https://cdif.org/odrl:profile:OSC-1.0",
+    "odrl:target": "spdx:OSC-1.0.html",
+    "odrl:permission": [
+        {
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "rdf:Statement",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ],
+            "odrl:action": [
+                "odrl:use",
+                "odrl:copy",
+                "odrl:modify",
+                "cdif:merge",
+                "odrl:publish",
+                "odrl:distribute",
+                "odrl:sublicense",
+                "odrl:sell"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,159 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdf",
+        "http://www.w3.org/2000/01/XMLSchema#": "xsd",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "http://example.com/policy:StandardML-NJ",
+    "odrl:profile": "https://cdif.org/odrl:profile:StandardML-NJ",
+    "odrl:permission": [
+        {
+            "odrl:action": "odrl:use",
+            "odrl:target": "spdx:StandardML-NJ.html",
+            "odrl:duty": {
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": [
+                    {
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                    }
+                ],
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        },
+        {
+            "odrl:action": "odrl:copy",
+            "odrl:target": "spdx:StandardML-NJ.html",
+            "odrl:duty": {
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": [
+                    {
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                    }
+                ],
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        },
+        {
+            "odrl:action": "odrl:modify",
+            "odrl:target": "spdx:StandardML-NJ.html",
+            "odrl:duty": {
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": [
+                    {
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                    }
+                ],
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        },
+        {
+            "odrl:action": "odrl:distribute",
+            "odrl:target": "spdx:StandardML-NJ.html",
+            "odrl:duty": {
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": [
+                    {
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                    }
+                ],
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        },
+        {
+            "odrl:action": "odrl:merge",
+            "odrl:target": "spdx:StandardML-NJ.html",
+            "odrl:duty": {
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": [
+                    {
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                    }
+                ],
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        },
+        {
+            "odrl:action": "odrl:publish",
+            "odrl:target": "spdx:StandardML-NJ.html",
+            "odrl:duty": {
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": [
+                    {
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                    }
+                ],
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        },
+        {
+            "odrl:action": "odrl:sublicense",
+            "odrl:target": "spdx:StandardML-NJ.html",
+            "odrl:duty": {
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": [
+                    {
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                    }
+                ],
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        },
+        {
+            "odrl:action": "odrl:sell",
+            "odrl:target": "spdx:StandardML-NJ.html",
+            "odrl:duty": {
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": [
+                    {
+                        "odrl:leftOperand": "cdif:scope",
+                        "odrl:operator": "odrl:eq",
+                        "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                    }
+                ],
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        }
+    ]
+}

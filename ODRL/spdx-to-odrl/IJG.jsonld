@@ -1,0 +1,225 @@
+{
+    "@context": {
+        "http://www.w3.org/2000/01/rdf-syntax-ns#": "rdf:",
+        "http://www.w3.org/2000/01/XMLSchema#": "xsd:",
+        "http://www.w3.org/ns/odrl/2/": "odrl:",
+        "https://cdif.org/odrl/": "cdif:",
+        "https://spdx.org/licenses/": "spdx:",
+        "rdfs": "http://www.w3.org/2000/0001/rdf-schema#"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "http://example.com/policy:ijg-license",
+    "odrl:profile": "https://cdif.org/odrl/profile/IJG",
+    "target": "spdx:Independent_JPEG_Group_License",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:use",
+            "odrl:target": "spdx:Independent_JPEG_Group_License",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:copy",
+            "odrl:target": "spdx:Independent_JPEG_Group_License",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:modify",
+            "odrl:target": "spdx:Independent_JPEG_Group_License",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:distribute",
+            "odrl:target": "spdx:Independent_JPEG_Group_License",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "cdif:merge",
+            "odrl:target": "spdx:Independent_JPEG_Group_License",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "cdif:publish",
+            "odrl:target": "spdx:Independent_JPEG_Group_License",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "cdif:sublicense",
+            "odrl:target": "spdx:Independent_JPEG_Group_License",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:sell",
+            "odrl:target": "spdx:Independent_JPEG_Group_License",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ],
+    "prohibition": [
+        {
+            "@type": "odrl:Prohibition",
+            "odrl:target": "spdx:Independent_JPEG_Group_License",
+            "odrl:assigner": {
+                "@type": "http://www.w3.org/DC/Person",
+                "rdfs:label": "IJG Author/Company"
+            },
+            "odrl:action": "odrl:use",
+            "odrl:remedy": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:doNothing",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:name",
+                            "odrl:operator": "odrl:ne",
+                            "odrl:rightOperand": "http://example.com/IJG_author_name"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

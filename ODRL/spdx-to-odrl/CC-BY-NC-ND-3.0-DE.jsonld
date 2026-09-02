@@ -1,0 +1,217 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:CC-BY-NC-ND-3.0-DE",
+    "profile": "https://cdif.org/odrl:profile:CC-BY-NC-ND-3.0-DE",
+    "target": "spdx:CC-BY-NC-ND-3.0-DE.html",
+    "permission": [
+        {
+            "@type": "Permission",
+            "target": "spdx:CC-BY-NC-ND-3.0-DE.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "odrl:use",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:enforceNonCommercial",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:purpose",
+                            "operator": "odrl:neq",
+                            "rightOperand": "cdif:commercialPurpose"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:CC-BY-NC-ND-3.0-DE.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "odrl:copy",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:enforceNonCommercial",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:purpose",
+                            "operator": "odrl:neq",
+                            "rightOperand": "cdif:commercialPurpose"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:CC-BY-NC-ND-3.0-DE.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "odrl:modify",
+            "duty": [
+                {
+                    "action": "cdif:noDerivatives",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:modificationLevel",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:none"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:CC-BY-NC-ND-3.0-DE.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "cdif:merge",
+            "duty": [
+                {
+                    "action": "cdif:noDerivatives",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:modificationLevel",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:none"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:CC-BY-NC-ND-3.0-DE.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:enforceNonCommercial",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:purpose",
+                            "operator": "odrl:neq",
+                            "rightOperand": "cdif:commercialPurpose"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:CC-BY-NC-ND-3.0-DE.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "odrl:display",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:enforceNonCommercial",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:purpose",
+                            "operator": "odrl:neq",
+                            "rightOperand": "cdif:commercialPurpose"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:CC-BY-NC-ND-3.0-DE.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "cdif:sublicense",
+            "duty": [
+                {
+                    "action": "cdif:noSublicensing"
+                }
+            ]
+        },
+        {
+            "@type": "Permission",
+            "target": "spdx:CC-BY-NC-ND-3.0-DE.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "cdif:sell",
+            "duty": [
+                {
+                    "action": "cdif:enforceNonCommercial",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:purpose",
+                            "operator": "odrl:neq",
+                            "rightOperand": "cdif:commercialPurpose"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

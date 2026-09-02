@@ -1,0 +1,97 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Set",
+    "uid": "http://example.com/policy:Dotseqn",
+    "profile": "https://cdif.org/odrl:profile:Dotseqn",
+    "description": "License for Dotseqn, allowing free transmission and reproduction, provided the notice is kept intact and modifications follow specific rules.",
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        }
+    ],
+    "permission": [
+        {
+            "target": "spdx:Dotseqn.html",
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Dotseqn.html",
+            "action": "odrl:reproduce",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ],
+            "constraint": [
+                {
+                    "leftOperand": "cdif:modification",
+                    "operator": "odrl:and",
+                    "operands": [
+                        {
+                            "leftOperand": "cdif:exception",
+                            "operator": "odrl:or",
+                            "operands": [
+                                {
+                                    "leftOperand": "cdif:paperSizeOption",
+                                    "operator": "odrl:eq",
+                                    "rightOperand": "cdif:true"
+                                },
+                                {
+                                    "leftOperand": "cdif:nameChange",
+                                    "operator": "odrl:eq",
+                                    "rightOperand": "cdif:true"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

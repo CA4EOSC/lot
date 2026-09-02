@@ -1,0 +1,185 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Agreement",
+    "profile": "https://cdif.org/odrl:profile:CC-BY-3.0-AT",
+    "target": "spdx:CC-BY-3.0-AT.html",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:CC-BY-3.0-AT.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "odrl:use",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:attribute",
+                    "attributedParty": "http://example.com/rightsHolder",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:attributionRequirement",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:requiredAttribution"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:CC-BY-3.0-AT.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "odrl:copy",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:attribute",
+                    "attributedParty": "http://example.com/rightsHolder",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:attributionRequirement",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:requiredAttribution"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:CC-BY-3.0-AT.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "odrl:modify",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:attribute",
+                    "attributedParty": "http://example.com/rightsHolder",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:attributionRequirement",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:requiredAttribution"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:CC-BY-3.0-AT.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:attribute",
+                    "attributedParty": "http://example.com/rightsHolder",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:attributionRequirement",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:requiredAttribution"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:CC-BY-3.0-AT.html",
+            "assigner": "http://example.com/licensor",
+            "assignee": "http://example.com/user",
+            "action": "odrl:publish",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:attribute",
+                    "attributedParty": "http://example.com/rightsHolder",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:attributionRequirement",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:requiredAttribution"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

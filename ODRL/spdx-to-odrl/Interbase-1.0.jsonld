@@ -1,0 +1,210 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl.jsonld": "odrl:",
+        "https://cdif.org/odrl/": "cdif:",
+        "https://spdx.org/licenses/": "spdx:",
+        "http://www.w3.org/ns/rdf": "rdf:",
+        "http://www.w3.org/2001/XMLSchema#": "xsd:",
+        "http://purl.org/dc/terms/": "dc:",
+        "odrl:": "http://www.w3.org/ns/odrl/2/",
+        "cdif:": "https://cdif.org/odrl/",
+        "spdx:": "https://spdx.org/licenses/"
+    },
+    "@type": "Policy",
+    "profile": "https://cdif.org/odrl:profile:Interbase-1.0",
+    "uid": "http://example.com/policy:Interbase-1.0",
+    "description": "License governing the use of Interbase Covered Code, derived from Interbase Public License Version 1.0.",
+    "permission": [
+        {
+            "target": "spdx:Interbase-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:use",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Interbase-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:copy",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Interbase-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:modify",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Interbase-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "cdif:merge",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Interbase-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:publish",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Interbase-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Interbase-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:sublicense",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Interbase-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:sell",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:Interbase-1.0.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "cdif:includeNotice",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

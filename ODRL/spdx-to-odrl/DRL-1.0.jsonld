@@ -1,0 +1,185 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Set",
+    "uid": "https://cdif.org/odrl/policy:DRL-1.0",
+    "profile": "https://cdif.org/odrl:profile:DRL-1.0",
+    "target": "spdx:Rules",
+    "permission": [
+        {
+            "target": "spdx:Rules",
+            "action": "odrl:use",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:authorNotice",
+                        "cdif:sourceUriNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Rules",
+            "action": "odrl:copy",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:authorNotice",
+                        "cdif:sourceUriNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Rules",
+            "action": "odrl:modify",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:authorNotice",
+                        "cdif:sourceUriNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Rules",
+            "action": "cdif:merge",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:authorNotice",
+                        "cdif:sourceUriNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Rules",
+            "action": "odrl:publish",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:authorNotice",
+                        "cdif:sourceUriNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Rules",
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:authorNotice",
+                        "cdif:sourceUriNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Rules",
+            "action": "odrl:sublicense",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:authorNotice",
+                        "cdif:sourceUriNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:Rules",
+            "action": "odrl:sell",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:authorNotice",
+                        "cdif:sourceUriNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

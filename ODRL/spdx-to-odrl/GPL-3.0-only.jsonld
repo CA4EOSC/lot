@@ -1,0 +1,112 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/ns/rdf": "rdf",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:GPL-3.0",
+    "profile": "https://cdif.org/odrl:profile:GPL-3.0-only",
+    "target": "spdx:GPL-3.0-only.html",
+    "description": "GNU General Public License Version 3, granting broad rights to use, copy, distribute, and modify the software, while imposing specific duties regarding source code availability and notice preservation.",
+    "permission": [
+        {
+            "target": "spdx:GPL-3.0-only.html",
+            "assigner": "http://www.free-software-foundation.org",
+            "assignee": "http://any-user.com",
+            "action": "odrl:use",
+            "description": "Unlimited permission to run the unmodified Program."
+        },
+        {
+            "target": "spdx:GPL-3.0-only.html",
+            "assigner": "http://www.free-software-foundation.org",
+            "assignee": "http://any-user.com",
+            "action": "odrl:copy",
+            "description": "Permission to copy verbatim copies of the source code."
+        },
+        {
+            "target": "spdx:GPL-3.0-only.html",
+            "assigner": "http://www.free-software-foundation.org",
+            "assignee": "http://any-user.com",
+            "action": "odrl:distribute",
+            "description": "Permission to distribute copies of the Program, whether gratis or for a fee."
+        },
+        {
+            "target": "spdx:GPL-3.0-only.html",
+            "assigner": "http://www.free-software-foundation.org",
+            "assignee": "http://any-user.com",
+            "action": "odrl:modify",
+            "description": "Permission to modify the Program and create modified versions."
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:GPL-3.0-only.html",
+            "assigner": "http://www.free-software-foundation.org",
+            "assignee": "http://any-user.com",
+            "action": "odrl:prohibit",
+            "description": "Prohibits imposing further restrictions on the exercise of rights granted under this License."
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ],
+            "description": "Must conspicuously and appropriately publish copyright notices and retain all notices regarding the license terms."
+        },
+        {
+            "action": "cdif:provideSourceCode",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:sourceCodeAvailability",
+                    "operator": "odrl:mustBeAvailable",
+                    "rightOperand": "cdif:CorrespondingSource"
+                }
+            ],
+            "target": [
+                "spdx:GPL-3.0-only.html"
+            ],
+            "description": "Must ensure that recipients receive or can get the Corresponding Source code."
+        },
+        {
+            "action": "cdif:preserveFreedoms",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:freedomsPassedOn",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:originalFreedoms"
+                }
+            ],
+            "target": [
+                "spdx:GPL-3.0-only.html"
+            ],
+            "description": "Must pass on to recipients the same freedoms that were received."
+        },
+        {
+            "action": "cdif:markModification",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:modificationNotice",
+                    "operator": "odrl:mustBePresent",
+                    "rightOperand": "cdif:relevantDate"
+                }
+            ],
+            "target": [
+                "spdx:GPL-3.0-only.html"
+            ],
+            "description": "Modified versions must carry prominent notices stating that they were modified and giving a relevant date."
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/AGPL-3.0-or-later",
+    "profile": "https://cdif.org/odrl:profile:AGPL-3.0-or-later",
+    "target": "spdx:AGPL-3.0-or-later.html",
+    "permission": [
+        {
+            "target": "spdx:AGPL-3.0-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:AGPL-3.0-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:AGPL-3.0-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:AGPL-3.0-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:AGPL-3.0-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:run"
+        },
+        {
+            "target": "spdx:AGPL-3.0-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:propagate"
+        },
+        {
+            "target": "spdx:AGPL-3.0-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:conveySource"
+        },
+        {
+            "target": "spdx:AGPL-3.0-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "cdif:merge"
+        },
+        {
+            "target": "spdx:AGPL-3.0-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:sublicense"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        },
+        {
+            "action": "cdif:provideSource",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:networkServerAccess",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:sourceCodeAvailable"
+                }
+            ],
+            "target": [
+                "cdif:CorrespondingSource"
+            ]
+        }
+    ]
+}

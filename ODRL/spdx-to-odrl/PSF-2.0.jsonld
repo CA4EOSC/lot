@@ -1,0 +1,66 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Agreement",
+    "uid": "https://cdif.org/odrl/policy/psf-2.0",
+    "profile": "https://cdif.org/odrl:profile:PSF-2.0",
+    "assigner": "https://cdif.org/party/PSF",
+    "assignee": "https://cdif.org/party/Licensee",
+    "permission": [
+        {
+            "target": "spdx:PSF-2.0.html",
+            "action": "odrl:reproduce"
+        },
+        {
+            "target": "spdx:PSF-2.0.html",
+            "action": "odrl:analyze"
+        },
+        {
+            "target": "spdx:PSF-2.0.html",
+            "action": "odrl:test"
+        },
+        {
+            "target": "spdx:PSF-2.0.html",
+            "action": "odrl:perform"
+        },
+        {
+            "target": "spdx:PSF-2.0.html",
+            "action": "odrl:display"
+        },
+        {
+            "target": "spdx:PSF-2.0.html",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:PSF-2.0.html",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:PSF-2.0.html",
+            "action": "odrl:use"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:derivativeWork"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:summaryOfChangesNotice"
+            ]
+        }
+    ]
+}

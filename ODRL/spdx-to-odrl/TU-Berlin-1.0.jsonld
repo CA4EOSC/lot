@@ -1,0 +1,179 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "http://purl.org/dc/terms/": "dc",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
+        "http://www.w3.org/2200/rdf-syntax-ns#": "rdf",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#": "rdfs"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "https://cdif.org/odrl/policy:TU-Berlin-1.0",
+    "odrl:profile": "https://cdif.org/odrl:profile:TU-Berlin-1.0",
+    "dc:creator": "Jutta Degener, Carsten Bormann",
+    "dc:description": "Software license based on TU-Berlin-1.0, granting general use permission.",
+    "dc:issued": "1992-09-15",
+    "odrl:permission": [
+        {
+            "odrl:action": "odrl:use",
+            "odrl:target": "spdx:TU-Berlin-1.0.html",
+            "odrl:duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:copy",
+            "odrl:target": "spdx:TU-Berlin-1.0.html",
+            "odrl:duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:modify",
+            "odrl:target": "spdx:TU-Berlin-1.0.html",
+            "odrl:duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "cdif:merge",
+            "odrl:target": "spdx:TU-Berlin-1.0.html",
+            "odrl:duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:publish",
+            "odrl:target": "spdx:TU-Berlin-1.0.html",
+            "odrl:duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:distribute",
+            "odrl:target": "spdx:TU-Berlin-1.0.html",
+            "odrl:duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:sublicense",
+            "odrl:target": "spdx:TU-Berlin-1.0.html",
+            "odrl:duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:sell",
+            "odrl:target": "spdx:TU-Berlin-1.0.html",
+            "odrl:duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

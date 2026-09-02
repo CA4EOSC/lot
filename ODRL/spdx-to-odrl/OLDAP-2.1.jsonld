@@ -1,0 +1,258 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "http://example.com/policy:OLDAP-2.1",
+    "odrl:profile": "https://cdif.org/odrl:profile:OLDAP-2.1",
+    "odrl:target": "spdx:OpenLDAP Public License Version 2.1",
+    "odrl:description": "This policy reflects the rights granted by the OpenLDAP Public License Version 2.1.",
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:OpenLDAP Public License Version 2.1",
+            "odrl:assigner": "http://example.com/party:OpenLDAP Foundation",
+            "odrl:action": "odrl:use",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:OpenLDAP Public License Version 2.1",
+            "odrl:assigner": "http://example.com/party:OpenLDAP Foundation",
+            "odrl:action": "odrl:copy",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:OpenLDAP Public License Version 2.1",
+            "odrl:assigner": "http://example.com/party:OpenLDAP Foundation",
+            "odrl:action": "odrl:modify",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:OpenLDAP Public License Version 2.1",
+            "odrl:assigner": "http://example.com/party:OpenLDAP Foundation",
+            "odrl:action": "cdif:merge",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:OpenLDAP Public License Version 2.1",
+            "odrl:assigner": "http://example.com/party:OpenLDAP Foundation",
+            "odrl:action": "odrl:publish",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:OpenLDAP Public License Version 2.1",
+            "odrl:assigner": "http://example.com/party:OpenLDAP Foundation",
+            "odrl:action": "odrl:distribute",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:creditNotice"
+                    ]
+                }
+            ]
+        }
+    ],
+    "odrl:prohibition": [
+        {
+            "@type": "odrl:Prohibition",
+            "odrl:target": "spdx:OpenLDAP Public License Version 2.1",
+            "odrl:assigner": "http://example.com/party:DerivedProduct",
+            "odrl:action": "odrl:use",
+            "odrl:constraint": [
+                {
+                    "@type": "odrl:Constraint",
+                    "odrl:leftOperand": "cdif:name",
+                    "odrl:operator": "odrl:ne",
+                    "odrl:rightOperand": "OpenLDAP"
+                }
+            ],
+            "odrl:remedy": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Prohibition",
+            "odrl:target": "spdx:OpenLDAP Public License Version 2.1",
+            "odrl:assigner": "http://example.com/party:DerivedProduct",
+            "odrl:action": "odrl:use",
+            "odrl:constraint": [
+                {
+                    "@type": "odrl:Constraint",
+                    "odrl:leftOperand": "cdif:name",
+                    "odrl:operator": "odrl:ne",
+                    "odrl:rightOperand": "OpenLDAP"
+                }
+            ],
+            "odrl:remedy": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/dcat#": "dcat:",
+        "http://www.w3.org/ns/rdf#": "rdf:",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#": "rdf:",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs:",
+        "http://www.w3.org/ns/odrl/2/": "odrl:",
+        "https://cdif.org/odrl/": "cdif:",
+        "https://spdx.org/licenses/": "spdx:"
+    },
+    "@type": "odrl:Set",
+    "odrl:profile": "https://cdif.org/odrl:profile:Baekmuk",
+    "odrl:uid": "https://cdif.org/odrl/license/baekmuk",
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:use",
+            "odrl:target": "https://cdif.org/software/baekmuk-font-license",
+            "odrl:duty": {
+                "@type": "odrl:Duty",
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": {
+                    "@type": "odrl:Constraint",
+                    "odrl:leftOperand": "cdif:scope",
+                    "odrl:operator": "odrl:eq",
+                    "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                },
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:copy",
+            "odrl:target": "https://cdif.org/software/baekmuk-font-license",
+            "odrl:duty": {
+                "@type": "odrl:Duty",
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": {
+                    "@type": "odrl:Constraint",
+                    "odrl:leftOperand": "cdif:scope",
+                    "odrl:operator": "odrl:eq",
+                    "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                },
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:modify",
+            "odrl:target": "https://cdif.org/software/baekmuk-font-license",
+            "odrl:duty": {
+                "@type": "odrl:Duty",
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": {
+                    "@type": "odrl:Constraint",
+                    "odrl:leftOperand": "cdif:scope",
+                    "odrl:operator": "odrl:eq",
+                    "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                },
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:distribute",
+            "odrl:target": "https://cdif.org/software/baekmuk-font-license",
+            "odrl:duty": {
+                "@type": "odrl:Duty",
+                "odrl:action": "cdif:includeNotice",
+                "odrl:constraint": {
+                    "@type": "odrl:Constraint",
+                    "odrl:leftOperand": "cdif:scope",
+                    "odrl:operator": "odrl:eq",
+                    "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                },
+                "odrl:target": [
+                    "cdif:copyrightNotice",
+                    "cdif:permissionNotice"
+                ]
+            }
+        }
+    ]
+}

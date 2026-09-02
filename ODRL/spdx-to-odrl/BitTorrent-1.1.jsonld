@@ -1,0 +1,141 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy:BitTorrent-1.1",
+    "profile": "https://cdif.org/odrl:profile:BitTorrent-1.1",
+    "target": "spdx:BitTorrent-1.1.html",
+    "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+    "permission": [
+        {
+            "target": "spdx:BitTorrent-1.1.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:use",
+            "assignee": "http://example.com/user:You"
+        },
+        {
+            "target": "spdx:BitTorrent-1.1.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:copy",
+            "assignee": "http://example.com/user:You"
+        },
+        {
+            "target": "spdx:BitTorrent-1.1.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:modify",
+            "assignee": "http://example.com/user:You"
+        },
+        {
+            "target": "spdx:BitTorrent-1.1.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:distribute",
+            "assignee": "http://example.com/user:You"
+        },
+        {
+            "target": "spdx:BitTorrent-1.1.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "cdif:sublicense",
+            "assignee": "http://example.com/user:You"
+        },
+        {
+            "target": "spdx:BitTorrent-1.1.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:reproduce",
+            "assignee": "http://example.com/user:You"
+        },
+        {
+            "target": "spdx:BitTorrent-1.1.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:display",
+            "assignee": "http://example.com/user:You"
+        },
+        {
+            "target": "spdx:BitTorrent-1.1.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:perform",
+            "assignee": "http://example.com/user:You"
+        },
+        {
+            "target": "spdx:BitTorrent-1.1.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "cdif:sell",
+            "assignee": "http://example.com/user:You"
+        },
+        {
+            "target": "spdx:BitTorrent-1.1.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "cdif:offerForSale",
+            "assignee": "http://example.com/user:You"
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:BitTorrent-1.1.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:sell",
+            "assignee": "http://example.com/user:You",
+            "remedy": [
+                {
+                    "action": "cdif:mustNotSellSourceCode"
+                }
+            ]
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        },
+        {
+            "action": "cdif:makeSourceCodeAvailable",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:allDistributions"
+                }
+            ],
+            "target": [
+                "cdif:SourceCode"
+            ]
+        },
+        {
+            "action": "cdif:includeLegalFile",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:allDistributions"
+                }
+            ],
+            "target": [
+                "cdif:LEGAL"
+            ]
+        }
+    ],
+    "consequence": [
+        {
+            "action": "cdif:terminateRights",
+            "consequence": [
+                {
+                    "action": "cdif:voidPolicy"
+                }
+            ]
+        }
+    ]
+}

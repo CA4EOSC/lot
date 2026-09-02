@@ -1,0 +1,64 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Offer",
+    "uid": "https://cdif.org/odrl/policy/mit-enna-2000",
+    "profile": "https://cdif.org/odrl/profile/mit-enna",
+    "permission": [
+        {
+            "target": "spdx:MIT-enna.html",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:MIT-enna.html",
+            "action": "odrl:reproduce"
+        },
+        {
+            "target": "spdx:MIT-enna.html",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:MIT-enna.html",
+            "action": "cdif:merge"
+        },
+        {
+            "target": "spdx:MIT-enna.html",
+            "action": "odrl:publish"
+        },
+        {
+            "target": "spdx:MIT-enna.html",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:MIT-enna.html",
+            "action": "odrl:sublicense"
+        },
+        {
+            "target": "spdx:MIT-enna.html",
+            "action": "odrl:sell"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copyOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        }
+    ]
+}

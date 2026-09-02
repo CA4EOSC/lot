@@ -1,0 +1,86 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Offer",
+    "uid": "https://cdif.org/odrl/policy/epl-1.0",
+    "profile": "https://cdif.org/odrl/profile/EPL-1.0",
+    "description": "The Eclipse Public License v1.0 grants broad rights for use, modification, distribution, and commercial exploitation of the Program.",
+    "permission": [
+        {
+            "target": "spdx:EPL-1.0.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:reproduce"
+        },
+        {
+            "target": "spdx:EPL-1.0.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:EPL-1.0.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:EPL-1.0.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:EPL-1.0.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:sublicense"
+        },
+        {
+            "target": "spdx:EPL-1.0.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:sell"
+        },
+        {
+            "target": "spdx:EPL-1.0.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:EPL-1.0.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:distribute"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copyOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        },
+        {
+            "action": "cdif:identifyOriginator",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:Program"
+                }
+            ],
+            "target": [
+                "cdif:attributionNotice"
+            ]
+        }
+    ]
+}

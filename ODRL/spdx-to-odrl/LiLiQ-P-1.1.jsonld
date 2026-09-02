@@ -1,0 +1,148 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Policy",
+  "uid": "https://cdif.org/odrl/policy/LiLiQ-P-1.1",
+  "profile": "https://cdif.org/odrl/profile:LiLiQ-P-1.1",
+  "description": "Software license granting permissions for reproduction, performance, publication, and sublicensing of the software.",
+  "permission": [
+    {
+      "target": "spdx:LiLiQ-P-1.1.html",
+      "action": "odrl:reproduce",
+      "assigner": "spdx:Concédant",
+      "assignee": "spdx:Licencié",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:LiLiQ-P-1.1.html",
+      "action": "odrl:perform",
+      "assigner": "spdx:Concédant",
+      "assignee": "spdx:Licencié",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:LiLiQ-P-1.1.html",
+      "action": "odrl:publish",
+      "assigner": "spdx:Concédant",
+      "assignee": "spdx:Licencié",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:LiLiQ-P-1.1.html",
+      "action": "odrl:sublicense",
+      "assigner": "spdx:Concédant",
+      "assignee": "spdx:Licencié",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    }
+  ],
+  "obligation": [
+    {
+      "assigner": "spdx:Concédant",
+      "assignee": "spdx:Licencié",
+      "action": {
+        "@type": "odrl:Action",
+        "odrl:includedIn": "odrl:use",
+        "refinement": [
+          {
+            "leftOperand": "cdif:provideSourceCode",
+            "operator": "odrl:eq",
+            "rightOperand": {
+              "@value": "True",
+              "@type": "xsd:boolean"
+            }
+          }
+        ]
+      },
+      "constraint": [
+        {
+          "leftOperand": "cdif:sourceCodeOfferValid",
+          "operator": "odrl:eq",
+          "rightOperand": {
+            "@value": "True",
+            "@type": "xsd:boolean"
+          }
+        }
+      ]
+    }
+  ],
+  "prohibition": [
+    {
+      "target": "spdx:LiLiQ-P-1.1.html",
+      "action": "odrl:modify",
+      "assigner": "spdx:Concédant",
+      "assignee": "spdx:Licencié",
+      "remedy": [
+        {
+          "action": "cdif:maintainAttribution"
+        }
+      ]
+    }
+  ]
+}

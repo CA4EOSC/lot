@@ -1,0 +1,200 @@
+{
+    "@context": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#": "rdf",
+        "http://www.w3.org/1999/02/22-rdfs-syntax-ns#": "rdfs",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/2001/XMLSchema#": "xsd"
+    },
+    "@type": "odrl:Set",
+    "odrl:profile": "https://cdif.org/odrl:profile:SSH-OpenSSH",
+    "odrl:uid": "https://cdif.org/odrl/policy/ssh-openssh-1995",
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:use",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ],
+            "odrl:target": "spdx:OpenSSH_Software_Asset"
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:copy",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ],
+            "odrl:target": "spdx:OpenSSH_Software_Asset"
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:modify",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ],
+            "odrl:target": "spdx:OpenSSH_Software_Asset"
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:reproduce",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ],
+            "odrl:target": "spdx:OpenSSH_Software_Asset"
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:distribute",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ],
+            "odrl:target": "spdx:OpenSSH_Software_Asset"
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:sublicense",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ],
+            "odrl:target": "spdx:OpenSSH_Software_Asset"
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:merge",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ],
+            "odrl:target": "spdx:OpenSSH_Software_Asset"
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:publish",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:derivedWorkNotice"
+                    ]
+                }
+            ],
+            "odrl:target": "spdx:OpenSSH_Software_Asset"
+        }
+    ]
+}

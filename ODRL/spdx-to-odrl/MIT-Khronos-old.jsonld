@@ -1,0 +1,43 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdf",
+        "http://www.w3.org/XML/1999/XMLSchema#": "xsd"
+    },
+    "@type": "odrl:Policy",
+    "odrl:uid": "https://cdif.org/odrl/policy/mit-khronos-old",
+    "odrl:profile": "https://cdif.org/odrl:profile/MIT-Khronos-old",
+    "odrl:permission": [
+        {
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ],
+            "odrl:action": [
+                "odrl:use",
+                "odrl:copy",
+                "odrl:modify",
+                "cdif:merge",
+                "odrl:publish",
+                "odrl:distribute",
+                "odrl:sublicense",
+                "odrl:sell"
+            ],
+            "odrl:target": "spdx:MIT-Khronos-old.html"
+        }
+    ]
+}

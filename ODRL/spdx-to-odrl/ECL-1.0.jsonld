@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Set",
+  "uid": "https://cdif.org/policy/ECL-1.0",
+  "profile": "https://cdif.org/odrl:profile:ECL-1.0",
+  "permission": [
+    {
+      "target": "spdx:OriginalWork",
+      "action": "odrl:use",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:educationalCommunityLicenseText",
+            "cdif:preExistingDisclaimers",
+            "cdif:modificationNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:OriginalWork",
+      "action": "odrl:copy",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:educationalCommunityLicenseText",
+            "cdif:preExistingDisclaimers",
+            "cdif:modificationNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:OriginalWork",
+      "action": "odrl:modify",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:educationalCommunityLicenseText",
+            "cdif:preExistingDisclaimers",
+            "cdif:modificationNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:OriginalWork",
+      "action": "cdif:merge",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:educationalCommunityLicenseText",
+            "cdif:preExistingDisclaimers",
+            "cdif:modificationNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:OriginalWork",
+      "action": "odrl:publish",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:educationalCommunityLicenseText",
+            "cdif:preExistingDisclaimers",
+            "cdif:modificationNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:OriginalWork",
+      "action": "odrl:distribute",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:educationalCommunityLicenseText",
+            "cdif:preExistingDisclaimers",
+            "cdif:modificationNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:OriginalWork",
+      "action": "odrl:sublicense",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:educationalCommunityLicenseText",
+            "cdif:preExistingDisclaimers",
+            "cdif:modificationNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:OriginalWork",
+      "action": "odrl:sell",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:educationalCommunityLicenseText",
+            "cdif:preExistingDisclaimers",
+            "cdif:modificationNotice"
+          ]
+        }
+      ]
+    }
+  ]
+}

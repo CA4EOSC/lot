@@ -1,0 +1,117 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Agreement",
+    "profile": "https://cdif.org/odrl:profile:RSCPL",
+    "assigner": "http://example.com/rsv:Ricoh Silicon Valley, Inc.",
+    "assignee": "http://example.com/user:You",
+    "target": "spdx:RSCPL.html",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RSCPL.html",
+            "assigner": "http://example.com/rsv:Ricoh Silicon Valley, Inc.",
+            "assignee": "http://example.com/user:You",
+            "action": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:use"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:reproduce"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:modify"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:createDerivativeWork"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:display"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:perform"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:sublicense"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:distribute"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:sell"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:make"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:practice"
+                }
+            ],
+            "duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:makeSourceAvailable",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:availabilityPeriod",
+                            "operator": "odrl:ge",
+                            "rightOperand": {
+                                "@value": "12",
+                                "@type": "xsd:integer"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:SourceCodeAvailability"
+                    ]
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:includeLegalFile",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:claimExists",
+                            "operator": "odrl:eq",
+                            "rightOperand": "true"
+                        }
+                    ],
+                    "target": [
+                        "cdif:LEGAL"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,151 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "schema": "http://schema.org/"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/lgpl-3.0-or-later",
+    "profile": "https://cdif.org/odrl:profile:LGPL-3.0-or-later",
+    "target": "spdx:LGPL-3.0-or-later.html",
+    "dcterms:description": "GNU Lesser General Public License Version 3, 29 June 2007. Grants broad rights to use, modify, and distribute covered works while maintaining copyleft principles.",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0-or-later.html",
+            "action": "odrl:copy",
+            "assignee": "http://example.com/user:all"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0-or-later.html",
+            "action": "odrl:distribute",
+            "assignee": "http://example.com/user:all"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0-or-later.html",
+            "action": "odrl:modify",
+            "assignee": "http://example.com/user:all"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0-or-later.html",
+            "action": "odrl:use",
+            "assignee": "http://example.com/user:all"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0-or-later.html",
+            "action": "cdif:merge",
+            "assignee": "http://example.com/user:all"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0-or-later.html",
+            "action": "odrl:recombine",
+            "assignee": "http://example.com/user:all"
+        }
+    ],
+    "prohibition": [
+        {
+            "@type": "odrl:Prohibition",
+            "target": "spdx:LGPL-3.0-or-later.html",
+            "action": "odrl:modify",
+            "assignee": "http://example.com/user:all",
+            "description": "Verbatim copies of the license document may be distributed, but the license text itself cannot be changed."
+        },
+        {
+            "@type": "odrl:Prohibition",
+            "target": "spdx:LGPL-3.0-or-later.html",
+            "action": "odrl:imposeRestriction",
+            "assignee": "http://example.com/user:all",
+            "description": "Cannot impose further restrictions on the rights granted by this License."
+        }
+    ],
+    "obligation": [
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:LGPL-3.0-or-later.html",
+            "description": "Provide prominent notice when conveying object code or combined works.",
+            "duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:provideNotice",
+                    "constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:isObjectCode",
+                            "operator": "odrl:implies",
+                            "rightOperand": "cdif:requiresNotice"
+                        },
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:isCombinedWork",
+                            "operator": "odrl:implies",
+                            "rightOperand": "cdif:requiresNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:prominentNoticeOfLibraryUse"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:LGPL-3.0-or-later.html",
+            "description": "Accompanying documentation requirements.",
+            "duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:includeDocumentation",
+                    "constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:isConveyed",
+                            "operator": "odrl:implies",
+                            "rightOperand": "cdif:requiresLicenseCopies"
+                        }
+                    ],
+                    "target": [
+                        "cdif:GNU_GPL_copy",
+                        "cdif:LGPL_copy"
+                    ]
+                },
+                {
+                    "@type": "odrl:Constraint",
+                    "leftOperand": "cdif:isObjectCode",
+                    "operator": "odrl:implies",
+                    "rightOperand": "cdif:requiresCorrespondingSource"
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:LGPL-3.0-or-later.html",
+            "description": "Installation Information requirement for User Products.",
+            "duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:provideInstallationInfo",
+                    "constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:isObjectCodeInUserProduct",
+                            "operator": "odrl:implies",
+                            "rightOperand": "cdif:requiresInstallationInfo"
+                        }
+                    ],
+                    "target": [
+                        "cdif:InstallationInformation"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Offer",
+  "uid": "http://example.com/policy:FSFULLR",
+  "profile": "https://cdif.org/odrl:profile:FSFULLR",
+  "permission": [
+    {
+      "target": "spdx:FSFULLR.html",
+      "action": "odrl:copy"
+    },
+    {
+      "target": "spdx:FSFULLR.html",
+      "action": "odrl:distribute"
+    },
+    {
+      "target": "spdx:FSFULLR.html",
+      "action": "odrl:modify"
+    }
+  ],
+  "duty": [
+    {
+      "action": "cdif:includeNotice",
+      "constraint": [
+        {
+          "leftOperand": "cdif:scope",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:copyOrSubstantialPortions"
+        }
+      ],
+      "target": [
+        "cdif:copyrightNotice",
+        "cdif:permissionNotice"
+      ]
+    }
+  ]
+}

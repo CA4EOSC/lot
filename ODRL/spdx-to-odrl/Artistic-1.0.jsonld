@@ -1,0 +1,190 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Offer",
+    "uid": "https://cdif.org/odrl/policy/Artistic-1.0",
+    "profile": "https://cdif.org/odrl:profile:Artistic-1.0",
+    "assigner": "https://cdif.org/party/CopyrightHolder",
+    "permission": [
+        {
+            "target": "https://cdif.org/asset/ThePackage",
+            "assigner": "https://cdif.org/party/CopyrightHolder",
+            "assignee": "https://cdif.org/party/User",
+            "action": "odrl:use",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ],
+            "constraint": [
+                {
+                    "leftOperand": "cdif:pricing",
+                    "operator": "odrl:ne",
+                    "rightOperand": {
+                        "@value": "Package",
+                        "@type": "cdif:Package"
+                    }
+                }
+            ]
+        },
+        {
+            "target": "https://cdif.org/asset/ThePackage",
+            "assigner": "https://cdif.org/party/CopyrightHolder",
+            "assignee": "https://cdif.org/party/User",
+            "action": "odrl:reproduce",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "https://cdif.org/asset/ThePackage",
+            "assigner": "https://cdif.org/party/CopyrightHolder",
+            "assignee": "https://cdif.org/party/User",
+            "action": "odrl:modify",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:modifiedFile"
+                        }
+                    ],
+                    "target": [
+                        "cdif:modificationNotice"
+                    ]
+                }
+            ],
+            "constraint": [
+                {
+                    "leftOperand": "cdif:modificationNotice",
+                    "operator": "odrl:mustBePresent",
+                    "rightOperand": {
+                        "@value": "True",
+                        "@type": "xsd:boolean"
+                    }
+                }
+            ]
+        },
+        {
+            "target": "https://cdif.org/asset/ThePackage",
+            "assigner": "https://cdif.org/party/CopyrightHolder",
+            "assignee": "https://cdif.org/party/User",
+            "action": "cdif:merge",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "https://cdif.org/asset/ThePackage",
+            "assigner": "https://cdif.org/party/CopyrightHolder",
+            "assignee": "https://cdif.org/party/User",
+            "action": "odrl:publish",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "https://cdif.org/asset/ThePackage",
+            "assigner": "https://cdif.org/party/CopyrightHolder",
+            "assignee": "https://cdif.org/party/User",
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "https://cdif.org/asset/ThePackage",
+            "assigner": "https://cdif.org/party/CopyrightHolder",
+            "assignee": "https://cdif.org/party/User",
+            "action": "odrl:sell",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

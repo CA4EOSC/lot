@@ -1,0 +1,184 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/mpl-1.1",
+    "profile": "https://cdif.org/odrl:profile:MPL-1.1",
+    "target": "spdx:MPL-1.1.html",
+    "description": "Mozilla Public License Version 1.1, governing the use of Covered Code.",
+    "permission": [
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:use",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:reproduce",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:modify",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:display",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:perform",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:sublicense",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:distribute",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:sell",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:make",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:haveMade",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/initial-developer",
+            "action": "odrl:offerForSale",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:use",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:reproduce",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:modify",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:display",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:perform",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:sublicense",
+            "assignee": "http://example.com/you"
+        },
+        {
+            "target": "spdx:MPL-1.1.html",
+            "assigner": "http://example.com/contributor",
+            "action": "odrl:distribute",
+            "assignee": "http://example.com/you"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:sourceCodeAvailability",
+                    "operator": "odrl:ge",
+                    "rightOperand": {
+                        "@value": "12",
+                        "@type": "xsd:integer"
+                    }
+                }
+            ],
+            "target": [
+                "cdif:sourceCodeNotice",
+                "cdif:licenseCopy"
+            ]
+        },
+        {
+            "action": "cdif:documentModification",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:documentationFile",
+                    "operator": "odrl:eq",
+                    "rightOperand": "true"
+                }
+            ],
+            "target": [
+                "cdif:modificationDate",
+                "cdif:modificationDescription"
+            ]
+        },
+        {
+            "action": "cdif:includeLicenseCopy",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:sourceCodeDistribution",
+                    "operator": "odrl:eq",
+                    "rightOperand": "true"
+                }
+            ],
+            "target": [
+                "cdif:licenseCopy"
+            ]
+        },
+        {
+            "action": "cdif:includeNoticeInExecutable",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:executableDistribution",
+                    "operator": "odrl:eq",
+                    "rightOperand": "true"
+                }
+            ],
+            "target": [
+                "cdif:noticeInExecutable",
+                "cdif:sourceCodeAvailabilityNotice"
+            ]
+        }
+    ]
+}

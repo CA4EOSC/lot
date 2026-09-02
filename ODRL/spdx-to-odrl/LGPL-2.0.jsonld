@@ -1,0 +1,139 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "jsonld": "http://www.w3.org/ns/json-ld#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy:LGPL-2.0",
+    "profile": "https://cdif.org/odrl:profile:LGPL-2.0",
+    "target": "spdx:LGPL-2.0.html",
+    "assigner": "http://example.com/org:FreeSoftwareFoundationInc",
+    "description": "GNU Library General Public License Version 2, governing use, distribution, and modification of free software libraries.",
+    "permission": [
+        {
+            "target": "spdx:LGPL-2.0.html",
+            "assigner": "http://example.com/org:FreeSoftwareFoundationInc",
+            "action": "odrl:copy",
+            "description": "Right to copy verbatim copies of the library source code."
+        },
+        {
+            "target": "spdx:LGPL-2.0.html",
+            "assigner": "http://example.com/org:FreeSoftwareFoundationInc",
+            "action": "odrl:distribute",
+            "description": "Right to distribute copies of the library and modified works."
+        },
+        {
+            "target": "spdx:LGPL-2.0.html",
+            "assigner": "http://example.com/org:FreeSoftwareFoundationInc",
+            "action": "odrl:modify",
+            "description": "Right to modify the library or any portion of it."
+        },
+        {
+            "target": "spdx:LGPL-2.0.html",
+            "assigner": "http://example.com/org:FreeSoftwareFoundationInc",
+            "action": "cdif:merge",
+            "description": "Right to merge the library with other works (forming a derivative work)."
+        },
+        {
+            "target": "spdx:LGPL-2.0.html",
+            "assigner": "http://example.com/org:FreeSoftwareFoundationInc",
+            "action": "odrl:sublicense",
+            "description": "Right to sublicense the work, provided the terms of this license are maintained."
+        },
+        {
+            "target": "spdx:LGPL-2.0.html",
+            "assigner": "http://example.com/org:FreeSoftwareFoundationInc",
+            "action": "odrl:use",
+            "description": "Right to use the library in applications (work that uses the library)."
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:LGPL-2.0.html",
+            "assigner": "http://example.com/org:FreeSoftwareFoundationInc",
+            "assignee": "http://example.com/person:Recipient",
+            "action": "cdif:fulfillLicenseTerms",
+            "duty": [
+                {
+                    "action": "cdif:provideSourceCode",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:sourceCodeAvailability",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:mustBeAvailable"
+                        }
+                    ]
+                },
+                {
+                    "action": "cdif:preserveNotices",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeIntegrity",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:mustBeIntact"
+                        }
+                    ]
+                },
+                {
+                    "action": "cdif:provideLicenseCopy",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:licenseCopy",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:mustBeDistributed"
+                        }
+                    ]
+                },
+                {
+                    "action": "cdif:markModification",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:modificationNotice",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:mustBeProminent"
+                        }
+                    ]
+                },
+                {
+                    "action": "cdif:licenseWholeWork",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:licensingScope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:noChargeToThirdParties"
+                        }
+                    ]
+                },
+                {
+                    "action": "cdif:provideObjectCodeAndSource",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:distributionMedium",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:mustIncludeSourceCode"
+                        }
+                    ]
+                },
+                {
+                    "action": "cdif:offerSourceCodeAccess",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:offerDuration",
+                            "operator": "odrl:ge",
+                            "rightOperand": {
+                                "@value": "3",
+                                "@type": "xsd:integer"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

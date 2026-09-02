@@ -1,0 +1,90 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/"
+    },
+    "@type": "Policy",
+    "profile": "https://cdif.org/odrl:profile:CC-BY-ND-3.0-DE",
+    "target": "spdx:CC-BY-ND-3.0-DE.html",
+    "permission": [
+        {
+            "target": "spdx:CC-BY-ND-3.0-DE.html",
+            "assigner": "http://example.com/rights_holder",
+            "assignee": "http://example.com/user",
+            "action": "cdif:use",
+            "duty": [
+                {
+                    "action": "cdif:retainNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:rightsNotice"
+                        }
+                    ],
+                    "target": ["cdif:attributionNotice", "cdif:licenseNotice"]
+                }
+            ]
+        },
+        {
+            "target": "spdx:CC-BY-ND-3.0-DE.html",
+            "assigner": "http://example.com/rights_holder",
+            "assignee": "http://example.com/user",
+            "action": "cdif:copy",
+            "duty": [
+                {
+                    "action": "cdif:retainNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:rightsNotice"
+                        }
+                    ],
+                    "target": ["cdif:attributionNotice", "cdif:licenseNotice"]
+                }
+            ]
+        },
+        {
+            "target": "spdx:CC-BY-ND-3.0-DE.html",
+            "assigner": "http://example.com/rights_holder",
+            "assignee": "http://example.com/user",
+            "action": "cdif:distribute",
+            "duty": [
+                {
+                    "action": "cdif:retainNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:rightsNotice"
+                        }
+                    ],
+                    "target": ["cdif:attributionNotice", "cdif:licenseNotice"]
+                }
+            ]
+        },
+        {
+            "target": "spdx:CC-BY-ND-3.0-DE.html",
+            "assigner": "http://example.com/rights_holder",
+            "assignee": "http://example.com/user",
+            "action": "cdif:publish",
+            "duty": [
+                {
+                    "action": "cdif:retainNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:rightsNotice"
+                        }
+                    ],
+                    "target": ["cdif:attributionNotice", "cdif:licenseNotice"]
+                }
+            ]
+        }
+    ]
+}

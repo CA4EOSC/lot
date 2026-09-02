@@ -1,0 +1,174 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/2200/0cc/": "dcif",
+        "http://www.w3.org/2001/XMLSchema#": "xsd"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "http://example.com/policy:soundex-license",
+    "odrl:profile": "https://cdif.org/odrl/profile/soundex",
+    "odrl:permission": [
+        {
+            "odrl:action": "odrl:use",
+            "odrl:target": "spdx:Soundex.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:changeNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:copy",
+            "odrl:target": "spdx:Soundex.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:changeNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:modify",
+            "odrl:target": "spdx:Soundex.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:changeNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "cdif:merge",
+            "odrl:target": "spdx:Soundex.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:changeNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:publish",
+            "odrl:target": "spdx:Soundex.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:changeNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:distribute",
+            "odrl:target": "spdx:Soundex.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:changeNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:sublicense",
+            "odrl:target": "spdx:Soundex.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:changeNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:sell",
+            "odrl:target": "spdx:Soundex.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:changeNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

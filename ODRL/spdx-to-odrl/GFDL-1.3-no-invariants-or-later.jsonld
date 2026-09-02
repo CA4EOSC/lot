@@ -1,0 +1,141 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:GFDL-1.3-no-invariants-or-later",
+    "profile": "https://cdif.org/odrl:profile:GFDL-1.3-no-invariants-or-later",
+    "target": "spdx:GFDL-1.3-no-invariants-or-later.html",
+    "assigner": "http://fsf.org/",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "action": "odrl:copy",
+            "description": "Permitted to copy and distribute verbatim copies of the license document."
+        },
+        {
+            "@type": "odrl:Permission",
+            "action": "odrl:distribute",
+            "description": "Permitted to distribute verbatim copies of the license document."
+        },
+        {
+            "@type": "odrl:Permission",
+            "action": "odrl:modify",
+            "description": "Permitted to modify the document, provided the Modified Version is released under this License."
+        },
+        {
+            "@type": "odrl:Permission",
+            "action": "cdif:merge",
+            "description": "Permitted to combine the Document with other documents released under this License."
+        },
+        {
+            "@type": "odrl:Permission",
+            "action": "odrl:publish",
+            "description": "Permitted to publish the Document."
+        },
+        {
+            "@type": "odrl:Permission",
+            "action": "odrl:sublicense",
+            "description": "Permitted to sublicense the Document."
+        },
+        {
+            "@type": "odrl:Permission",
+            "action": "odrl:sell",
+            "description": "Permitted to sell the Document."
+        }
+    ],
+    "obligation": [
+        {
+            "@type": "odrl:Obligation",
+            "description": "Mandatory requirements for distribution and modification of the Document.",
+            "duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:includeNotice",
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseNotice",
+                        "cdif:invariantSection",
+                        "cdif:historySection",
+                        "cdif:acknowledgementsSection",
+                        "cdif:dedicationsSection",
+                        "cdif:warrantyDisclaimer"
+                    ],
+                    "constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:action",
+                            "operator": "odrl:or",
+                            "rightOperand": {
+                                "@id": "odrl:copy"
+                            }
+                        },
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:action",
+                            "operator": "odrl:or",
+                            "rightOperand": {
+                                "@id": "odrl:modify"
+                            }
+                        },
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:action",
+                            "operator": "odrl:or",
+                            "rightOperand": {
+                                "@id": "cdif:distribute"
+                            }
+                        }
+                    ],
+                    "description": "Must reproduce the License, copyright notices, and the license notice applying to the Document in all copies."
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:preserveMetadata",
+                    "target": [
+                        "cdif:titlePage",
+                        "cdif:authorshipList",
+                        "cdif:publisherNotice"
+                    ],
+                    "constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:action",
+                            "operator": "odrl:eq",
+                            "rightOperand": {
+                                "@id": "odrl:modify"
+                            }
+                        }
+                    ],
+                    "description": "When modifying the Document, must preserve all copyright notices, list authors, and state the publisher."
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:preserveSections",
+                    "target": [
+                        "cdif:invariantSection",
+                        "cdif:historySection",
+                        "cdif:acknowledgementsSection",
+                        "cdif:dedicationsSection"
+                    ],
+                    "constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:action",
+                            "operator": "odrl:or",
+                            "rightOperand": {
+                                "@id": "odrl:modify"
+                            }
+                        }
+                    ],
+                    "description": "Must preserve all Invariant Sections, History, Acknowledgements, and Dedications, unaltered."
+                }
+            ]
+        }
+    ]
+}

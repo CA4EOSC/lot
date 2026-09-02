@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "odrl:Set",
+  "odrl:uid": "http://example.com/policy:dvipdfm",
+  "profile": "https://cdif.org/odrl/profile/dvipdfm",
+  "permission": [
+    {
+      "action": "odrl:distribute",
+      "target": "spdx:dvipdfm.html",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ],
+      "constraint": [
+        {
+          "leftOperand": "cdif:distributionName",
+          "operator": "odrl:neq",
+          "rightOperand": "spdx:dvipdfm.html"
+        },
+        {
+          "leftOperand": "cdif:distributionScope",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:completeAndUnchangedDistribution"
+        }
+      ]
+    },
+    {
+      "action": "odrl:modify",
+      "target": "spdx:dvipdfm.html",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ],
+      "constraint": [
+        {
+          "leftOperand": "cdif:distributionName",
+          "operator": "odrl:neq",
+          "rightOperand": "spdx:dvipdfm.html"
+        }
+      ]
+    }
+  ]
+}

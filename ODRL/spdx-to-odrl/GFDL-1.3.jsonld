@@ -1,0 +1,101 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl.jsonld": "odrl:",
+        "https://cdif.org/odrl/": "cdif:",
+        "https://spdx.org/licenses/": "spdx:",
+        "http://www.w3.org/2000/01/XMLSchema#": "xsd:",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:GFDL-1.3",
+    "profile": "https://cdif.org/odrl:profile:GFDL-1.3",
+    "target": "spdx:GFDL-1.3.html",
+    "permission": [
+        {
+            "target": "spdx:GFDL-1.3.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:GFDL-1.3.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:GFDL-1.3.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:GFDL-1.3.html",
+            "assigner": "http://fsf.org/",
+            "action": "cdif:merge"
+        },
+        {
+            "target": "spdx:GFDL-1.3.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:publish"
+        },
+        {
+            "target": "spdx:GFDL-1.3.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:sublicense"
+        },
+        {
+            "target": "spdx:GFDL-1.3.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:sell"
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:GFDL-1.3.html",
+            "assigner": "http://fsf.org/",
+            "action": "cdif:includeNotice",
+            "duty": [
+                {
+                    "action": "cdif:preserveNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:verbatimCopy"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:preserveNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:modifiedVersion"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:preserveNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:invariantSections"
+                        }
+                    ],
+                    "target": [
+                        "cdif:invariantSectionsList"
+                    ]
+                }
+            ]
+        }
+    ]
+}

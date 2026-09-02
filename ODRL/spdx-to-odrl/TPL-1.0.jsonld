@@ -1,0 +1,223 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "jsonld": "http://www.w3.org/ns/jsonld#"
+    },
+    "@type": "Policy",
+    "uid": "http://cdif.org/policy/TPL-1.0",
+    "profile": "https://cdif.org/odrl:profile:TPL-1.0",
+    "target": "spdx:TPL-1.0.html",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:TPL-1.0.html",
+            "assigner": "http://cdif.org/party/InitialDeveloper",
+            "assignee": "http://cdif.org/party/You",
+            "action": "odrl:use",
+            "duty": [
+                {
+                    "action": "cdif:includeLicenseCopy",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:SourceCodeDistribution"
+                        }
+                    ],
+                    "target": ["cdif:LicenseCopy"]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:TPL-1.0.html",
+            "assigner": "http://cdif.org/party/InitialDeveloper",
+            "assignee": "http://cdif.org/party/You",
+            "action": "odrl:reproduce",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:SourceCodeDistribution"
+                        }
+                    ],
+                    "target": ["cdif:OriginalCodeNotice"]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:TPL-1.0.html",
+            "assigner": "http://cdif.org/party/InitialDeveloper",
+            "assignee": "http://cdif.org/party/You",
+            "action": "odrl:modify",
+            "duty": [
+                {
+                    "action": "cdif:documentModification",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:ModificationCreation"
+                        }
+                    ],
+                    "target": ["cdif:ModificationFile"]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:TPL-1.0.html",
+            "assigner": "http://cdif.org/party/InitialDeveloper",
+            "assignee": "http://cdif.org/party/You",
+            "action": "odrl:display",
+            "duty": []
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:TPL-1.0.html",
+            "assigner": "http://cdif.org/party/InitialDeveloper",
+            "assignee": "http://cdif.org/party/You",
+            "action": "odrl:perform",
+            "duty": []
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:TPL-1.0.html",
+            "assigner": "http://cdif.org/party/InitialDeveloper",
+            "assignee": "http://cdif.org/party/You",
+            "action": "odrl:sublicense",
+            "duty": []
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:TPL-1.0.html",
+            "assigner": "http://cdif.org/party/InitialDeveloper",
+            "assignee": "http://cdif.org/party/You",
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "cdif:ensureSourceCodeAvailability",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:DistributionEvent"
+                        }
+                    ],
+                    "target": ["cdif:SourceCodeAvailabilityNotice"]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:TPL-1.0.html",
+            "assigner": "http://cdif.org/party/InitialDeveloper",
+            "assignee": "http://cdif.org/party/You",
+            "action": "odrl:sell",
+            "duty": []
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:TPL-1.0.html",
+            "assigner": "http://cdif.org/party/InitialDeveloper",
+            "assignee": "http://cdif.org/party/You",
+            "action": "odrl:make",
+            "duty": []
+        }
+    ],
+    "prohibition": [
+        {
+            "@type": "odrl:Prohibition",
+            "target": "spdx:TPL-1.0.html",
+            "assigner": "http://cdif.org/party/InitialDeveloper",
+            "assignee": "http://cdif.org/party/You",
+            "action": "odrl:alterLicenseTerms",
+            "remedy": [
+                {
+                    "action": "cdif:notifyComplianceFailure",
+                    "target": "http://cdif.org/notice/LicenseAlteration"
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Prohibition",
+            "target": "spdx:TPL-1.0.html",
+            "assigner": "http://cdif.org/party/InitialDeveloper",
+            "assignee": "http://cdif.org/party/You",
+            "action": "odrl:limitSourceCodeRights",
+            "remedy": [
+                {
+                    "action": "cdif:notifyComplianceFailure",
+                    "target": "http://cdif.org/notice/SourceCodeLimitation"
+                }
+            ]
+        }
+    ],
+    "obligation": [
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:TPL-1.0.html",
+            "assignee": "http://cdif.org/party/You",
+            "action": "cdif:ensureSourceCodeAvailability",
+            "duty": [
+                {
+                    "action": "cdif:maintainAvailability",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:DistributionEvent"
+                        }
+                    ],
+                    "target": ["cdif:SourceCodeAvailabilityNotice"]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:TPL-1.0.html",
+            "assignee": "http://cdif.org/party/You",
+            "action": "cdif:documentModification",
+            "duty": [
+                {
+                    "action": "cdif:includeDocumentation",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:ModificationCreation"
+                        }
+                    ],
+                    "target": ["cdif:ModificationFile"]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:TPL-1.0.html",
+            "assignee": "http://cdif.org/party/You",
+            "action": "cdif:includeNotice",
+            "duty": [
+                {
+                    "action": "cdif:duplicateNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:SourceCodeDistribution"
+                        }
+                    ],
+                    "target": ["cdif:OriginalCodeNotice"]
+                }
+            ]
+        }
+    ]
+}

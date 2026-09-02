@@ -1,0 +1,207 @@
+{
+  "@context": {
+    "http://www.w3.org/ns/odrl/2/": "odrl",
+    "https://cdif.org/odrl/": "cdif",
+    "https://spdx.org/licenses/": "spdx",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "odrl:Agreement",
+  "odrl:profile": "https://cdif.org/odrl:profile:APSL-2.0",
+  "odrl:uid": "http://example.com/policy:APSL-2.0",
+  "odrl:assigner": "http://example.com/apple:Apple Inc.",
+  "odrl:assignee": "http://example.com/user:You",
+  "odrl:obligation": [
+    {
+      "@type": "odrl:Obligation",
+      "target": "spdx:APSL-2.0.html",
+      "action": {
+        "@type": "odrl:action",
+        "odrl:rdf:value": {
+          "@id": "odrl:retainNotices"
+        }
+      },
+      "duty": [
+        {
+          "@type": "odrl:Duty",
+          "action": {
+            "@type": "odrl:action",
+            "odrl:rdf:value": {
+              "@id": "odrl:retainNotices"
+            }
+          },
+          "constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "odrl:retainNotices",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": {
+                "@value": "true",
+                "@type": "xsd:boolean"
+              }
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:proprietaryNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "odrl:Obligation",
+      "target": "spdx:APSL-2.0.html",
+      "action": {
+        "@type": "odrl:action",
+        "odrl:rdf:value": {
+          "@id": "odrl:includeLicenseCopy"
+        }
+      },
+      "duty": [
+        {
+          "@type": "odrl:Duty",
+          "action": {
+            "@type": "odrl:action",
+            "odrl:rdf:value": {
+              "@id": "odrl:includeLicenseCopy"
+            }
+          },
+          "constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:distributionEvent",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": {
+                "@value": "true",
+                "@type": "xsd:boolean"
+              }
+            }
+          ],
+          "target": [
+            "cdif:LicenseCopy"
+          ]
+        }
+      ]
+    }
+  ],
+  "permission": [
+    {
+      "@type": "odrl:Permission",
+      "target": "spdx:APSL-2.0.html",
+      "odrl:assigner": "http://example.com/apple:Apple Inc.",
+      "odrl:assignee": "http://example.com/user:You",
+      "odrl:action": [
+        {
+          "@type": "odrl:action",
+          "odrl:rdf:value": {
+            "@id": "odrl:use"
+          }
+        },
+        {
+          "@type": "odrl:action",
+          "odrl:rdf:value": {
+            "@id": "odrl:copy"
+          }
+        },
+        {
+          "@type": "odrl:action",
+          "odrl:rdf:value": {
+            "@id": "odrl:modify"
+          }
+        },
+        {
+          "@type": "odrl:action",
+          "odrl:rdf:value": {
+            "@id": "cdif:merge"
+          }
+        },
+        {
+          "@type": "odrl:action",
+          "odrl:rdf:value": {
+            "@id": "odrl:publish"
+          }
+        },
+        {
+          "@type": "odrl:action",
+          "odrl:rdf:value": {
+            "@id": "odrl:distribute"
+          }
+        },
+        {
+          "@type": "odrl:action",
+          "odrl:rdf:value": {
+            "@id": "odrl:sublicense"
+          }
+        },
+        {
+          "@type": "odrl:action",
+          "odrl:rdf:value": {
+            "@id": "odrl:sell"
+          }
+        },
+        {
+          "@type": "odrl:action",
+          "odrl:rdf:value": {
+            "@id": "odrl:display"
+          }
+        },
+        {
+          "@type": "odrl:action",
+          "odrl:rdf:value": {
+            "@id": "odrl:perform"
+          }
+        }
+      ],
+      "duty": [
+        {
+          "@type": "odrl:Duty",
+          "action": {
+            "@type": "odrl:action",
+            "odrl:rdf:value": {
+              "@id": "odrl:retainNotices"
+            }
+          },
+          "constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "odrl:retainNotices",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": {
+                "@value": "true",
+                "@type": "xsd:boolean"
+              }
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:proprietaryNotice"
+          ]
+        },
+        {
+          "@type": "odrl:Duty",
+          "action": {
+            "@type": "odrl:action",
+            "odrl:rdf:value": {
+              "@id": "odrl:includeLicenseCopy"
+            }
+          },
+          "constraint": [
+            {
+              "@type": "odrl:Constraint",
+              "odrl:leftOperand": "cdif:distributionEvent",
+              "odrl:operator": "odrl:eq",
+              "odrl:rightOperand": {
+                "@value": "true",
+                "@type": "xsd:boolean"
+              }
+            }
+          ],
+          "target": [
+            "cdif:LicenseCopy"
+          ]
+        }
+      ]
+    }
+  ]
+}

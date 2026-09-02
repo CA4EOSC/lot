@@ -1,0 +1,236 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl.jsonld": "odrl:",
+        "https://cdif.org/odrl/": "cdif:",
+        "https://spdx.org/licenses/": "spdx:",
+        "http://example.com/party": "party:",
+        "http://example.com/asset": "asset:",
+        "odrl:": "http://www.w3.org/ns/odrl/2/",
+        "cdif:": "https://cdif.org/odrl/",
+        "spdx:": "https://spdx.org/licenses/",
+        "rdfs:": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@type": "odrl:Set",
+    "uid": "http://example.com/policy:paratype-free-font-1.3",
+    "profile": "https://cdif.org/odrl:profile:ParaType-Free-Font-1.3",
+    "assigner": "http://example.com/party:ParaTypeLtd",
+    "permission": [
+        {
+            "target": "asset:paratype-free-font-1.3",
+            "action": "odrl:use",
+            "assigner": "http://example.com/party:ParaTypeLtd",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "asset:paratype-free-font-1.3",
+            "action": "odrl:copy",
+            "assigner": "http://example.com/party:ParaTypeLtd",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "asset:paratype-free-font-1.3",
+            "action": "odrl:modify",
+            "assigner": "http://example.com/party:ParaTypeLtd",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "asset:paratype-free-font-1.3",
+            "action": "cdif:merge",
+            "assigner": "http://example.com/party:ParaTypeLtd",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "asset:paratype-free-font-1.3",
+            "action": "odrl:publish",
+            "assigner": "http://example.com/party:ParaTypeLtd",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "asset:paratype-free-font-1.3",
+            "action": "odrl:distribute",
+            "assigner": "http://example.com/party:ParaTypeLtd",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "asset:paratype-free-font-1.3",
+            "action": "odrl:sublicense",
+            "assigner": "http://example.com/party:ParaTypeLtd",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "asset:paratype-free-font-1.3",
+            "action": "odrl:sell",
+            "assigner": "http://example.com/party:ParaTypeLtd",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "asset:paratype-free-font-1.3",
+            "action": "odrl:sell",
+            "assigner": "http://example.com/party:ParaTypeLtd",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:noSell"
+                }
+            ]
+        },
+        {
+            "target": "asset:paratype-free-font-1.3",
+            "action": "odrl:modify",
+            "assigner": "http://example.com/party:ParaTypeLtd",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:name",
+                    "operator": "odrl:ne",
+                    "rightOperand": "Original Name"
+                }
+            ]
+        }
+    ],
+    "obligation": [
+        {
+            "target": "asset:paratype-free-font-1.3",
+            "action": "cdif:includeNotice",
+            "assigner": "http://example.com/party:ParaTypeLtd",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,253 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Set",
+  "uid": "https://cdif.org/odrl/policy/sul-1.0",
+  "profile": "https://cdif.org/odrl:profile:SUL-1.0",
+  "permission": [
+    {
+      "target": "spdx:SUL-1.0.html",
+      "action": "odrl:use",
+      "assigner": "spdx:SUL-1.0.html",
+      "assignee": "spdx:SUL-1.0.html",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:nonCommercialOrInternalUse"
+        }
+      ],
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:licenseTermsNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:SUL-1.0.html",
+      "action": "odrl:copy",
+      "assigner": "spdx:SUL-1.0.html",
+      "assignee": "spdx:SUL-1.0.html",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:nonCommercialOrInternalUse"
+        }
+      ],
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:licenseTermsNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:SUL-1.0.html",
+      "action": "odrl:distribute",
+      "assigner": "spdx:SUL-1.0.html",
+      "assignee": "spdx:SUL-1.0.html",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:nonCommercialOrFreeOfCharge"
+        }
+      ],
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:licenseTermsNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:SUL-1.0.html",
+      "action": "odrl:makeAvailable",
+      "assigner": "spdx:SUL-1.0.html",
+      "assignee": "spdx:SUL-1.0.html",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:nonCommercialOrFreeOfCharge"
+        }
+      ],
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:licenseTermsNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:SUL-1.0.html",
+      "action": "odrl:modify",
+      "assigner": "spdx:SUL-1.0.html",
+      "assignee": "spdx:SUL-1.0.html",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:nonCommercialOrInternalUse"
+        },
+        {
+          "leftOperand": "cdif:noticeRetention",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:mustRetainOriginalNotices"
+        }
+      ],
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:modificationNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:SUL-1.0.html",
+      "action": "odrl:sell",
+      "assigner": "spdx:SUL-1.0.html",
+      "assignee": "spdx:SUL-1.0.html",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:nonCommercialOrInternalUse"
+        }
+      ],
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:licenseTermsNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:SUL-1.0.html",
+      "action": "odrl:offerForSale",
+      "assigner": "spdx:SUL-1.0.html",
+      "assignee": "spdx:SUL-1.0.html",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:nonCommercialOrInternalUse"
+        }
+      ],
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:licenseTermsNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:SUL-1.0.html",
+      "action": "odrl:import",
+      "assigner": "spdx:SUL-1.0.html",
+      "assignee": "spdx:SUL-1.0.html",
+      "constraint": [
+        {
+          "leftOperand": "cdif:purpose",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:nonCommercialOrInternalUse"
+        }
+      ],
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:licenseTermsNotice"
+          ]
+        }
+      ]
+    }
+  ]
+}

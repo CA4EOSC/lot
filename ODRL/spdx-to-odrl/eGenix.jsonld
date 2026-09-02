@@ -1,0 +1,197 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Offer",
+  "uid": "https://cdif.org/odrl/policy/eGenix-1.1.0",
+  "profile": "https://cdif.org/odrl:profile:eGenix",
+  "assigner": "eGenix.com Software, Skills and Services GmbH",
+  "permission": [
+    {
+      "target": "https://cdif.org/asset/eGenix-Software",
+      "action": "odrl:reproduce",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "https://cdif.org/asset/eGenix-Software",
+      "action": "odrl:analyze",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "https://cdif.org/asset/eGenix-Software",
+      "action": "odrl:test",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "https://cdif.org/asset/eGenix-Software",
+      "action": "odrl:perform",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "https://cdif.org/asset/eGenix-Software",
+      "action": "odrl:display",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "https://cdif.org/asset/eGenix-Software",
+      "action": "odrl:modify",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "https://cdif.org/asset/eGenix-Software",
+      "action": "cdif:merge",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "https://cdif.org/asset/eGenix-Software",
+      "action": "odrl:distribute",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "https://cdif.org/asset/eGenix-Software",
+      "action": "odrl:use",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    }
+  ]
+}

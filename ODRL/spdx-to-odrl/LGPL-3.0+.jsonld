@@ -1,0 +1,173 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "dc": "http://purl.org/dc/terms/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:lgpl-3.0+",
+    "profile": "https://cdif.org/odrl:profile:LGPL-3.0+",
+    "dc:description": "GNU Lesser General Public License Version 3, granting broad rights to use, copy, modify, and distribute covered works.",
+    "target": "spdx:LGPL-3.0+.html",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:use"
+            },
+            "assigner": "http://example.com/public"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:copy"
+            },
+            "assigner": "http://example.com/public"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:distribute"
+            },
+            "assigner": "http://example.com/public"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:modify"
+            },
+            "assigner": "http://example.com/public"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "cdif:merge"
+            },
+            "assigner": "http://example.com/public"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:publish"
+            },
+            "assigner": "http://example.com/public"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:sublicense"
+            },
+            "assigner": "http://example.com/public"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:sell"
+            },
+            "assigner": "http://example.com/public"
+        }
+    ],
+    "prohibition": [
+        {
+            "@type": "odrl:Prohibition",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:modify"
+            },
+            "assignee": "http://example.com/public",
+            "reason": "Modification of the license document itself is not allowed."
+        }
+    ],
+    "obligation": [
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:provideNotice"
+            },
+            "assignee": "http://example.com/public",
+            "constraint": [
+                {
+                    "@type": "Constraint",
+                    "leftOperand": {
+                        "@type": "odrl:Asset",
+                        "rdfs:label": "Object Code/Combined Work"
+                    },
+                    "operator": "odrl:implies",
+                    "rightOperand": {
+                        "@type": "odrl:Asset",
+                        "rdfs:label": "Prominent Notice of Use"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:conveySourceCode"
+            },
+            "assignee": "http://example.com/public",
+            "constraint": [
+                {
+                    "@type": "Constraint",
+                    "leftOperand": {
+                        "@type": "odrl:Asset",
+                        "rdfs:label": "Object Code Form"
+                    },
+                    "operator": "odrl:implies",
+                    "rightOperand": {
+                        "@type": "odrl:Asset",
+                        "rdfs:label": "Corresponding Source Code"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:LGPL-3.0+.html",
+            "action": {
+                "@type": "odrl:Action",
+                "odrl:includedIn": "odrl:includeLicenseCopy"
+            },
+            "assignee": "http://example.com/public",
+            "constraint": [
+                {
+                    "@type": "Constraint",
+                    "leftOperand": {
+                        "@type": "odrl:Asset",
+                        "rdfs:label": "Conveying Covered Work"
+                    },
+                    "operator": "odrl:implies",
+                    "rightOperand": {
+                        "@type": "odrl:Asset",
+                        "rdfs:label": "Copy of the GNU GPL and this License Document"
+                    }
+                }
+            ]
+        }
+    ]
+}

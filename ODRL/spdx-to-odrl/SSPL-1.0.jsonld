@@ -1,0 +1,98 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:sspl-1.0",
+    "profile": "https://cdif.org/odrl:profile:SSPL-1.0",
+    "description": "Server Side Public License Version 1.0, granting broad rights for use, modification, and distribution of covered works.",
+    "permission": [
+        {
+            "target": "spdx:SSPL-1.0.html",
+            "assigner": "MongoDB, Inc.",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:SSPL-1.0.html",
+            "assigner": "MongoDB, Inc.",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:SSPL-1.0.html",
+            "assigner": "MongoDB, Inc.",
+            "action": "odrl:run"
+        },
+        {
+            "target": "spdx:SSPL-1.0.html",
+            "assigner": "MongoDB, Inc.",
+            "action": "odrl:make"
+        },
+        {
+            "target": "spdx:SSPL-1.0.html",
+            "assigner": "MongoDB, Inc.",
+            "action": "odrl:propagate"
+        },
+        {
+            "target": "spdx:SSPL-1.0.html",
+            "assigner": "MongoDB, Inc.",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:SSPL-1.0.html",
+            "assigner": "MongoDB, Inc.",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:SSPL-1.0.html",
+            "assigner": "MongoDB, Inc.",
+            "action": "odrl:sell"
+        },
+        {
+            "target": "spdx:SSPL-1.0.html",
+            "assigner": "MongoDB, Inc.",
+            "action": "odrl:offerForSale"
+        },
+        {
+            "target": "spdx:SSPL-1.0.html",
+            "assigner": "MongoDB, Inc.",
+            "action": "odrl:import"
+        },
+        {
+            "target": "spdx:SSPL-1.0.html",
+            "assigner": "MongoDB, Inc.",
+            "action": "odrl:convey"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        },
+        {
+            "action": "cdif:makeAvailableAsService",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:sourceCodeAvailability",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:networkDownloadNoCharge"
+                }
+            ],
+            "target": [
+                "cdif:ServiceSourceCode"
+            ]
+        }
+    ]
+}

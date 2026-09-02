@@ -1,0 +1,184 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/OSET-PL-2.1",
+    "profile": "https://cdif.org/odrl:profile:OSET-PL-2.1",
+    "description": "The OSET Public License v.2.1 grants rights for use, reproduction, distribution, modification, and exploitation of Covered Software.",
+    "permission": [
+        {
+            "target": "spdx:OSET-PL-2.1.html",
+            "assigner": "http://example.com/OSET-Foundation",
+            "action": [
+                "odrl:use",
+                "odrl:reproduce",
+                "odrl:makeAvailable",
+                "odrl:modify",
+                "odrl:display",
+                "odrl:perform",
+                "odrl:distribute",
+                "odrl:exploit"
+            ],
+            "duty": [
+                {
+                    "action": "cdif:preserveNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyrightNotice"
+                        },
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:patentNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:patentNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:makeSourceCodeAvailable",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:distributionForm",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:executableForm"
+                        }
+                    ],
+                    "target": [
+                        "cdif:sourceCodeForm"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:OSET-PL-2.1.html",
+            "assigner": "http://example.com/OSET-Foundation",
+            "action": "odrl:make",
+            "duty": [
+                {
+                    "action": "cdif:preserveNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyrightNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:OSET-PL-2.1.html",
+            "assigner": "http://example.com/OSET-Foundation",
+            "action": "odrl:sell",
+            "duty": [
+                {
+                    "action": "cdif:preserveNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyrightNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:OSET-PL-2.1.html",
+            "assigner": "http://example.com/OSET-Foundation",
+            "action": "odrl:offerForSale",
+            "duty": [
+                {
+                    "action": "cdif:preserveNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyrightNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:OSET-PL-2.1.html",
+            "assigner": "http://example.com/OSET-Foundation",
+            "action": "odrl:haveMade",
+            "duty": [
+                {
+                    "action": "cdif:preserveNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyrightNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:OSET-PL-2.1.html",
+            "assigner": "http://example.com/OSET-Foundation",
+            "action": "odrl:import",
+            "duty": [
+                {
+                    "action": "cdif:preserveNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyrightNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:OSET-PL-2.1.html",
+            "assigner": "http://example.com/OSET-Foundation",
+            "action": "odrl:transfer",
+            "duty": [
+                {
+                    "action": "cdif:preserveNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyrightNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

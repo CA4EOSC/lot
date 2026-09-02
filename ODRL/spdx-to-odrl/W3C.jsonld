@@ -1,0 +1,139 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Set",
+  "uid": "http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231",
+  "profile": "https://cdif.org/odrl:profile:W3C",
+  "description": "W3C Software Notice and License. Grants permission to copy, modify, and distribute the software and documentation for any purpose, provided specific notices are included.",
+  "permission": [
+    {
+      "target": "spdx:W3C.software",
+      "action": "odrl:copy",
+      "assigner": "http://www.w3.org/",
+      "assignee": "http://www.w3.org/licensee",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        },
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:noticeOfChanges",
+            "cdif:preExistingDisclaimers"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:W3C.software",
+      "action": "odrl:modify",
+      "assigner": "http://www.w3.org/",
+      "assignee": "http://www.w3.org/licensee",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        },
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:noticeOfChanges",
+            "cdif:preExistingDisclaimers"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "spdx:W3C.software",
+      "action": "odrl:distribute",
+      "assigner": "http://www.w3.org/",
+      "assignee": "http://www.w3.org/licensee",
+      "duty": [
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        },
+        {
+          "action": "cdif:includeNotice",
+          "constraint": [
+            {
+              "leftOperand": "cdif:scope",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:copiesOrSubstantialPortions"
+            }
+          ],
+          "target": [
+            "cdif:noticeOfChanges",
+            "cdif:preExistingDisclaimers"
+          ]
+        }
+      ]
+    }
+  ],
+  "prohibition": [
+    {
+      "target": "spdx:W3C.software",
+      "action": "odrl:advertise",
+      "assigner": "http://www.w3.org/",
+      "assignee": "http://www.w3.org/licensee",
+      "remedy": [
+        {
+          "action": "cdif:mustObtainWrittenPermission",
+          "description": "Cannot use names and trademarks in advertising or publicity without specific, written prior permission."
+        }
+      ]
+    }
+  ]
+}

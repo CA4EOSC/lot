@@ -1,0 +1,45 @@
+{
+    "@context": {
+        "http://www.w3.org/2000/01/rdf-syntax-ns#": "rdf:",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs:",
+        "http://www.w3.org/ns/odrl/2/": "odrl:",
+        "https://cdif.org/odrl/": "cdif:",
+        "https://spdx.org/licenses/": "spdx:",
+        "http://www.w3.org/2001/XMLSchema#": "xsd:"
+    },
+    "@type": "odrl:Set",
+    "uid": "http://example.com/policy:public-domain-lzma-sdk",
+    "profile": "https://cdif.org/odrl:profile:LZMA-SDK-9.11-to-9.20",
+    "description": "LZMA SDK is placed in the public domain by Igor Pavlov, acknowledging contributions from PPMd var.H and SHA-256.",
+    "permission": [
+        {
+            "target": "spdx:LZMA-SDK-9.11-to-9.20.html",
+            "action": [
+                "odrl:use",
+                "odrl:copy",
+                "odrl:modify",
+                "cdif:merge",
+                "odrl:publish",
+                "odrl:distribute",
+                "odrl:sublicense",
+                "odrl:sell"
+            ],
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

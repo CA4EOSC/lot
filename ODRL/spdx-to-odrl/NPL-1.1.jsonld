@@ -1,0 +1,148 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Agreement",
+    "uid": "https://cdif.org/policy/NPL-1.1",
+    "profile": "https://cdif.org/odrl:profile:NPL-1.1",
+    "target": "spdx:NPL-1.1.html",
+    "description": "The Netscape Public License Version 1.1, governing rights for Covered Code.",
+    "permission": [
+        {
+            "target": "spdx:NPL-1.1.html",
+            "assigner": "http://www.mozilla.org/NPL/",
+            "action": "odrl:use",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:NPL-1.1.html",
+            "assigner": "http://www.mozilla.org/NPL/",
+            "action": "odrl:reproduce",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:NPL-1.1.html",
+            "assigner": "http://www.mozilla.org/NPL/",
+            "action": "odrl:modify",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:NPL-1.1.html",
+            "assigner": "http://www.mozilla.org/NPL/",
+            "action": "odrl:display",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:NPL-1.1.html",
+            "assigner": "http://www.mozilla.org/NPL/",
+            "action": "odrl:perform",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:NPL-1.1.html",
+            "assigner": "http://www.mozilla.org/NPL/",
+            "action": "odrl:sublicense",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:NPL-1.1.html",
+            "assigner": "http://www.mozilla.org/NPL/",
+            "action": "odrl:distribute",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:NPL-1.1.html",
+            "assigner": "http://www.mozilla.org/NPL/",
+            "action": "odrl:sell",
+            "assignee": "*"
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:NPL-1.1.html",
+            "assigner": "http://www.mozilla.org/NPL/",
+            "action": "odrl:use",
+            "assignee": "*",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:trademark",
+                    "operator": "odrl:not",
+                    "rightOperand": "cdif:trademarks_netscape_gecko_java"
+                }
+            ],
+            "description": "No rights granted to use Netscape, 'Netscape N and horizon' logo, 'Netscape lighthouse' logo, 'Netcenter', 'Gecko', 'Java', or 'JavaScript' trademarks."
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ],
+            "description": "Must duplicate the notice in Exhibit A in each file of the Source Code."
+        },
+        {
+            "action": "cdif:documentChanges",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:coveredCode"
+                }
+            ],
+            "target": [
+                "cdif:file_documentation"
+            ],
+            "description": "Must cause all Covered Code to contain a file documenting the changes and the date of any change."
+        },
+        {
+            "action": "cdif:preserveSourceAvailability",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:source_code_availability"
+                }
+            ],
+            "target": [
+                "cdif:source_code_version"
+            ],
+            "description": "Source Code must remain available for at least twelve (12) months after initial availability."
+        }
+    ],
+    "constraint": [
+        {
+            "description": "The Covered Code is provided on an 'AS IS' basis, without warranty of any kind.",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:warranty",
+                    "operator": "odrl:not",
+                    "rightOperand": "cdif:warranty_of_merchantability"
+                }
+            ]
+        },
+        {
+            "description": "The license terminates if the terms are not complied with and the breach is not cured within 30 days.",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:compliance_status",
+                    "operator": "odrl:neq",
+                    "rightOperand": "cdif:compliant"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Offer",
+    "uid": "https://cdif.org/odrl/policy/BSD-2-Clause-FreeBSD",
+    "profile": "https://cdif.org/odrl:profile:BSD-2-Clause-FreeBSD",
+    "target": "spdx:BSD-2-Clause-FreeBSD.html",
+    "permission": [
+        {
+            "target": "spdx:BSD-2-Clause-FreeBSD.html",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:BSD-2-Clause-FreeBSD.html",
+            "action": "odrl:reproduce"
+        },
+        {
+            "target": "spdx:BSD-2-Clause-FreeBSD.html",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:BSD-2-Clause-FreeBSD.html",
+            "action": "odrl:distribute"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copyOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        }
+    ]
+}
