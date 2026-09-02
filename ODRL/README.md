@@ -54,6 +54,19 @@ ollama run llama3.2-croissant
 ## Note on File Extensions
 Although these files have `.md` (Markdown) extensions to allow for easy reading and syntax highlighting of the embedded prompts on GitHub, they are fully valid Ollama Modelfiles containing the required `FROM`, `PARAMETER`, and `SYSTEM` directives.
 
+## Natural Language Policy Conversion
+
+In addition to automated SPDX license conversion, the framework provides a tool to convert arbitrary natural language policy descriptions into valid ODRL.
+
+The script `convert_description_to_odrl.py` accepts text descriptions and generates SHACL-compliant JSON-LD (using a generalized SHACL shape).
+
+**Example Usage (Copernicus Data Space):**
+```bash
+python convert_description_to_odrl.py copernicus --text "On Copernicus website there is a different kind of policy and user should create account first and after... if he wants to use some data with API, this user should open page with specific dataset and manually click to consent with conditions of usage. So there is manual interaction inside."
+```
+
+This will automatically extract the duties (e.g., `cdif:createAccount`, `cdif:consent`), structure them into an ODRL policy, run the self-healing SHACL loop, and save the result to `custom-policies/copernicus.jsonld`.
+
 ## SPDX to ODRL Conversion Pipeline
 
 This directory also contains the infrastructure for converting raw software licenses into machine-readable [ODRL (Open Digital Rights Language)](https://www.w3.org/TR/odrl-model/) policies compliant with the CDIF specification.
@@ -75,3 +88,4 @@ The validator ensures that every output policy perfectly adheres to our CDIF pro
 - The target MUST be a valid expanded IRI (e.g., `https://spdx.org/licenses/...`).
 - Every `odrl:permission` MUST include an `odrl:action` and at least one `odrl:duty`.
 - Constraints MUST use `odrl:eq` and map to valid right-operands like `cdif:copiesOrSubstantialPortions`.
+

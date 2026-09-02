@@ -1,0 +1,50 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Set",
+    "uid": "https://cdif.org/policy/copernicus-api-use",
+    "profile": "https://cdif.org/odrl:profile:copernicus",
+    "permission": [
+        {
+            "target": "https://cdif.org/dataset/copernicus",
+            "action": "odrl:use",
+            "assigner": "https://cdif.org/party/copernicus-owner",
+            "assignee": "https://cdif.org/party/api-user",
+            "duty": [
+                {
+                    "action": "cdif:createAccount",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:accountStatus",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:active"
+                        }
+                    ],
+                    "target": [
+                        "cdif:accountCreationNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:consent",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:interaction",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:manualClick"
+                        }
+                    ],
+                    "target": [
+                        "cdif:usageConditionsNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}
