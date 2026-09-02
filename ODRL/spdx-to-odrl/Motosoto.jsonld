@@ -1,0 +1,116 @@
+{
+    "@context": {
+        "http://www.w3.org/2001/XMLSchema#": "http://www.w3.org/2001/XMLSchema#",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "dc": "http://purl.org/dc/terms/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:motosoto-license-09-1",
+    "profile": "https://cdif.org/odrl:profile:Motosoto",
+    "target": "spdx:Motosoto.html",
+    "dc:description": "Motosoto Open Source License - Version 0.9.1. Grants broad rights for use, modification, and distribution of Licensed Product.",
+    "permission": [
+        {
+            "target": "spdx:Motosoto.html",
+            "action": "odrl:use",
+            "assigner": "http://example.com/org/motosoto-licensor",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:Motosoto.html",
+            "action": "odrl:copy",
+            "assigner": "http://example.com/org/motosoto-licensor",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:Motosoto.html",
+            "action": "odrl:modify",
+            "assigner": "http://example.com/org/motosoto-licensor",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:Motosoto.html",
+            "action": "odrl:display",
+            "assigner": "http://example.com/org/motosoto-licensor",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:Motosoto.html",
+            "action": "odrl:perform",
+            "assigner": "http://example.com/org/motosoto-licensor",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:Motosoto.html",
+            "action": "odrl:sublicense",
+            "assigner": "http://example.com/org/motosoto-licensor",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:Motosoto.html",
+            "action": "odrl:distribute",
+            "assigner": "http://example.com/org/motosoto-licensor",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:Motosoto.html",
+            "action": "odrl:sell",
+            "assigner": "http://example.com/org/motosoto-licensor",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:Motosoto.html",
+            "action": "cdif:merge",
+            "assigner": "http://example.com/org/motosoto-licensor",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:Motosoto.html",
+            "action": "odrl:publish",
+            "assigner": "http://example.com/org/motosoto-licensor",
+            "assignee": "*"
+        }
+    ],
+    "obligation": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:sourceCode",
+                    "operator": "odrl:mustContain",
+                    "rightOperand": "cdif:noticeFile"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:licenseCopy"
+            ]
+        },
+        {
+            "action": "cdif:makeAvailable",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:sourceCode",
+                    "operator": "odrl:mustBeAvailable",
+                    "rightOperand": "cdif:sourceCodeAvailabilityPeriod"
+                }
+            ],
+            "target": "spdx:Motosoto.html"
+        },
+        {
+            "action": "cdif:documentChanges",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:modificationFile",
+                    "operator": "odrl:mustBeIncluded",
+                    "rightOperand": "cdif:dateOfModification"
+                }
+            ],
+            "target": "spdx:Motosoto.html"
+        }
+    ]
+}

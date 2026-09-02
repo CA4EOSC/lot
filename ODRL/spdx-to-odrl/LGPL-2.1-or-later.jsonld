@@ -1,0 +1,123 @@
+{
+    "@context": {
+        "http://www.w3.org/2001/XMLSchema#": "http://www.w3.org/2001/XMLSchema#",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:LGPL-2.1-or-later",
+    "profile": "https://cdif.org/odrl:profile:LGPL-2.1-or-later",
+    "permission": [
+        {
+            "target": "spdx:LGPL-2.1-or-later.html",
+            "assigner": "http://example.com/free-software-foundation",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:LGPL-2.1-or-later.html",
+            "assigner": "http://example.com/free-software-foundation",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:LGPL-2.1-or-later.html",
+            "assigner": "http://example.com/free-software-foundation",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:LGPL-2.1-or-later.html",
+            "assigner": "http://example.com/free-software-foundation",
+            "action": "cdif:merge"
+        },
+        {
+            "target": "spdx:LGPL-2.1-or-later.html",
+            "assigner": "http://example.com/free-software-foundation",
+            "action": "odrl:publish"
+        },
+        {
+            "target": "spdx:LGPL-2.1-or-later.html",
+            "assigner": "http://example.com/free-software-foundation",
+            "action": "odrl:sublicense"
+        },
+        {
+            "target": "spdx:LGPL-2.1-or-later.html",
+            "assigner": "http://example.com/free-software-foundation",
+            "action": "odrl:sell"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:retainNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:noticeType",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copyrightNotice"
+                },
+                {
+                    "leftOperand": "cdif:noticeType",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:warrantyDisclaimer"
+                }
+            ],
+            "target": ["spdx:LGPL-2.1-or-later.html"]
+        },
+        {
+            "action": "cdif:provideSourceCode",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:distributionType",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:distributed"
+                }
+            ],
+            "target": ["spdx:LGPL-2.1-or-later.html"]
+        },
+        {
+            "action": "cdif:provideObjectFiles",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:linkingMethod",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:sharedLibrary"
+                }
+            ],
+            "target": ["spdx:LGPL-2.1-or-later.html"]
+        },
+        {
+            "action": "cdif:licenseWholeWork",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:licensingCost",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:free"
+                }
+            ],
+            "target": ["spdx:LGPL-2.1-or-later.html"]
+        },
+        {
+            "action": "cdif:maintainModificationNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:modificationStatus",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:modified"
+                }
+            ],
+            "target": ["spdx:LGPL-2.1-or-later.html"]
+        },
+        {
+            "action": "cdif:ensurePatentConsistency",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:patentLicense",
+                    "operator": "odrl:implies",
+                    "rightOperand": "cdif:fullFreedomOfUse"
+                }
+            ],
+            "target": ["spdx:LGPL-2.1-or-later.html"]
+        }
+    ]
+}

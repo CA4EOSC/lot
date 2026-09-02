@@ -1,0 +1,127 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Agreement",
+    "uid": "https://cdif.org/odrl/policy/OpenSSL",
+    "profile": "https://cdif.org/odrl:profile:OpenSSL",
+    "permission": [
+        {
+            "target": "spdx:OpenSSL.html",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:OpenSSL.html",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:OpenSSL.html",
+            "action": "odrl:distribute"
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:OpenSSL.html",
+            "action": "odrl:sublicense",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:licenseTerms",
+                    "operator": "odrl:ne",
+                    "rightOperand": "cdif:originalLicenseTerms"
+                }
+            ]
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:sourceCodeRedistribution"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:conditionList"
+            ]
+        },
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:binaryRedistribution"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:conditionList"
+            ]
+        },
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:advertisingMaterial"
+                }
+            ],
+            "target": [
+                "cdif:acknowledgementNotice",
+                "cdif:specificAcknowledgment"
+            ]
+        },
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:anyRedistribution"
+                }
+            ],
+            "target": [
+                "cdif:acknowledgementNotice",
+                "cdif:generalAcknowledgment"
+            ]
+        },
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:productUsage"
+                }
+            ],
+            "target": [
+                "cdif:attributionNotice",
+                "cdif:specificAttribution"
+            ]
+        },
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:codeUsage"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:originalCopyrightRetention"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Offer",
+  "uid": "https://cdif.org/odrl/policy/OGL-Canada-2.0",
+  "profile": "https://cdif.org/odrl:profile:OGL-Canada-2.0",
+  "assigner": "http://example.com/provider/Canada",
+  "assignee": "http://example.com/user/any",
+  "permission": [
+    {
+      "target": "http://example.com/asset/Information",
+      "action": "odrl:use"
+    },
+    {
+      "target": "http://example.com/asset/Information",
+      "action": "odrl:copy"
+    },
+    {
+      "target": "http://example.com/asset/Information",
+      "action": "odrl:modify"
+    },
+    {
+      "target": "http://example.com/asset/Information",
+      "action": "odrl:publish"
+    },
+    {
+      "target": "http://example.com/asset/Information",
+      "action": "odrl:translate"
+    },
+    {
+      "target": "http://example.com/asset/Information",
+      "action": "odrl:adapt"
+    },
+    {
+      "target": "http://example.com/asset/Information",
+      "action": "odrl:distribute"
+    }
+  ],
+  "duty": [
+    {
+      "action": "cdif:includeNotice",
+      "constraint": [
+        {
+          "leftOperand": "cdif:scope",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:copyOrSubstantialPortion"
+        }
+      ],
+      "target": [
+        "cdif:copyrightNotice",
+        "cdif:permissionNotice"
+      ]
+    }
+  ],
+  "prohibition": [
+    {
+      "target": "http://example.com/asset/Information",
+      "action": "odrl:use",
+      "assigner": "http://example.com/provider/Canada",
+      "assignee": "http://example.com/user/any",
+      "remedy": [
+        {
+          "action": "odrl:anonymize",
+          "target": "http://example.com/asset/Information"
+        }
+      ]
+    }
+  ],
+  "constraint": [
+    {
+      "leftOperand": "cdif:attribution",
+      "operator": "odrl:mustBeSatisfied",
+      "rightOperand": {
+        "@value": "Contains information licensed under the Open Government Licence – Canada.",
+        "@type": "xsd:string"
+      }
+    },
+    {
+      "leftOperand": "cdif:noPersonalData",
+      "operator": "odrl:eq",
+      "rightOperand": {
+        "@value": "false",
+        "@type": "xsd:boolean"
+      }
+    },
+    {
+      "leftOperand": "cdif:noIPRights",
+      "operator": "odrl:eq",
+      "rightOperand": {
+        "@value": "false",
+        "@type": "xsd:boolean"
+      }
+    }
+  ]
+}

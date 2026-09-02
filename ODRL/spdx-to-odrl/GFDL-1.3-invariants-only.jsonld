@@ -1,0 +1,177 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Agreement",
+    "uid": "http://example.com/policy:GFDL-1.3-invariants-only",
+    "profile": "https://cdif.org/odrl:profile:GFDL-1.3-invariants-only",
+    "assigner": "http://fsf.org/",
+    "target": "spdx:GFDL-1.3-invariants-only.html",
+    "obligation": [
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:GFDL-1.3-invariants-only.html",
+            "action": "odrl:reviewPolicy",
+            "assignee": "http://example.com/person:licensee"
+        }
+    ],
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GFDL-1.3-invariants-only.html",
+            "assigner": "http://fsf.org/",
+            "assignee": "http://example.com/person:licensee",
+            "action": "odrl:copy",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:reproduce",
+                            "operator": "odrl:and",
+                            "rightOperand": {
+                                "@id": "odrl:requiredNotice"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GFDL-1.3-invariants-only.html",
+            "assigner": "http://fsf.org/",
+            "assignee": "http://example.com/person:licensee",
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:reproduce",
+                            "operator": "odrl:and",
+                            "rightOperand": {
+                                "@id": "odrl:requiredNotice"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GFDL-1.3-invariants-only.html",
+            "assigner": "http://fsf.org/",
+            "assignee": "http://example.com/person:licensee",
+            "action": "odrl:modify",
+            "duty": [
+                {
+                    "action": "cdif:preserveStructure",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:preserve",
+                            "operator": "odrl:and",
+                            "rightOperand": {
+                                "@id": "odrl:requiredNotice"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:preserveCopyrightNotices",
+                        "cdif:preserveInvariantSections",
+                        "cdif:preserveCoverTexts",
+                        "cdif:preserveHistorySection"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GFDL-1.3-invariants-only.html",
+            "assigner": "http://fsf.org/",
+            "assignee": "http://example.com/person:licensee",
+            "action": "cdif:merge",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:includeAll",
+                            "operator": "odrl:and",
+                            "rightOperand": {
+                                "@id": "odrl:requiredNotice"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:preserveInvariantSections",
+                        "cdif:preserveWarrantyDisclaimers"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GFDL-1.3-invariants-only.html",
+            "assigner": "http://fsf.org/",
+            "assignee": "http://example.com/person:licensee",
+            "action": "odrl:sublicense",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:reproduce",
+                            "operator": "odrl:and",
+                            "rightOperand": {
+                                "@id": "odrl:requiredNotice"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GFDL-1.3-invariants-only.html",
+            "assigner": "http://fsf.org/",
+            "assignee": "http://example.com/person:licensee",
+            "action": "odrl:publish",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:reproduce",
+                            "operator": "odrl:and",
+                            "rightOperand": {
+                                "@id": "odrl:requiredNotice"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

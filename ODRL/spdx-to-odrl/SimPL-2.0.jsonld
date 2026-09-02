@@ -1,0 +1,305 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#": "rdf",
+        "http://www.w3.org/2200/01/rdf-schema#": "rdfs",
+        "http://www.w3.org/ns/shacl#": "sh"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "https://cdif.org/odrl/policy/simpl-2.0",
+    "odrl:profile": "https://cdif.org/odrl:profile:SimPL-2.0",
+    "odrl:target": "spdx:SimPL-2.0.html",
+    "odrl:permission": [
+        {
+            "odrl:action": "odrl:use",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:availabilityNotice",
+                        "cdif:licensePreservationNotice",
+                        "cdif:licenseTerms",
+                        "cdif:noticeOfChanges",
+                        "cdif:sourceCodeProvision"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:copy",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:availabilityNotice",
+                        "cdif:licensePreservationNotice",
+                        "cdif:licenseTerms",
+                        "cdif:noticeOfChanges",
+                        "cdif:sourceCodeProvision"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:distribute",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:availabilityNotice",
+                        "cdif:licensePreservationNotice",
+                        "cdif:licenseTerms",
+                        "cdif:noticeOfChanges",
+                        "cdif:sourceCodeProvision"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:modify",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:availabilityNotice",
+                        "cdif:licensePreservationNotice",
+                        "cdif:licenseTerms",
+                        "cdif:noticeOfChanges",
+                        "cdif:sourceCodeProvision"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:merge",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:availabilityNotice",
+                        "cdif:licensePreservationNotice",
+                        "cdif:licenseTerms",
+                        "cdif:noticeOfChanges",
+                        "cdif:sourceCodeProvision"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:publish",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:availabilityNotice",
+                        "cdif:licensePreservationNotice",
+                        "cdif:licenseTerms",
+                        "cdif:noticeOfChanges",
+                        "cdif:sourceCodeProvision"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:sublicense",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:availabilityNotice",
+                        "cdif:licensePreservationNotice",
+                        "cdif:licenseTerms",
+                        "cdif:noticeOfChanges",
+                        "cdif:sourceCodeProvision"
+                    ]
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:sell",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:derivedWork"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:availabilityNotice",
+                        "cdif:licensePreservationNotice",
+                        "cdif:licenseTerms",
+                        "cdif:noticeOfChanges",
+                        "cdif:sourceCodeProvision"
+                    ]
+                }
+            ]
+        }
+    ]
+}

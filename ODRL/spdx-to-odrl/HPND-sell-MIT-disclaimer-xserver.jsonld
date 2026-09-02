@@ -1,0 +1,52 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Offer",
+  "uid": "https://cdif.org/policy/hpnd-sell-mit-disclaimer-xserver",
+  "profile": "https://cdif.org/odrl:profile:HPND-sell-MIT-disclaimer-xserver",
+  "permission": [
+    {
+      "target": "https://cdif.org/asset/software-documentation",
+      "action": "odrl:use"
+    },
+    {
+      "target": "https://cdif.org/asset/software-documentation",
+      "action": "odrl:copy"
+    },
+    {
+      "target": "https://cdif.org/asset/software-documentation",
+      "action": "odrl:modify"
+    },
+    {
+      "target": "https://cdif.org/asset/software-documentation",
+      "action": "odrl:distribute"
+    },
+    {
+      "target": "https://cdif.org/asset/software-documentation",
+      "action": "odrl:sell"
+    }
+  ],
+  "duty": [
+    {
+      "action": "cdif:includeNotice",
+      "constraint": [
+        {
+          "leftOperand": "cdif:scope",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:copiesOrSubstantialPortions"
+        }
+      ],
+      "target": [
+        "cdif:copyrightNotice",
+        "cdif:permissionNotice"
+      ]
+    }
+  ]
+}

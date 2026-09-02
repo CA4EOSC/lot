@@ -1,0 +1,91 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "profile": "https://cdif.org/odrl:profile:CC-BY-SA-3.0-AT",
+    "target": "spdx:CC-BY-SA-3.0-AT.html",
+    "permission": [
+        {
+            "action": "odrl:use",
+            "description": "The right to use the protected subject matter in any form and quantity."
+        },
+        {
+            "action": "odrl:copy",
+            "description": "The right to reproduce the protected subject matter, including integration into collections."
+        },
+        {
+            "action": "odrl:modify",
+            "description": "The right to adapt or modify the protected subject matter, including translations."
+        },
+        {
+            "action": "cdif:merge",
+            "description": "The right to combine the protected subject matter with other works (merging)."
+        },
+        {
+            "action": "odrl:publish",
+            "description": "The right to publish or make available the protected subject matter or its modifications."
+        },
+        {
+            "action": "odrl:distribute",
+            "description": "The right to distribute the protected subject matter or its modifications."
+        },
+        {
+            "action": "odrl:sublicense",
+            "description": "The right to grant further licenses (subject to the terms of this license)."
+        },
+        {
+            "action": "odrl:sell",
+            "description": "The right to sell the protected subject matter or its modifications."
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:licenseNotice",
+                "cdif:attributionNotice"
+            ]
+        },
+        {
+            "action": "cdif:maintainLicenseTerms",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:all"
+                }
+            ],
+            "target": [
+                "cdif:licenseCopy",
+                "cdif:uri"
+            ]
+        },
+        {
+            "action": "cdif:ensureCompatibility",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:all"
+                }
+            ],
+            "target": [
+                "cdif:compatibleLicense"
+            ]
+        }
+    ]
+}

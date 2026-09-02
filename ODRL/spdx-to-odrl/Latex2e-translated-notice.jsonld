@@ -1,0 +1,88 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
+        "http://www.w3.org/ns/shacl#": "sh",
+        "http://www.w3.org/2001/XMLSchema#": "xsd"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "https://cdif.org/odrl/policy/latex2e-translated-notice",
+    "odrl:profile": "https://cdif.org/odrl:profile:Latex2e-translated-notice",
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:Latex2e-translated-notice.html",
+            "odrl:action": "odrl:copy",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": {
+                                "@value": "cdif:copiesOrSubstantialPortions",
+                                "@type": "xsd:string"
+                            }
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:Latex2e-translated-notice.html",
+            "odrl:action": "odrl:modify",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": {
+                                "@value": "cdif:copiesOrSubstantialPortions",
+                                "@type": "xsd:string"
+                            }
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:Latex2e-translated-notice.html",
+            "odrl:action": "odrl:translate",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": {
+                                "@value": "cdif:copiesOrSubstantialPortions",
+                                "@type": "xsd:string"
+                            }
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

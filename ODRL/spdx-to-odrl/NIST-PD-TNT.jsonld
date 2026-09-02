@@ -1,0 +1,150 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:nist-pd-tnt",
+    "profile": "https://cdif.org/odrl:profile:NIST-PD-TNT",
+    "permission": [
+        {
+            "odrl:action": "odrl:merge",
+            "odrl:target": "spdx:NIST-PD-TNT.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:redistributableWorks"
+                        }
+                    ],
+                    "odrl:target": "cdif:acknowledgementNotice"
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:copy",
+            "odrl:target": "spdx:NIST-PD-TNT.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:redistributableWorks"
+                        }
+                    ],
+                    "odrl:target": "cdif:acknowledgementNotice"
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:distribute",
+            "odrl:target": "spdx:NIST-PD-TNT.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:redistributableWorks"
+                        }
+                    ],
+                    "odrl:target": "cdif:acknowledgementNotice"
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:modify",
+            "odrl:target": "spdx:NIST-PD-TNT.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:redistributableWorks"
+                        }
+                    ],
+                    "odrl:target": "cdif:acknowledgementNotice"
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:publish",
+            "odrl:target": "spdx:NIST-PD-TNT.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:redistributableWorks"
+                        }
+                    ],
+                    "odrl:target": "cdif:acknowledgementNotice"
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:sell",
+            "odrl:target": "spdx:NIST-PD-TNT.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:redistributableWorks"
+                        }
+                    ],
+                    "odrl:target": "cdif:acknowledgementNotice"
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:sublicense",
+            "odrl:target": "spdx:NIST-PD-TNT.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:redistributableWorks"
+                        }
+                    ],
+                    "odrl:target": "cdif:acknowledgementNotice"
+                }
+            ]
+        },
+        {
+            "odrl:action": "odrl:use",
+            "odrl:target": "spdx:NIST-PD-TNT.html",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:redistributableWorks"
+                        }
+                    ],
+                    "odrl:target": "cdif:acknowledgementNotice"
+                }
+            ]
+        }
+    ]
+}

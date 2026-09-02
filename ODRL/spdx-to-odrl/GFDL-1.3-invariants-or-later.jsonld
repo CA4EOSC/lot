@@ -1,0 +1,67 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
+        "http://www.w3.org/2002/07/owl#": "owl",
+        "http://purl.org/dc/terms/": "dc"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:GFDL-1.3-invariants-or-later",
+    "profile": "https://cdif.org/odrl:profile:GFDL-1.3-invariants-or-later",
+    "target": "spdx:GFDL-1.3-invariants-or-later.html",
+    "description": "GNU Free Documentation License Version 1.3, 3 November 2008. Grants broad freedoms to copy, modify, and distribute, provided the license terms and notices are preserved.",
+    "permission": [
+        {
+            "assigner": "http://fsf.org/",
+            "target": "spdx:GFDL-1.3-invariants-or-later.html",
+            "action": [
+                "odrl:copy",
+                "odrl:distribute",
+                "odrl:modify",
+                "odrl:use",
+                "cdif:merge",
+                "cdif:publish",
+                "cdif:sublicense",
+                "cdif:sell"
+            ],
+            "duty": [
+                {
+                    "action": "cdif:preserveLicenseTerms",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:preserveNotice",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:licenseNotice"
+                        },
+                        {
+                            "leftOperand": "cdif:preserveCopyright",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyrightNotices"
+                        },
+                        {
+                            "leftOperand": "cdif:preserveInvariantSections",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:invariantSections"
+                        },
+                        {
+                            "leftOperand": "cdif:preserveCoverTexts",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:coverTexts"
+                        },
+                        {
+                            "leftOperand": "cdif:preserveWarrantyDisclaimers",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:warrantyDisclaimers"
+                        }
+                    ],
+                    "target": [
+                        "spdx:GFDL-1.3-invariants-or-later.html"
+                    ]
+                }
+            ]
+        }
+    ]
+}

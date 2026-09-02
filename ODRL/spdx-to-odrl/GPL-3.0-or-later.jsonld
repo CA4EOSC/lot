@@ -1,0 +1,135 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/ns/rdf": "rdf",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/GPL-3.0-or-later",
+    "profile": "https://cdif.org/odrl:profile:GPL-3.0-or-later",
+    "target": "spdx:GPL-3.0-or-later.html",
+    "description": "The GNU General Public License Version 3, guaranteeing freedom to share and change software.",
+    "permission": [
+        {
+            "target": "spdx:GPL-3.0-or-later.html",
+            "assigner": "https://fsf.org/",
+            "action": "odrl:copy",
+            "assignee": "http://any-user"
+        },
+        {
+            "target": "spdx:GPL-3.0-or-later.html",
+            "assigner": "https://fsf.org/",
+            "action": "odrl:distribute",
+            "assignee": "http://any-user"
+        },
+        {
+            "target": "spdx:GPL-3.0-or-later.html",
+            "assigner": "https://fsf.org/",
+            "action": "odrl:modify",
+            "assignee": "http://any-user"
+        },
+        {
+            "target": "spdx:GPL-3.0-or-later.html",
+            "assigner": "https://fsf.org/",
+            "action": "odrl:use",
+            "assignee": "http://any-user"
+        },
+        {
+            "target": "spdx:GPL-3.0-or-later.html",
+            "assigner": "https://fsf.org/",
+            "action": "odrl:merge",
+            "assignee": "http://any-user"
+        },
+        {
+            "target": "spdx:GPL-3.0-or-later.html",
+            "assigner": "https://fsf.org/",
+            "action": "odrl:publish",
+            "assignee": "http://any-user"
+        },
+        {
+            "target": "spdx:GPL-3.0-or-later.html",
+            "assigner": "https://fsf.org/",
+            "action": "odrl:sublicense",
+            "assignee": "http://any-user"
+        },
+        {
+            "target": "spdx:GPL-3.0-or-later.html",
+            "assigner": "https://fsf.org/",
+            "action": "odrl:sell",
+            "assignee": "http://any-user"
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:GPL-3.0-or-later.html",
+            "assigner": "https://fsf.org/",
+            "action": "odrl:restrict",
+            "assignee": "http://any-user",
+            "description": "Prohibits imposing further restrictions on the exercise of rights granted."
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:GPL-3.0-or-later.html",
+            "assigner": "https://fsf.org/",
+            "assignee": "http://any-user",
+            "obligation": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:provideSourceCode",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:sourceCodeAvailability",
+                            "operator": "odrl:mustBeAvailable",
+                            "rightOperand": "cdif:CorrespondingSource"
+                        }
+                    ],
+                    "target": [
+                        "cdif:CorrespondingSource"
+                    ]
+                },
+                {
+                    "action": "cdif:markChanges",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:modificationStatus",
+                            "operator": "odrl:neq",
+                            "rightOperand": "cdif:originalVersion"
+                        }
+                    ],
+                    "target": [
+                        "cdif:modifiedVersionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:provideInstallationInfo",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:userProductContext",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:UserProduct"
+                        }
+                    ],
+                    "target": [
+                        "cdif:InstallationInformation"
+                    ]
+                }
+            ]
+        }
+    ]
+}

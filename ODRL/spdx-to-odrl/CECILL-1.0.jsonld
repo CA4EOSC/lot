@@ -1,0 +1,70 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "dcterms": "http://purl.org/dc/terms/"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy:CECILL-1.0",
+    "profile": "https://cdif.org/odrl:profile:CECILL-1.0",
+    "target": "spdx:CECILL-1.0.html",
+    "description": "License granting the freedom of modification and redistribution for the software, subject to specific duties.",
+    "permission": [
+        {
+            "target": "spdx:CECILL-1.0.html",
+            "assigner": "http://example.com/author:CEA",
+            "assignee": "http://example.com/user:AnyUser",
+            "action": [
+                "odrl:use",
+                "odrl:copy",
+                "odrl:modify",
+                "cdif:merge",
+                "odrl:publish",
+                "odrl:distribute",
+                "odrl:sublicense",
+                "odrl:sell"
+            ],
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyOrSubstantialPortion"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:preserveIPNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeIntegrity",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:originalState"
+                        }
+                    ]
+                },
+                {
+                    "action": "cdif:provideSourceCodeAccess",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:distributionType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:objectCodeOnly"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

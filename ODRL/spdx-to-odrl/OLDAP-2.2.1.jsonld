@@ -1,0 +1,59 @@
+{
+    "@context": {
+        "http://www.w3.org/2001/XMLSchema#": "http://www.w3.org/2001/XMLSchema#",
+        "@vocab": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "dc": "http://purl.org/dc/terms/",
+        "rdfs": "http://www.w3.org/2000/0001/rdf-schema#"
+    },
+    "@type": "Set",
+    "odrl:uid": "https://cdif.org/odrl/policy/OLDAP-2.2.1",
+    "odrl:profile": "https://cdif.org/odrl:profile:OLDAP-2.2.1",
+    "dc:description": "The OpenLDAP Public License Version 2.2.1, granting rights for use, copy, modify, reproduce, and distribution of the Software.",
+    "dc:creator": "The OpenLDAP Foundation",
+    "dc:issued": "2000-03-01T00:00:00Z",
+    "odrl:permission": [
+        {
+            "odrl:target": "spdx:OLDAP-2.2.1.html",
+            "odrl:action": [
+                "odrl:use",
+                "odrl:copy",
+                "odrl:modify",
+                "odrl:reproduce",
+                "odrl:distribute"
+            ],
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseTextNotice"
+                    ]
+                },
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseTextNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

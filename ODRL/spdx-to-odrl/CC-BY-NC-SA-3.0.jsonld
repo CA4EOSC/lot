@@ -1,0 +1,124 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:CC-BY-NC-SA-3.0",
+    "profile": "https://cdif.org/odrl:profile:CC-BY-NC-SA-3.0",
+    "target": "spdx:CC-BY-NC-SA-3.0.html",
+    "description": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:CC-BY-NC-SA-3.0.html",
+            "assigner": "http://creativecommons.org/",
+            "action": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:use",
+                    "description": "General right to use the Work."
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:copy",
+                    "description": "Right to reproduce the Work (make copies)."
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:modify",
+                    "description": "Right to create Adaptations (modify the Work)."
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:distribute",
+                    "description": "Right to distribute the Work or Adaptations."
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:perform",
+                    "description": "Right to publicly perform the Work."
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:merge",
+                    "description": "Right to incorporate the Work into a Collection or Adaptation."
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:sublicense",
+                    "description": "Right to sublicense (Note: This right is restricted by the license)."
+                }
+            ],
+            "duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:includeNotice",
+                    "description": "Must keep intact all notices and provide required attribution.",
+                    "constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice",
+                        "cdif:attributionNotice"
+                    ]
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:enforceNonCommercial",
+                    "description": "The use must not be primarily intended for commercial advantage.",
+                    "constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:purpose",
+                            "operator": "odrl:neq",
+                            "rightOperand": "cdif:commercial"
+                        }
+                    ],
+                    "target": []
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "action": "cdif:requireSameLicense",
+                    "description": "Adaptations must be distributed under the same license elements (ShareAlike).",
+                    "constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "leftOperand": "cdif:licenseElements",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:Attribution-NonCommercial-ShareAlike"
+                        }
+                    ],
+                    "target": []
+                }
+            ],
+            "prohibition": [
+                {
+                    "@type": "odrl:Prohibition",
+                    "description": "Prohibits use for commercial advantage or private monetary compensation.",
+                    "action": "odrl:prohibitCommercialUse"
+                },
+                {
+                    "@type": "odrl:Prohibition",
+                    "description": "Prohibits imposing effective technological measures that restrict rights.",
+                    "action": "odrl:prohibitTechnologicalRestriction"
+                },
+                {
+                    "@type": "odrl:Prohibition",
+                    "description": "Prohibits sublicensing the Work.",
+                    "action": "odrl:prohibitSublicensing"
+                }
+            ]
+        }
+    ]
+}

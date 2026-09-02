@@ -1,0 +1,72 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/odrl:CC-BY-SA-3.0-DE",
+    "profile": "https://cdif.org/odrl:profile:CC-BY-SA-3.0-DE",
+    "target": "spdx:CC-BY-SA-3.0-DE.html",
+    "assigner": "http://example.com/original_rights_holder",
+    "assignee": "http://example.com/public",
+    "permission": [
+        {
+            "action": "odrl:use",
+            "description": "General right to use the protected work."
+        },
+        {
+            "action": "odrl:copy",
+            "description": "Right to reproduce or make copies (Vervielfältigen)."
+        },
+        {
+            "action": "odrl:modify",
+            "description": "Right to adapt or create derivative works (Abwandlungen)."
+        },
+        {
+            "action": "cdif:merge",
+            "description": "Right to combine the work into a collection or compilation (Sammelwerke)."
+        },
+        {
+            "action": "odrl:publish",
+            "description": "Right to publish or make available (Veröffentlichen)."
+        },
+        {
+            "action": "odrl:distribute",
+            "description": "Right to distribute or make available to the public (Verbreiten/Öffentlich Zeigen)."
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice",
+                "cdif:attributionNotice"
+            ]
+        },
+        {
+            "action": "cdif:retainLicense",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:entireWork"
+                }
+            ],
+            "target": [
+                "cdif:licenseCopy",
+                "cdif:uri"
+            ]
+        }
+    ]
+}

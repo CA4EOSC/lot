@@ -1,0 +1,80 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://purl.org/dc/terms/": "dc",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:rpl-1.5",
+    "profile": "https://cdif.org/odrl:profile:RPL-1.5",
+    "dc:description": "Reciprocal Public License 1.5 (RPL1.5) governing rights for use, modification, and distribution of software.",
+    "target": "spdx:RPL-1.5.html",
+    "permission": [
+        {
+            "target": "spdx:RPL-1.5.html",
+            "assigner": "http://example.com/org/licensor",
+            "action": [
+                "odrl:use",
+                "odrl:reproduce",
+                "odrl:modify",
+                "odrl:display",
+                "odrl:perform",
+                "odrl:sublicense",
+                "odrl:distribute"
+            ]
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:makeSourceCodeAvailable",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:timeWindow",
+                    "operator": "odrl:within",
+                    "rightOperand": "cdif:timePeriod"
+                }
+            ],
+            "target": "spdx:RPL-1.5.html",
+            "description": "Source code must be made available within one (1) month of deployment and remain available for no less than twelve (12) months."
+        },
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:allSourceCodeFiles"
+                }
+            ],
+            "target": "spdx:RPL-1.5.html",
+            "description": "Must duplicate the License Notice (EXHIBIT A) in every source code file distributed."
+        },
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:userVisibleDisplay"
+                }
+            ],
+            "target": "spdx:RPL-1.5.html",
+            "description": "Must duplicate the User-Visible Attribution Notice (EXHIBIT B) in every user-visible display."
+        },
+        {
+            "action": "cdif:documentModifications",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:allModifications"
+                }
+            ],
+            "target": "spdx:RPL-1.5.html",
+            "description": "Modifications must be documented in the Source Code, clearly describing additions, changes, or deletions."
+        }
+    ]
+}

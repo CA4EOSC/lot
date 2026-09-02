@@ -1,0 +1,57 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "spdx": "https://spdx.org/licenses/",
+    "cdif": "https://cdif.org/odrl/",
+    "@vocab": "http://www.w3.org/ns/odrl/2/",
+    "action": {"@type": "@id"},
+    "target": {"@type": "@id"},
+    "profile": {"@type": "@id"}
+  },
+  "@type": "Offer",
+  "uid": "https://cdif.org/odrl/policy/hdf5-license",
+  "profile": "https://cdif.org/odrl:profile:HDF5",
+  "description": "Non-exclusive, royalty-free perpetual license for HDF5 Software Library and Utilities.",
+  "permission": [
+    {
+      "target": "spdx:HDF5.html",
+      "action": "odrl:use"
+    },
+    {
+      "target": "spdx:HDF5.html",
+      "action": "odrl:modify"
+    },
+    {
+      "target": "spdx:HDF5.html",
+      "action": "odrl:reproduce"
+    },
+    {
+      "target": "spdx:HDF5.html",
+      "action": "cdif:merge"
+    },
+    {
+      "target": "spdx:HDF5.html",
+      "action": "odrl:distribute"
+    },
+    {
+      "target": "spdx:HDF5.html",
+      "action": "odrl:sublicense"
+    }
+  ],
+  "duty": [
+    {
+      "action": "cdif:includeNotice",
+      "constraint": [
+        {
+          "leftOperand": "cdif:scope",
+          "operator": "odrl:eq",
+          "rightOperand": "cdif:copyOrSubstantialPortion"
+        }
+      ],
+      "target": [
+        "cdif:copyrightNotice",
+        "cdif:permissionNotice"
+      ]
+    }
+  ]
+}

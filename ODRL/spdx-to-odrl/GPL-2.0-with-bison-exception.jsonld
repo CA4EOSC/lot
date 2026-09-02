@@ -1,0 +1,62 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Offer",
+    "uid": "https://cdif.org/policy/bison-exception",
+    "profile": "https://cdif.org/odrl:profile:GPL-2.0-with-bison-exception",
+    "assigner": "https://cdif.org/party/free-software-foundation",
+    "permission": [
+        {
+            "target": "spdx:GPL-2.0-with-bison-exception.html",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-bison-exception.html",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-bison-exception.html",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-bison-exception.html",
+            "action": "cdif:merge"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-bison-exception.html",
+            "action": "odrl:publish"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-bison-exception.html",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-bison-exception.html",
+            "action": "odrl:sublicense"
+        },
+        {
+            "target": "spdx:GPL-2.0-with-bison-exception.html",
+            "action": "odrl:sell"
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:GPL-2.0-with-bison-exception.html",
+            "action": "odrl:use",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:workType",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:parserGenerator"
+                }
+            ]
+        }
+    ]
+}

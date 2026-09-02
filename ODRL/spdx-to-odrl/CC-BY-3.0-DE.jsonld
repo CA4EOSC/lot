@@ -1,0 +1,43 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl.jsonld": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://purl.org/dc/terms/": "dc",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/odrl/policy:CC-BY-3.0-DE",
+    "profile": "https://cdif.org/odrl:profile:CC-BY-3.0-DE",
+    "target": "spdx:CC-BY-3.0-DE.html",
+    "description": "Creative Commons Namensnennung 3.0 Deutschland (CC-BY-DE)",
+    "permission": [{
+        "target": "spdx:CC-BY-3.0-DE.html",
+        "assigner": "http://example.com/creative-commons",
+        "action": [
+            "odrl:use",
+            "odrl:copy",
+            "odrl:modify",
+            "cdif:merge",
+            "odrl:publish",
+            "odrl:distribute",
+            "odrl:sublicense",
+            "odrl:sell"
+        ],
+        "duty": [{
+            "action": "cdif:includeNotice",
+            "constraint": [{
+                "leftOperand": "cdif:scope",
+                "operator": "odrl:eq",
+                "rightOperand": "cdif:copyOrSubstantialPortion"
+            }],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice",
+                "cdif:attributionNotice"
+            ]
+        }]
+    }]
+}

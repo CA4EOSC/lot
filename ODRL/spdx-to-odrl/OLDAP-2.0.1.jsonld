@@ -1,0 +1,106 @@
+{
+    "@context": {
+        "http://www.w3.org/2001/XMLSchema": "xsd",
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://purl.org/dc/terms/": "dc",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "http://example.com/policy:OLDAP-2.0.1",
+    "odrl:profile": "https://cdif.org/odrl:profile:OLDAP-2.0.1",
+    "dc:creator": "The OpenLDAP Foundation",
+    "dc:description": "The OpenLDAP Public License Version 2.0.1, governing redistribution and use of OpenLDAP software.",
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:OLDAP-2.0.1.html",
+            "odrl:action": [
+                "odrl:use",
+                "odrl:copy",
+                "odrl:modify",
+                "odrl:merge",
+                "odrl:publish",
+                "odrl:distribute",
+                "odrl:sublicense",
+                "odrl:sell"
+            ],
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "cdif:giveCredit",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:LeftOperand",
+                            "odrl:leftOperand": "cdif:source",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "http://www.openldap.org/"
+                        }
+                    ],
+                    "odrl:target": "cdif:attributionNotice"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:LeftOperand",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:binaryForm"
+                        }
+                    ],
+                    "odrl:target": "cdif:copyrightNotice, cdif:licenseText"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:LeftOperand",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:sourceCode"
+                        }
+                    ],
+                    "odrl:target": "cdif:copyrightNotice, cdif:licenseText"
+                }
+            ]
+        }
+    ],
+    "odrl:prohibition": [
+        {
+            "@type": "odrl:Prohibition",
+            "odrl:target": "spdx:OLDAP-2.0.1.html",
+            "odrl:action": [
+                "odrl:use"
+            ],
+            "odrl:constraint": [
+                {
+                    "@type": "odrl:LeftOperand",
+                    "odrl:leftOperand": "cdif:name",
+                    "odrl:operator": "odrl:eq",
+                    "odrl:rightOperand": "OpenLDAP"
+                }
+            ],
+            "odrl:description": "Products derived from this Software may not be called 'OpenLDAP' nor may 'OpenLDAP' appear in their names without prior written permission of the OpenLDAP Foundation."
+        },
+        {
+            "@type": "odrl:Prohibition",
+            "odrl:target": "spdx:OLDAP-2.0.1.html",
+            "odrl:action": [
+                "odrl:use"
+            ],
+            "odrl:constraint": [
+                {
+                    "@type": "odrl:LeftOperand",
+                    "odrl:leftOperand": "cdif:name",
+                    "odrl:operator": "odrl:eq",
+                    "odrl:rightOperand": "OpenLDAP"
+                }
+            ],
+            "odrl:description": "The name 'OpenLDAP' must not be used to endorse or promote products derived from this Software without prior written permission of the OpenLDAP Foundation."
+        }
+    ]
+}

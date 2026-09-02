@@ -1,0 +1,35 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/odrl.jsonld",
+        { "spdx": "https://spdx.org/licenses/" }
+    ],
+    "@type": "Set",
+    "uid": "https://cdif.org/policy:mit-license",
+    "profile": "https://cdif.org/odrl:profile:mit",
+    "permission": [
+        {
+            "target": "spdx:MIT.html",
+            "action": "use",
+            "assigner": "https://cdif.org/party:copyright-holders",
+            "assignee": "https://cdif.org/party:any-person",
+            "duty": [
+                {
+                    "action": "includeNotice",
+                    "target": "spdx:MIT.html",
+                    "assigner": "https://cdif.org/party:copyright-holders",
+                    "assignee": "https://cdif.org/party:any-person",
+                    "constraint": [
+                        {
+                            "leftOperand": "presence",
+                            "operator": "eq",
+                            "rightOperand": {
+                                "@value": "true",
+                                "@type": "xsd:boolean"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

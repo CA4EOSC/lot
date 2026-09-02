@@ -1,0 +1,98 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "profile": "https://cdif.org/odrl:profile:CC-BY-3.0-NL",
+    "target": "spdx:CC-BY-3.0-NL.html",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:CC-BY-3.0-NL.html",
+            "assigner": "http://example.com/licensor:CreativeCommons",
+            "action": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:use"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:copy"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:modify"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:merge"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:publish"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:distribute"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:sublicense"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:sell"
+                }
+            ]
+        }
+    ],
+    "duty": [
+        {
+            "@type": "odrl:Duty",
+            "action": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:includeNotice"
+                }
+            ],
+            "constraint": [
+                {
+                    "@type": "odrl:Constraint",
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        },
+        {
+            "@type": "odrl:Duty",
+            "action": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:attribute"
+                }
+            ],
+            "constraint": [
+                {
+                    "@type": "odrl:Constraint",
+                    "leftOperand": "cdif:attributionRequired",
+                    "operator": "odrl:eq",
+                    "rightOperand": "true"
+                }
+            ],
+            "target": [
+                "cdif:makerNotice",
+                "cdif:licensorNotice"
+            ]
+        }
+    ]
+}

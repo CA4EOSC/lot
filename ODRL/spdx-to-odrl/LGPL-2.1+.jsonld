@@ -1,0 +1,112 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:LGPL-2.1+",
+    "profile": "https://cdif.org/odrl:profile:LGPL-2.1+",
+    "target": "spdx:LGPL-2.1+.html",
+    "assigner": "http://example.com/org/FreeSoftwareFoundationInc",
+    "assignee": "http://example.com/person/AllUsers",
+    "permission": [
+        {
+            "target": "spdx:LGPL-2.1+.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundationInc",
+            "assignee": "http://example.com/person/AllUsers",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:LGPL-2.1+.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundationInc",
+            "assignee": "http://example.com/person/AllUsers",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:LGPL-2.1+.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundationInc",
+            "assignee": "http://example.com/person/AllUsers",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:LGPL-2.1+.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundationInc",
+            "assignee": "http://example.com/person/AllUsers",
+            "action": "cdif:link"
+        },
+        {
+            "target": "spdx:LGPL-2.1+.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundationInc",
+            "assignee": "http://example.com/person/AllUsers",
+            "action": "cdif:use"
+        }
+    ],
+    "duty": [
+        {
+            "description": "Duty to preserve notices and license copy upon distribution.",
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:noticeCheck",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:allNoticesIntact"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:licenseCopy"
+            ]
+        },
+        {
+            "description": "Duty to provide source code and object files upon distribution or modification.",
+            "action": "cdif:provideSourceCode",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:distributionType",
+                    "operator": "odrl:in",
+                    "rightOperand": [
+                        "cdif:objectCode",
+                        "cdif:executable"
+                    ]
+                }
+            ],
+            "target": [
+                "cdif:completeSourceCode",
+                "cdif:objectFiles"
+            ]
+        },
+        {
+            "description": "Duty to ensure the entire work remains free and licensed under the terms of this license.",
+            "action": "cdif:licenseWholeWork",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:licensingScope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:entireWork"
+                }
+            ],
+            "target": [
+                "cdif:noChargeToThirdParties"
+            ]
+        },
+        {
+            "description": "Duty to provide prominent notice when combining or linking the library.",
+            "action": "cdif:giveProminentNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:combinationMethod",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:linking"
+                }
+            ],
+            "target": [
+                "cdif:libraryUsedNotice",
+                "cdif:licenseCopy"
+            ]
+        }
+    ]
+}

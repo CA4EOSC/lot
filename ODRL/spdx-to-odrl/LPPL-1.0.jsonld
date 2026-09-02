@@ -1,0 +1,133 @@
+{
+    "@context": {
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://www.w3.org/2000/0001/XMLSchema#": "xsd",
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#": "rdf",
+        "http://www.w3.org/nwo/?": "odrl:profile"
+    },
+    "@type": "odrl:Policy",
+    "odrl:profile": "https://cdif.org/odrl/profile/LPPL-1.0",
+    "odrl:uid": "http://example.com/policy:LPPL-1.0",
+    "odrl:description": "The LaTeX Project Public License (LPPL) Version 1.0.",
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "spdx:LPPL-1.0.html",
+            "odrl:assigner": "http://example.com/latex-project",
+            "odrl:assignee": "http://example.com/all-users",
+            "odrl:action": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:use"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:copy"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:distribute"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:modify"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "cdif:merge"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:sublicense"
+                }
+            ],
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": {
+                        "@type": "odrl:Action",
+                        "odrl:action": "cdif:includeNotice"
+                    },
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": {
+                                "@type": "odrl:LeftOperand",
+                                "odrl:value": "cdif:scope"
+                            },
+                            "odrl:operator": {
+                                "@type": "odrl:Operator",
+                                "odrl:operator": "odrl:eq"
+                            },
+                            "odrl:rightOperand": {
+                                "@type": "odrl:RightOperand",
+                                "odrl:value": "cdif:copyOrSubstantialPortion"
+                            }
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": {
+                        "@type": "odrl:Action",
+                        "odrl:action": "cdif:preserveSource"
+                    },
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": {
+                                "@type": "odrl:LeftOperand",
+                                "odrl:value": "cdif:sourceAcknowledgment"
+                            },
+                            "odrl:operator": {
+                                "@type": "odrl:Operator",
+                                "odrl:operator": "odrl:mustAcknowledge"
+                            },
+                            "odrl:rightOperand": {
+                                "@type": "odrl:RightOperand",
+                                "odrl:value": "cdif:originalAuthorship"
+                            }
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:originalSource"
+                    ]
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": {
+                        "@type": "odrl:Action",
+                        "odrl:action": "cdif:maintainDistributionIntegrity"
+                    },
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": {
+                                "@type": "odrl:LeftOperand",
+                                "odrl:value": "cdif:completenessCheck"
+                            },
+                            "odrl:operator": {
+                                "@type": "odrl:Operator",
+                                "odrl:operator": "odrl:allPartsPresent"
+                            },
+                            "odrl:rightOperand": {
+                                "@type": "odrl:RightOperand",
+                                "odrl:value": "true"
+                            }
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:fullDistributionSet"
+                    ]
+                }
+            ]
+        }
+    ]
+}

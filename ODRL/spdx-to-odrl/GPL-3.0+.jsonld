@@ -1,0 +1,120 @@
+{
+    "@context": {
+        "jsonld": "http://www.w3.org/1999/10/bcp/rdf-syntax-ns#",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:GPL-3.0+",
+    "profile": "https://cdif.org/odrl:profile:GPL-3.0+",
+    "target": "spdx:GPL-3.0+.html",
+    "assigner": "http://example.com/org/free-software-foundation",
+    "assignee": "http://example.com/person/recipient",
+    "description": "The GNU General Public License Version 3, granting broad rights to use, modify, and distribute free software.",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GPL-3.0+.html",
+            "action": "odrl:copy",
+            "assigner": "http://example.com/org/free-software-foundation",
+            "assignee": "http://example.com/person/recipient"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GPL-3.0+.html",
+            "action": "odrl:distribute",
+            "assigner": "http://example.com/org/free-software-foundation",
+            "assignee": "http://example.com/person/recipient"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GPL-3.0+.html",
+            "action": "odrl:modify",
+            "assigner": "http://example.com/org/free-software-foundation",
+            "assignee": "http://example.com/person/recipient"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GPL-3.0+.html",
+            "action": "cdif:merge",
+            "assigner": "http://example.com/org/free-software-foundation",
+            "assignee": "http://example.com/person/recipient"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GPL-3.0+.html",
+            "action": "odrl:publish",
+            "assigner": "http://example.com/org/free-software-foundation",
+            "assignee": "http://example.com/person/recipient"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GPL-3.0+.html",
+            "action": "odrl:sublicense",
+            "assigner": "http://example.com/org/free-software-foundation",
+            "assignee": "http://example.com/person/recipient"
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:GPL-3.0+.html",
+            "action": "odrl:sell",
+            "assigner": "http://example.com/org/free-software-foundation",
+            "assignee": "http://example.com/person/recipient"
+        }
+    ],
+    "obligation": [
+        {
+            "@type": "odrl:Obligation",
+            "target": "spdx:GPL-3.0+.html",
+            "assigner": "http://example.com/org/free-software-foundation",
+            "assignee": "http://example.com/person/recipient",
+            "description": "Ensure the recipient receives the same freedoms and source code.",
+            "duty": [
+                {
+                    "action": "odrl:distribute",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:passOnFreedoms",
+                        "cdif:provideSourceCode"
+                    ]
+                },
+                {
+                    "action": "odrl:modify",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:modifiedVersion"
+                        }
+                    ],
+                    "target": [
+                        "cdif:markAsChanged"
+                    ]
+                },
+                {
+                    "action": "odrl:convey",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:objectCode"
+                        }
+                    ],
+                    "target": [
+                        "cdif:provideCorrespondingSource",
+                        "cdif:provideInstallationInformation"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:GFDL-1.3-or-later",
+    "profile": "https://cdif.org/odrl:profile:GFDL-1.3-or-later",
+    "target": "spdx:GFDL-1.3-or-later.html",
+    "description": "GNU Free Documentation License Version 1.3 or later. Grants broad rights to copy, modify, and distribute the Document, provided specific notices and conditions are maintained.",
+    "permission": [
+        {
+            "target": "spdx:GFDL-1.3-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:copy",
+            "assignee": "http://example.com/public"
+        },
+        {
+            "target": "spdx:GFDL-1.3-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:distribute",
+            "assignee": "http://example.com/public"
+        },
+        {
+            "target": "spdx:GFDL-1.3-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:modify",
+            "assignee": "http://example.com/public"
+        },
+        {
+            "target": "spdx:GFDL-1.3-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "cdif:merge",
+            "assignee": "http://example.com/public"
+        },
+        {
+            "target": "spdx:GFDL-1.3-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:sublicense",
+            "assignee": "http://example.com/public"
+        },
+        {
+            "target": "spdx:GFDL-1.3-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:use",
+            "assignee": "http://example.com/public"
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:GFDL-1.3-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:use",
+            "remedy": [
+                {
+                    "action": "cdif:includeNotice",
+                    "target": "spdx:GFDL-1.3-or-later.html",
+                    "description": "Must not use technical measures to obstruct or control the reading or further copying of the copies."
+                }
+            ],
+            "constraint": [
+                {
+                    "leftOperand": "cdif:technicalControl",
+                    "operator": "odrl:ne",
+                    "rightOperand": "http://example.com/none"
+                }
+            ]
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:GFDL-1.3-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "cdif:includeNotice",
+            "duty": [
+                {
+                    "action": "cdif:preserveNotice",
+                    "target": ["cdif:copyrightNotice", "cdif:licenseNotice"],
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:verbatimCopy"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:GFDL-1.3-or-later.html",
+            "assigner": "http://fsf.org/",
+            "action": "cdif:includeNotice",
+            "duty": [
+                {
+                    "action": "cdif:preserveNotice",
+                    "target": ["cdif:invariantSections", "cdif:coverTexts"],
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:modifiedVersion"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

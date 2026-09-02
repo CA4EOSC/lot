@@ -1,0 +1,192 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Agreement",
+    "profile": "https://cdif.org/odrl:profile:NPL-1.0",
+    "uid": "http://example.com/policy:NPL-1.0",
+    "assigner": "http://example.com/initialDeveloper:Netscape Communications Corporation",
+    "assignee": "http://example.com/licensee:You",
+    "permission": [
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/initialDeveloper:Netscape Communications Corporation",
+            "action": "odrl:use",
+            "description": "Right to use the Original Code or Modifications."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/initialDeveloper:Netscape Communications Corporation",
+            "action": "odrl:reproduce",
+            "description": "Right to reproduce the Original Code or Modifications."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/initialDeveloper:Netscape Communications Corporation",
+            "action": "odrl:modify",
+            "description": "Right to modify the Original Code or Modifications."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/initialDeveloper:Netscape Communications Corporation",
+            "action": "odrl:display",
+            "description": "Right to display the Original Code or Modifications."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/initialDeveloper:Netscape Communications Corporation",
+            "action": "odrl:perform",
+            "description": "Right to perform the Original Code or Modifications."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/initialDeveloper:Netscape Communications Corporation",
+            "action": "odrl:sublicense",
+            "description": "Right to sublicense the Original Code or Modifications."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/initialDeveloper:Netscape Communications Corporation",
+            "action": "odrl:distribute",
+            "description": "Right to distribute the Original Code or Modifications."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/initialDeveloper:Netscape Communications Corporation",
+            "action": "odrl:sell",
+            "description": "Right to sell the Original Code or Modifications."
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/licensee:You",
+            "action": "cdif:includeLicenseCopy",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:allCopies"
+                        }
+                    ],
+                    "target": [
+                        "cdif:licenseCopy",
+                        "cdif:noticeCopy"
+                    ]
+                }
+            ],
+            "description": "Must include a copy of the License with every distribution (Section 3.1)."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/licensee:You",
+            "action": "cdif:maintainSourceCodeAvailability",
+            "duty": [
+                {
+                    "action": "cdif:ensureAvailability",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:availabilityPeriod",
+                            "operator": "odrl:ge",
+                            "rightOperand": {
+                                "@value": "12",
+                                "@type": "xsd:integer"
+                            }
+                        }
+                    ],
+                    "target": "cdif:sourceCode"
+                }
+            ],
+            "description": "Must ensure Source Code remains available for at least 12 months (Section 3.2)."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/licensee:You",
+            "action": "cdif:documentModifications",
+            "duty": [
+                {
+                    "action": "cdif:documentChange",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:documentationRequired",
+                            "operator": "odrl:eq",
+                            "rightOperand": "true"
+                        }
+                    ],
+                    "target": "cdif:modificationFile"
+                }
+            ],
+            "description": "Must document changes and date of modification (Section 3.3)."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/licensee:You",
+            "action": "cdif:handleThirdPartyClaims",
+            "duty": [
+                {
+                    "action": "cdif:includeLegalFile",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:claimKnown",
+                            "operator": "odrl:eq",
+                            "rightOperand": "true"
+                        }
+                    ],
+                    "target": "cdif:legalFile"
+                }
+            ],
+            "description": "Must include a LEGAL file if third-party claims are known (Section 3.4)."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/licensee:You",
+            "action": "cdif:includeNotice",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeRequired",
+                            "operator": "odrl:eq",
+                            "rightOperand": "true"
+                        }
+                    ],
+                    "target": [
+                        "cdif:originalNotice",
+                        "cdif:licenseNotice"
+                    ]
+                }
+            ],
+            "description": "Must duplicate the notice in Exhibit A and include the License in documentation (Section 3.5)."
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/licensee:You",
+            "action": "cdif:restrictLicenseTerms",
+            "description": "Prohibits altering or restricting the applicable version of the License (Section 3.1)."
+        },
+        {
+            "target": "spdx:NPL-1.0.html",
+            "assigner": "http://example.com/licensee:You",
+            "action": "cdif:offerThirdPartyWarranties",
+            "description": "Prohibits offering warranties/support/indemnity on behalf of Initial Developer or Contributor (Section 3.5)."
+        }
+    ],
+    "failure": {
+        "consequence": [
+            {
+                "action": "cdif:terminateRights",
+                "description": "Failure to comply with terms results in automatic termination of rights (Section 8)."
+            }
+        ]
+    }
+}

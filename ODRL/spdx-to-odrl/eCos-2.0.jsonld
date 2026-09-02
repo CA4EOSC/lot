@@ -1,0 +1,73 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Offer",
+    "uid": "https://cdif.org/odrl/policy/eCos-2.0",
+    "profile": "https://cdif.org/odrl:profile:eCos-2.0",
+    "assigner": "http://example.com/party/RedHatInc",
+    "permission": [
+        {
+            "target": "spdx:eCos-2.0.html",
+            "assigner": "http://example.com/party/RedHatInc",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:eCos-2.0.html",
+            "assigner": "http://example.com/party/RedHatInc",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:eCos-2.0.html",
+            "assigner": "http://example.com/party/RedHatInc",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:eCos-2.0.html",
+            "assigner": "http://example.com/party/RedHatInc",
+            "action": "cdif:merge"
+        },
+        {
+            "target": "spdx:eCos-2.0.html",
+            "assigner": "http://example.com/party/RedHatInc",
+            "action": "odrl:publish"
+        },
+        {
+            "target": "spdx:eCos-2.0.html",
+            "assigner": "http://example.com/party/RedHatInc",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:eCos-2.0.html",
+            "assigner": "http://example.com/party/RedHatInc",
+            "action": "odrl:sublicense"
+        },
+        {
+            "target": "spdx:eCos-2.0.html",
+            "assigner": "http://example.com/party/RedHatInc",
+            "action": "odrl:sell"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copyOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        }
+    ]
+}

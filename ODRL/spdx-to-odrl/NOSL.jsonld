@@ -1,0 +1,59 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://cdif.org/policy:NOSL",
+    "profile": "https://cdif.org/odrl:profile:NOSL",
+    "description": "The Netizen Open Source License (NOSL) grants broad rights to use, modify, and distribute Covered Code.",
+    "permission": [{
+        "target": "spdx:NOSL.html",
+        "assigner": "http://cdif.org/party:InitialDeveloper",
+        "action": [
+            "odrl:use",
+            "odrl:reproduce",
+            "odrl:modify",
+            "odrl:display",
+            "odrl:perform",
+            "odrl:sublicense",
+            "odrl:distribute",
+            "odrl:sell",
+            "odrl:make",
+            "odrl:practice",
+            "odrl:offerForSale",
+            "odrl:disposeOf"
+        ],
+        "duty": [{
+            "action": "cdif:includeLicenseCopy",
+            "constraint": [{
+                "leftOperand": "cdif:distributionContext",
+                "operator": "odrl:eq",
+                "rightOperand": "cdif:mustIncludeLicense"
+            }],
+            "target": ["cdif:copyrightNotice", "cdif:permissionNotice"]
+        },
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [{
+                "leftOperand": "cdif:sourceCodeLocation",
+                "operator": "odrl:eq",
+                "rightOperand": "cdif:mustIncludeNotice"
+            }],
+            "target": ["cdif:originalCodeNotice"]
+        },
+        {
+            "action": "cdif:documentChanges",
+            "constraint": [{
+                "leftOperand": "cdif:modificationContext",
+                "operator": "odrl:eq",
+                "rightOperand": "cdif:mustDocumentChanges"
+            }],
+            "target": ["cdif:modificationFile"]
+        }]
+    }]
+}

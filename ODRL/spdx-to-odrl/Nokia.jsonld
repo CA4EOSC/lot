@@ -1,0 +1,121 @@
+{
+  "@context": {
+    "http://www.w3.org/ns/odrl.jsonld": "odrl",
+    "https://cdif.org/odrl/": "cdif",
+    "https://spdx.org/licenses/": "spdx",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "Policy",
+  "profile": "https://cdif.org/odrl:profile:Nokia",
+  "uid": "https://cdif.org/policy/nokia-open-source-license-v1.0a",
+  "description": "The Nokia Open Source License (NOKOS License) Version 1.0a, granting rights for use, modification, and distribution of Covered Software.",
+  "target": "spdx:Nokia.html",
+  "permission": [
+    {
+      "assigner": "http://example.com/nokia-corporation",
+      "assignee": "http://example.com/recipient-user",
+      "action": [
+        {
+          "rdf:value": {
+            "@id": "odrl:use"
+          }
+        },
+        {
+          "rdf:value": {
+            "@id": "odrl:reproduce"
+          }
+        },
+        {
+          "rdf:value": {
+            "@id": "odrl:modify"
+          }
+        },
+        {
+          "rdf:value": {
+            "@id": "odrl:display"
+          }
+        },
+        {
+          "rdf:value": {
+            "@id": "odrl:perform"
+          }
+        },
+        {
+          "rdf:value": {
+            "@id": "odrl:sublicense"
+          }
+        },
+        {
+          "rdf:value": {
+            "@id": "odrl:distribute"
+          }
+        },
+        {
+          "rdf:value": {
+            "@id": "odrl:sell"
+          }
+        }
+      ],
+      "duty": [
+        {
+          "action": "cdif:includeLicenseCopy",
+          "constraint": [
+            {
+              "leftOperand": "cdif:distributionMedium",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:sourceCodeDistribution"
+            }
+          ],
+          "target": [
+            "cdif:licenseDocument"
+          ]
+        },
+        {
+          "action": "cdif:ensureSourceCodeAvailability",
+          "constraint": [
+            {
+              "leftOperand": "cdif:availabilityPeriod",
+              "operator": "odrl:gte",
+              "rightOperand": {
+                "@value": "12",
+                "@type": "xsd:integer"
+              }
+            }
+          ],
+          "target": [
+            "cdif:sourceCodeVersion"
+          ]
+        },
+        {
+          "action": "cdif:documentModifications",
+          "constraint": [
+            {
+              "leftOperand": "cdif:documentationRequirement",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:modificationFilePresent"
+            }
+          ],
+          "target": [
+            "cdif:coveredSoftware"
+          ]
+        },
+        {
+          "action": "cdif:includeRequiredNotices",
+          "constraint": [
+            {
+              "leftOperand": "cdif:noticeRequirement",
+              "operator": "odrl:eq",
+              "rightOperand": "cdif:noticeMandatory"
+            }
+          ],
+          "target": [
+            "cdif:copyrightNotice",
+            "cdif:permissionNotice"
+          ]
+        }
+      ]
+    }
+  ]
+}

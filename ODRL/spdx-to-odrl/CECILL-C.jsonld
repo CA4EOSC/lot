@@ -1,0 +1,63 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:ceciil-c",
+    "profile": "https://cdif.org/odrl:profile:CECILL-C",
+    "target": "spdx:CECILL-C.html",
+    "permission": [
+        {
+            "assigner": "http://example.com/user:licensee",
+            "target": "spdx:CECILL-C.html",
+            "action": [
+                "odrl:use",
+                "odrl:copy",
+                "odrl:modify",
+                "cdif:merge",
+                "odrl:publish",
+                "odrl:distribute",
+                "odrl:sublicense",
+                "odrl:sell"
+            ],
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:retainSourceCodeAccess",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:accessPeriod",
+                            "operator": "odrl:gte",
+                            "rightOperand": {
+                                "@value": "distribution_period",
+                                "@type": "xsd:string"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:sourceCode",
+                        "cdif:modifiedSourceCode"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl.jsonld": "http://www.w3.org/ns/odrl/2/",
+        "https://cdif.org/odrl/": "https://cdif.org/odrl/",
+        "https://spdx.org/licenses/": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@type": "Policy",
+    "profile": "https://cdif.org/odrl:profile:mplus",
+    "uid": "https://cdif.org/odrl/policy/mplus-fonts",
+    "description": "Unlimited permission granted for use, copy, and distribution of MPLUS fonts.",
+    "permission": [
+        {
+            "target": "spdx:mplus.html",
+            "assigner": "http://example.com/assigner",
+            "action": [
+                "odrl:use",
+                "odrl:copy",
+                "odrl:distribute",
+                "odrl:modify"
+            ],
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

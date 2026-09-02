@@ -1,0 +1,60 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl.jsonld": "odrl",
+        "http://www.w3.org/ns/shacl#": "sh",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
+        "http://purl.org/dc/terms/": "dc",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif"
+    },
+    "@type": "odrl:Policy",
+    "odrl:uid": "https://cdif.org/odrl/policy/nsca-open-source-license",
+    "odrl:profile": "https://cdif.org/odrl/profile/nsca",
+    "dc:description": "NCSA Open Source License, granting broad rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.",
+    "odrl:permission": [
+        {
+            "odrl:action": [
+                "odrl:use",
+                "odrl:copy",
+                "odrl:modify",
+                "cdif:merge",
+                "odrl:publish",
+                "odrl:distribute",
+                "odrl:sublicense",
+                "odrl:sell"
+            ],
+            "odrl:target": "spdx:Software",
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:binaryDistribution"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:sourceCodeDistribution"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

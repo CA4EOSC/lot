@@ -1,0 +1,54 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "odrl:Policy",
+    "odrl:uid": "http://example.com/policy/bitstream-charter",
+    "odrl:profile": "https://cdif.org/odrl:profile:Bitstream-Charter",
+    "odrl:permission": [
+        {
+            "odrl:target": "spdx:Bitstream-Charter.html",
+            "odrl:action": [
+                {
+                    "@id": "odrl:use"
+                },
+                {
+                    "@id": "odrl:copy"
+                },
+                {
+                    "@id": "odrl:modify"
+                },
+                {
+                    "@id": "odrl:sublicense"
+                },
+                {
+                    "@id": "odrl:sell"
+                },
+                {
+                    "@id": "odrl:distribute"
+                }
+            ],
+            "odrl:duty": [
+                {
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortion"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

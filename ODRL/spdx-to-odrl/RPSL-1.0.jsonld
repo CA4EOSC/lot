@@ -1,0 +1,248 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "schema": "http://schema.org/"
+    },
+    "@type": "odrl:Policy",
+    "uid": "http://example.com/policy:rpsl-1.0",
+    "profile": "https://cdif.org/odrl:profile:RPSL-1.0",
+    "target": "spdx:RPSL-1.0.html",
+    "description": "Policy derived from the RealNetworks Public Source License Version 1.0, detailing permitted uses, modifications, and distribution requirements.",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RPSL-1.0.html",
+            "assigner": "http://example.com/licensor:realnetworks",
+            "action": "odrl:use",
+            "assignee": "http://example.com/user:any",
+            "duty": [
+                {
+                    "action": "cdif:retainNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:notice",
+                            "operator": "odrl:includes",
+                            "rightOperand": "cdif:copyrightAndProprietaryNotices"
+                        }
+                    ],
+                    "target": [
+                        "cdif:originalCode"
+                    ]
+                },
+                {
+                    "action": "cdif:includeLicenseCopy",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:license",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:RPSL-1.0"
+                        }
+                    ],
+                    "target": [
+                        "cdif:sourceCodeDistribution",
+                        "cdif:documentation"
+                    ]
+                },
+                {
+                    "action": "cdif:markModification",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:notice",
+                            "operator": "odrl:includes",
+                            "rightOperand": "cdif:modificationNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:modifiedFiles"
+                    ]
+                },
+                {
+                    "action": "cdif:makeSourcePublic",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:deploymentScope",
+                            "operator": "odrl:neq",
+                            "rightOperand": "cdif:internalR&DOrPersonalUse"
+                        }
+                    ],
+                    "target": [
+                        "cdif:externallyDeployedModifications"
+                    ]
+                },
+                {
+                    "action": "cdif:includeSourceNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:objectCode",
+                            "operator": "odrl:implies",
+                            "rightOperand": "cdif:sourceCodeAvailableNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:objectCodeDeployment"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RPSL-1.0.html",
+            "assigner": "http://example.com/licensor:realnetworks",
+            "action": "odrl:copy",
+            "assignee": "http://example.com/user:any",
+            "duty": [
+                {
+                    "action": "cdif:reproduceNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:notice",
+                            "operator": "odrl:includes",
+                            "rightOperand": "cdif:copyrightAndProprietaryNotices"
+                        }
+                    ],
+                    "target": [
+                        "cdif:reproducedCopy"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RPSL-1.0.html",
+            "assigner": "http://example.com/licensor:realnetworks",
+            "action": "odrl:modify",
+            "assignee": "http://example.com/user:any",
+            "duty": [
+                {
+                    "action": "cdif:markModification",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:notice",
+                            "operator": "odrl:includes",
+                            "rightOperand": "cdif:modificationNotice"
+                        }
+                    ],
+                    "target": [
+                        "cdif:modifiedFiles"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RPSL-1.0.html",
+            "assigner": "http://example.com/licensor:realnetworks",
+            "action": "odrl:distribute",
+            "assignee": "http://example.com/user:any",
+            "duty": [
+                {
+                    "action": "cdif:includeLicenseCopy",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:license",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:RPSL-1.0"
+                        }
+                    ],
+                    "target": [
+                        "cdif:sourceCodeDistribution",
+                        "cdif:documentation"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RPSL-1.0.html",
+            "assigner": "http://example.com/licensor:realnetworks",
+            "action": "odrl:sublicense",
+            "assignee": "http://example.com/user:any",
+            "duty": [
+                {
+                    "action": "cdif:ensureCompatibility",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:license",
+                            "operator": "odrl:implies",
+                            "rightOperand": "cdif:RPSL-1.0"
+                        }
+                    ],
+                    "target": [
+                        "cdif:sublicensedWork"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RPSL-1.0.html",
+            "assigner": "http://example.com/licensor:realnetworks",
+            "action": "odrl:sell",
+            "assignee": "http://example.com/user:any",
+            "duty": [
+                {
+                    "action": "cdif:licenseDerivativeWork",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:license",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:RPSL-1.0"
+                        }
+                    ],
+                    "target": [
+                        "cdif:derivativeWork"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RPSL-1.0.html",
+            "assigner": "http://example.com/licensor:realnetworks",
+            "action": "odrl:merge",
+            "assignee": "http://example.com/user:any",
+            "duty": [
+                {
+                    "action": "cdif:licenseDerivativeWork",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:license",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:RPSL-1.0"
+                        }
+                    ],
+                    "target": [
+                        "cdif:derivativeWork"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:RPSL-1.0.html",
+            "assigner": "http://example.com/licensor:realnetworks",
+            "action": "odrl:publish",
+            "assignee": "http://example.com/user:any",
+            "duty": [
+                {
+                    "action": "cdif:licenseDerivativeWork",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:license",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:RPSL-1.0"
+                        }
+                    ],
+                    "target": [
+                        "cdif:derivativeWork"
+                    ]
+                }
+            ]
+        }
+    ]
+}

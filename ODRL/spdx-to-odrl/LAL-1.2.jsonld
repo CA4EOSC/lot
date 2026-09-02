@@ -1,0 +1,73 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Offer",
+    "uid": "https://cdif.org/odrl/policy/LAL-1.2",
+    "profile": "https://cdif.org/odrl:profile:LAL-1.2",
+    "description": "License Art Libre (LAL-1.2) - Grants free rights to copy, distribute, and modify works, provided the resulting work remains free.",
+    "permission": [
+        {
+            "target": "spdx:LAL-1.2.html",
+            "action": "odrl:use",
+            "description": "General right to use the work for any purpose."
+        },
+        {
+            "target": "spdx:LAL-1.2.html",
+            "action": "odrl:reproduce",
+            "description": "Right to copy the work for personal use or for friends, regardless of technique."
+        },
+        {
+            "target": "spdx:LAL-1.2.html",
+            "action": "odrl:distribute",
+            "description": "Right to freely distribute copies, modified or unmodified, regardless of medium or location, whether for profit or free of charge."
+        },
+        {
+            "target": "spdx:LAL-1.2.html",
+            "action": "odrl:modify",
+            "description": "Right to modify copies of the original or derivative works."
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:LAL-1.2.html",
+            "action": "odrl:sublicense",
+            "description": "Sublicensing is not authorized."
+        },
+        {
+            "target": "spdx:LAL-1.2.html",
+            "action": "odrl:merge",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:ne",
+                    "rightOperand": "cdif:freeWork"
+                }
+            ],
+            "description": "Prohibited from integrating the original or derivative works into another work that is not also subject to this free license."
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copyOrSubstantialPortion"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ],
+            "description": "When distributing or representing copies (modified or unmodified), the recipient must be informed: 1) By including this license identically, or indicating where it is found; 2) By indicating the name of the original author(s); and 3) By indicating where the originals can be accessed."
+        }
+    ]
+}

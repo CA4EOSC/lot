@@ -1,0 +1,148 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/ns/rdf": "rdf",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#": "rdf:type",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
+        "http://purl.org/dc/terms/": "dc"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/odrl/policy:BitTorrent-1.0",
+    "profile": "https://cdif.org/odrl:profile:BitTorrent-1.0",
+    "target": "spdx:BitTorrent-1.0.html",
+    "description": "This policy governs the use, reproduction, modification, and distribution of Licensed Product under the BitTorrent Open Source License Version 1.0.",
+    "permission": [
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:use",
+            "description": "Allows use of the Licensed Product for any purpose."
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:reproduce",
+            "description": "Allows reproduction of the Licensed Product."
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:modify",
+            "description": "Allows modification of the Licensed Product to create Modifications and Derivative Works."
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:display",
+            "description": "Allows display of the Licensed Product."
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:perform",
+            "description": "Allows performance of the Licensed Product."
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:sublicense",
+            "description": "Allows sublicensing of the Licensed Product or Derivative Works."
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:distribute",
+            "description": "Allows distribution of the Licensed Product, Modifications, and Derivative Works."
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:sell",
+            "description": "Allows selling the Licensed Product or Derivative Works."
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "odrl:giveAway",
+            "description": "Allows giving away the Licensed Product."
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "cdif:merge",
+            "description": "Allows merging the Licensed Product with other software (aggregate distribution)."
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "cdif:includeNotice",
+            "description": "Mandatory inclusion of the Notice (Exhibit A) in all distributed Source Code files.",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:sourceCodeFile",
+                    "operator": "odrl:eq",
+                    "rightOperand": {
+                        "@value": "true",
+                        "@type": "xsd:boolean"
+                    }
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "cdif:makeSourceCodeAvailable",
+            "description": "Mandatory availability of Source Code for Modifications and Licensed Product.",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:distribution",
+                    "operator": "odrl:eq",
+                    "rightOperand": {
+                        "@value": "true",
+                        "@type": "xsd:boolean"
+                    }
+                }
+            ]
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "cdif:includeLicenseCopy",
+            "description": "Mandatory inclusion of a copy of the License with every distribution.",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:distribution",
+                    "operator": "odrl:eq",
+                    "rightOperand": {
+                        "@value": "true",
+                        "@type": "xsd:boolean"
+                    }
+                }
+            ]
+        },
+        {
+            "target": "spdx:BitTorrent-1.0.html",
+            "assigner": "http://example.com/licensor:BitTorrent, Inc.",
+            "action": "cdif:includeLegalFile",
+            "description": "Mandatory inclusion of a LEGAL file describing third-party intellectual property claims.",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:thirdPartyClaim",
+                    "operator": "odrl:eq",
+                    "rightOperand": {
+                        "@value": "true",
+                        "@type": "xsd:boolean"
+                    }
+                }
+            ]
+        }
+    ]
+}

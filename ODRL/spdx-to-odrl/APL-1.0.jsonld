@@ -1,0 +1,159 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "cdif": "https://cdif.org/odrl/",
+    "spdx": "https://spdx.org/licenses/",
+    "jsonld": "http://www.w3.org/n3/json-ld#"
+  },
+  "@type": "Policy",
+  "uid": "http://example.com/policy:APL-1.0",
+  "profile": "https://cdif.org/odrl:profile:APL-1.0",
+  "target": "spdx:APL-1.0.html",
+  "description": "Adaptive Public License Version 1.0 grants broad rights for use, modification, and distribution, subject to specific obligations regarding notice and license inclusion.",
+  "permission": [
+    {
+      "@type": "odrl:Permission",
+      "target": "spdx:APL-1.0.html",
+      "action": {
+        "@type": "odrl:Action",
+        "rdfs:label": "use"
+      },
+      "assigner": "http://example.com/user:Recipient",
+      "description": "Right to use the Licensed Work."
+    },
+    {
+      "@type": "odrl:Permission",
+      "target": "spdx:APL-1.0.html",
+      "action": {
+        "@type": "odrl:Action",
+        "rdfs:label": "copy"
+      },
+      "assigner": "http://example.com/user:Recipient",
+      "description": "Right to reproduce the Licensed Work."
+    },
+    {
+      "@type": "odrl:Permission",
+      "target": "spdx:APL-1.0.html",
+      "action": {
+        "@type": "odrl:Action",
+        "rdfs:label": "modify"
+      },
+      "assigner": "http://example.com/user:Recipient",
+      "description": "Right to prepare derivative works (modify) the Licensed Work."
+    },
+    {
+      "@type": "odrl:Permission",
+      "target": "spdx:APL-1.0.html",
+      "action": {
+        "@type": "odrl:Action",
+        "rdfs:label": "merge"
+      },
+      "assigner": "http://example.com/user:Recipient",
+      "description": "Right to combine the Licensed Work with other code (Larger Work)."
+    },
+    {
+      "@type": "odrl:Permission",
+      "target": "spdx:APL-1.0.html",
+      "action": {
+        "@type": "odrl:Action",
+        "rdfs:label": "publish"
+      },
+      "assigner": "http://example.com/user:Recipient",
+      "description": "Right to publicly display or perform the Licensed Work."
+    },
+    {
+      "@type": "odrl:Permission",
+      "target": "spdx:APL-1.0.html",
+      "action": {
+        "@type": "odrl:Action",
+        "rdfs:label": "distribute"
+      },
+      "assigner": "http://example.com/user:Recipient",
+      "description": "Right to distribute the Licensed Work or derivative works."
+    },
+    {
+      "@type": "odrl:Permission",
+      "target": "spdx:APL-1.0.html",
+      "action": {
+        "@type": "odrl:Action",
+        "rdfs:label": "sublicense"
+      },
+      "assigner": "http://example.com/user:Recipient",
+      "description": "Right to grant further licenses to the Licensed Work."
+    },
+    {
+      "@type": "odrl:Permission",
+      "target": "spdx:APL-1.0.html",
+      "action": {
+        "@type": "odrl:Action",
+        "rdfs:label": "sell"
+      },
+      "assigner": "http://example.com/user:Recipient",
+      "description": "Right to sell the Licensed Work or derivative works."
+    }
+  ],
+  "obligation": [
+    {
+      "@type": "odrl:Obligation",
+      "target": "spdx:APL-1.0.html",
+      "action": {
+        "@type": "odrl:Action",
+        "rdfs:label": "complyWithLicense"
+      },
+      "assigner": "http://example.com/user:Recipient",
+      "description": "Obligation to comply with distribution requirements."
+    }
+  ],
+  "duty": [
+    {
+      "@type": "odrl:Duty",
+      "action": {
+        "@type": "odrl:Action",
+        "rdfs:label": "includeLicenseCopy"
+      },
+      "constraint": [
+        {
+          "@type": "odrl:Constraint",
+          "leftOperand": {
+            "@type": "odrl:Asset",
+            "rdfs:label": "Licensed Work Copy"
+          },
+          "operator": "odrl:mustContain",
+          "rightOperand": {
+            "@type": "odrl:Asset",
+            "rdfs:label": "Copy of APL-1.0 License (including Exhibit A and Supplement File)"
+          }
+        }
+      ],
+      "target": [
+        "spdx:APL-1.0.html"
+      ]
+    },
+    {
+      "@type": "odrl:Duty",
+      "action": {
+        "@type": "odrl:Action",
+        "rdfs:label": "includeNotice"
+      },
+      "constraint": [
+        {
+          "@type": "odrl:Constraint",
+          "leftOperand": {
+            "@type": "odrl:Asset",
+            "rdfs:label": "Source Code File"
+          },
+          "operator": "odrl:mustContain",
+          "rightOperand": {
+            "@type": "odrl:Asset",
+            "rdfs:label": "License Notice (Part 5 of Exhibit A)"
+          }
+        }
+      ],
+      "target": [
+        "spdx:APL-1.0.html"
+      ]
+    }
+  ]
+}

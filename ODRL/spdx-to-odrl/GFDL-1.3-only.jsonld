@@ -1,0 +1,109 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:GFDL-1.3-only",
+    "profile": "https://cdif.org/odrl:profile:GFDL-1.3-only",
+    "description": "GNU Free Documentation License Version 1.3, granting broad freedoms for use, modification, and distribution, while mandating preservation of notices and license terms.",
+    "permission": [
+        {
+            "target": "spdx:GFDL-1.3-only.html",
+            "assigner": "http://example.com/public",
+            "action": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:use"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:copy"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:distribute"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:modify"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "cdif:merge"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:publish"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:sublicense"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:includedIn": "odrl:sell"
+                }
+            ],
+            "duty": [
+                {
+                    "action": "cdif:reproduceLicense",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:reproduceLicense",
+                            "operator": "odrl:eq",
+                            "rightOperand": {
+                                "@value": "true",
+                                "@type": "xsd:boolean"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:licenseNotice",
+                        "cdif:originalLicenseText"
+                    ]
+                },
+                {
+                    "action": "cdif:preserveOriginalContent",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:preserveOriginalContent",
+                            "operator": "odrl:eq",
+                            "rightOperand": {
+                                "@value": "true",
+                                "@type": "xsd:boolean"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:invariantSections",
+                        "cdif:historySection",
+                        "cdif:acknowledgements",
+                        "cdif:dedications"
+                    ]
+                },
+                {
+                    "action": "cdif:preserveTitle",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:preserveTitle",
+                            "operator": "odrl:eq",
+                            "rightOperand": {
+                                "@value": "true",
+                                "@type": "xsd:boolean"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:titlePage"
+                    ]
+                }
+            ]
+        }
+    ]
+}

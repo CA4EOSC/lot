@@ -1,0 +1,85 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "profile": "https://cdif.org/odrl:profile:CC-BY-NC-SA-3.0-DE",
+    "target": "spdx:CC-BY-NC-SA-3.0-DE.html",
+    "permission": [
+        {
+            "target": "spdx:CC-BY-NC-SA-3.0-DE.html",
+            "assigner": "http://example.com/creator",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:CC-BY-NC-SA-3.0-DE.html",
+            "assigner": "http://example.com/creator",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:CC-BY-NC-SA-3.0-DE.html",
+            "assigner": "http://example.com/creator",
+            "action": "cdif:modify"
+        },
+        {
+            "target": "spdx:CC-BY-NC-SA-3.0-DE.html",
+            "assigner": "http://example.com/creator",
+            "action": "cdif:merge"
+        },
+        {
+            "target": "spdx:CC-BY-NC-SA-3.0-DE.html",
+            "assigner": "http://example.com/creator",
+            "action": "odrl:display"
+        },
+        {
+            "target": "spdx:CC-BY-NC-SA-3.0-DE.html",
+            "assigner": "http://example.com/creator",
+            "action": "odrl:distribute"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copyOrSubstantialPortion"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        },
+        {
+            "action": "cdif:shareAlike",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:derivativeWork"
+                }
+            ],
+            "target": [
+                "cdif:licenseCopy"
+            ]
+        },
+        {
+            "action": "cdif:nonCommercial",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:nonCommercialUse"
+                }
+            ],
+            "target": []
+        }
+    ]
+}

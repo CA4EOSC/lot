@@ -1,0 +1,111 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://www.w3.org/ns/rdf": "rdf",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/AGPL-3.0",
+    "profile": "https://cdif.org/odrl:profile:AGPL-3.0",
+    "assigner": "http://fsf.org/",
+    "target": "spdx:AGPL-3.0.html",
+    "description": "The GNU Affero General Public License (AGPL) Version 3, ensuring free software rights, especially for network server usage.",
+    "permission": [
+        {
+            "target": "spdx:AGPL-3.0.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:use",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:AGPL-3.0.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:copy",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:AGPL-3.0.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:distribute",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:AGPL-3.0.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:modify",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:AGPL-3.0.html",
+            "assigner": "http://fsf.org/",
+            "action": "cdif:merge",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:AGPL-3.0.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:publish",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:AGPL-3.0.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:sublicense",
+            "assignee": "*"
+        },
+        {
+            "target": "spdx:AGPL-3.0.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:sell",
+            "assignee": "*"
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:AGPL-3.0.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:prohibit",
+            "assignee": "*",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:imposeFurtherRestrictions",
+                    "operator": "odrl:neq",
+                    "rightOperand": "true"
+                }
+            ],
+            "description": "Cannot impose further restrictions on the rights granted by this license."
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:AGPL-3.0.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:reviewPolicy",
+            "assignee": "*",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:provideSourceCode",
+                    "operator": "odrl:eq",
+                    "rightOperand": "true"
+                }
+            ],
+            "description": "If used on a network server, the operator must provide the Corresponding Source Code to the users."
+        },
+        {
+            "target": "spdx:AGPL-3.0.html",
+            "assigner": "http://fsf.org/",
+            "action": "odrl:reviewPolicy",
+            "assignee": "*",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:includeNotice",
+                    "operator": "odrl:eq",
+                    "rightOperand": "true"
+                }
+            ],
+            "description": "Must include appropriate copyright and license notices on all copies."
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "@context": {
+        "http://www.w3.org/2001/XMLSchema#": "xsd:",
+        "http://www.w3.org/ns/odrl/2/": "odrl:",
+        "https://cdif.org/odrl/": "cdif:",
+        "https://spdx.org/licenses/": "spdx:",
+        "http://www.w3.org/ns/rdf": "rdf:",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs:",
+        "http://purl.org/dc/terms/": "dc:",
+        "odrl:": "http://www.w3.org/ns/odrl/2/",
+        "cdif:": "https://cdif.org/odrl/",
+        "spdx:": "https://spdx.org/licenses/"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:CECILL-B",
+    "profile": "https://cdif.org/odrl:profile:CECILL-B",
+    "dc:creator": "CEA, CNRS, INRIA",
+    "dc:description": "CeCILL-B Free Software License Agreement, granting broad rights for use, modification, and distribution.",
+    "target": "spdx:CECILL-B.html",
+    "assigner": "http://example.com/org/CEA_CNRS_INRIA",
+    "assignee": "http://example.com/person/Licensee",
+    "permission": [
+        {
+            "target": "spdx:CECILL-B.html",
+            "assigner": "http://example.com/org/CEA_CNRS_INRIA",
+            "assignee": "http://example.com/person/Licensee",
+            "action": [
+                "odrl:use",
+                "odrl:copy",
+                "odrl:modify",
+                "cdif:merge",
+                "odrl:publish",
+                "odrl:distribute",
+                "odrl:sublicense",
+                "odrl:sell"
+            ],
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyOrSubstantialPortion"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:ensureSourceCodeAccess",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:distributionType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "ObjectCodeOnly"
+                        }
+                    ],
+                    "target": [
+                        "cdif:fullSourceCode"
+                    ]
+                }
+            ]
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:CECILL-B.html",
+            "assigner": "http://example.com/org/CEA_CNRS_INRIA",
+            "assignee": "http://example.com/person/Licensee",
+            "action": "odrl:modify",
+            "remedy": [
+                {
+                    "action": "cdif:restoreOriginalNotice",
+                    "target": "spdx:CECILL-B.html"
+                }
+            ],
+            "failure": {
+                "consequence": [
+                    {
+                        "action": "cdif:voidPolicy",
+                        "target": "spdx:CECILL-B.html"
+                    }
+                ]
+            }
+        }
+    ]
+}

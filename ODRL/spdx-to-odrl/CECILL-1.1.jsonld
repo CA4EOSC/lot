@@ -1,0 +1,123 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://purl.org/dc/terms/": "dc",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Agreement",
+    "odrl:profile": "https://cdif.org/odrl:profile:CECILL-1.1",
+    "odrl:uid": "https://cdif.org/policy/CECILL-1.1",
+    "odrl:target": "spdx:CECILL-1.1.html",
+    "odrl:assigner": "http://example.com/authors/CEA_CNRS_INRIA_LL",
+    "odrl:assignee": "http://example.com/user/Licensee",
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:target": "http://example.com/software/Software",
+            "odrl:assigner": "http://example.com/authors/CEA_CNRS_INRIA_LL",
+            "odrl:action": [
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:use"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:copy"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:modify"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "cdif:merge"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:publish"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:distribute"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:sublicense"
+                },
+                {
+                    "@type": "odrl:Action",
+                    "odrl:action": "odrl:sell"
+                }
+            ],
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortion"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ],
+                    "odrl:consequence": [
+                        {
+                            "@type": "odrl:Action",
+                            "odrl:action": "odrl:terminate"
+                        }
+                    ]
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:provideSourceCode",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:redistributeFormat",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:objectCodeOnly"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:sourceCodeAccess"
+                    ],
+                    "odrl:consequence": [
+                        {
+                            "@type": "odrl:Action",
+                            "odrl:action": "odrl:terminate"
+                        }
+                    ]
+                },
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:retainIPNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:noticeType",
+                            "odrl:operator": "odrl:neq",
+                            "odrl:rightOperand": "cdif:removed"
+                        }
+                    ],
+                    "odrl:target": [
+                        "cdif:intellectualPropertyNotice"
+                    ],
+                    "odrl:consequence": [
+                        {
+                            "@type": "odrl:Action",
+                            "odrl:action": "odrl:terminate"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

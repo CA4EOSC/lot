@@ -1,0 +1,109 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "spdx": "https://spdx.org/licenses/",
+        "cdif": "https://cdif.org/odrl/",
+        "@vocab": "http://www.w3.org/ns/odrl/2/",
+        "action": {"@type": "@id"},
+        "target": {"@type": "@id"},
+        "profile": {"@type": "@id"}
+    },
+    "@type": "Offer",
+    "uid": "https://cdif.org/odrl/policy/OSL-2.1",
+    "profile": "https://cdif.org/odrl:profile:OSL-2.1",
+    "description": "The Open Software License v2.1 grants broad rights for use, modification, and distribution of Original Works and Derivative Works.",
+    "permission": [
+        {
+            "target": "spdx:OSL-2.1.html",
+            "action": "odrl:reproduce",
+            "assigner": "spdx:OSL-2.1.html",
+            "assignee": "spdx:OSL-2.1.html"
+        },
+        {
+            "target": "spdx:OSL-2.1.html",
+            "action": "odrl:modify",
+            "assigner": "spdx:OSL-2.1.html",
+            "assignee": "spdx:OSL-2.1.html"
+        },
+        {
+            "target": "spdx:OSL-2.1.html",
+            "action": "odrl:distribute",
+            "assigner": "spdx:OSL-2.1.html",
+            "assignee": "spdx:OSL-2.1.html",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:OSL-2.1.html",
+            "action": "odrl:perform",
+            "assigner": "spdx:OSL-2.1.html",
+            "assignee": "spdx:OSL-2.1.html"
+        },
+        {
+            "target": "spdx:OSL-2.1.html",
+            "action": "odrl:display",
+            "assigner": "spdx:OSL-2.1.html",
+            "assignee": "spdx:OSL-2.1.html"
+        },
+        {
+            "target": "spdx:OSL-2.1.html",
+            "action": "odrl:use",
+            "assigner": "spdx:OSL-2.1.html",
+            "assignee": "spdx:OSL-2.1.html"
+        },
+        {
+            "target": "spdx:OSL-2.1.html",
+            "action": "odrl:sell",
+            "assigner": "spdx:OSL-2.1.html",
+            "assignee": "spdx:OSL-2.1.html"
+        },
+        {
+            "target": "spdx:OSL-2.1.html",
+            "action": "odrl:sublicense",
+            "assigner": "spdx:OSL-2.1.html",
+            "assignee": "spdx:OSL-2.1.html"
+        }
+    ],
+    "obligation": [
+        {
+            "assigner": "spdx:OSL-2.1.html",
+            "assignee": "spdx:OSL-2.1.html",
+            "action": {
+                "rdf:value": {
+                    "@id": "odrl:provideSourceCode"
+                },
+                "refinement": [
+                    {
+                        "leftOperand": "cdif:sourceCodeAvailability",
+                        "operator": "odrl:eq",
+                        "rightOperand": {
+                            "@value": "true",
+                            "@type": "xsd:boolean"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "constraint": [
+        {
+            "leftOperand": "cdif:attributionNotice",
+            "operator": "odrl:mustBeIncluded",
+            "rightOperand": "spdx:OSL-2.1.html"
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:GPL-3.0",
+    "profile": "https://cdif.org/odrl:profile:GPL-3.0",
+    "target": "spdx:GPL-3.0.html",
+    "description": "GNU General Public License Version 3, granting broad rights to use, modify, and distribute software while ensuring the resulting work remains free software.",
+    "permission": [
+        {
+            "target": "spdx:GPL-3.0.html",
+            "action": "odrl:copy",
+            "assigner": "http://example.com/org/free-software-foundation"
+        },
+        {
+            "target": "spdx:GPL-3.0.html",
+            "action": "odrl:distribute",
+            "assigner": "http://example.com/org/free-software-foundation"
+        },
+        {
+            "target": "spdx:GPL-3.0.html",
+            "action": "odrl:modify",
+            "assigner": "http://example.com/org/free-software-foundation"
+        },
+        {
+            "target": "spdx:GPL-3.0.html",
+            "action": "odrl:use",
+            "assigner": "http://example.com/org/free-software-foundation"
+        },
+        {
+            "target": "spdx:GPL-3.0.html",
+            "action": "odrl:run",
+            "assigner": "http://example.com/org/free-software-foundation"
+        },
+        {
+            "target": "spdx:GPL-3.0.html",
+            "action": "odrl:propagate",
+            "assigner": "http://example.com/org/free-software-foundation"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copyOrSubstantialPortion"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        },
+        {
+            "action": "cdif:provideSourceCode",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:sourceAvailability",
+                    "operator": "odrl:mustBeAvailable",
+                    "rightOperand": "cdif:CorrespondingSource"
+                }
+            ],
+            "target": [
+                "cdif:CorrespondingSource"
+            ]
+        },
+        {
+            "action": "cdif:markModification",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:modificationNotice",
+                    "operator": "odrl:mustBePresent",
+                    "rightOperand": "cdif:relevantDate"
+                }
+            ],
+            "target": [
+                "cdif:modifiedVersion"
+            ]
+        },
+        {
+            "action": "cdif:displayLegalNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:interfaceDisplay",
+                    "operator": "odrl:mustDisplay",
+                    "rightOperand": "cdif:AppropriateLegalNotices"
+                }
+            ],
+            "target": [
+                "cdif:interactiveUserInterface"
+            ]
+        }
+    ]
+}

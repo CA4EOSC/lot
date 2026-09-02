@@ -1,0 +1,143 @@
+{
+    "@context": {
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#": "rdf",
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "http://example.com/party/": "party"
+    },
+    "@type": "odrl:Set",
+    "odrl:uid": "https://cdif.org/odrl/policy/YPL-1.0",
+    "odrl:profile": "https://cdif.org/odrl:profile:YPL-1.0",
+    "odrl:assignee": "http://example.com/party/You",
+    "odrl:assigner": "http://example.com/party/Yahoo!Inc",
+    "odrl:permission": [
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:copy",
+            "odrl:target": "spdx:YPL-1.0.html",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortion"
+                        }
+                    ],
+                    "odrl:description": "Must retain and reproduce all copyright, patent, trademark, and attribution notices.",
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:copyrightNotice",
+                        "cdif:patentNotice",
+                        "cdif:trademarkNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:modify",
+            "odrl:target": "spdx:YPL-1.0.html",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortion"
+                        }
+                    ],
+                    "odrl:description": "Must retain and reproduce all copyright, patent, trademark, and attribution notices.",
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:copyrightNotice",
+                        "cdif:patentNotice",
+                        "cdif:trademarkNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:compile",
+            "odrl:target": "spdx:YPL-1.0.html",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:compiledCodeDistribution"
+                        }
+                    ],
+                    "odrl:description": "When distributing in compiled or object code format, must provide source code access and a complete copy of this Agreement.",
+                    "odrl:target": [
+                        "cdif:agreementNotice",
+                        "cdif:sourceCodeAccessNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:execute",
+            "odrl:target": "spdx:YPL-1.0.html",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:copyOrSubstantialPortion"
+                        }
+                    ],
+                    "odrl:description": "Must retain and reproduce all copyright, patent, trademark, and attribution notices.",
+                    "odrl:target": [
+                        "cdif:attributionNotice",
+                        "cdif:copyrightNotice",
+                        "cdif:patentNotice",
+                        "cdif:trademarkNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "odrl:action": "odrl:distribute",
+            "odrl:target": "spdx:YPL-1.0.html",
+            "odrl:duty": [
+                {
+                    "@type": "odrl:Duty",
+                    "odrl:action": "cdif:includeNotice",
+                    "odrl:constraint": [
+                        {
+                            "@type": "odrl:Constraint",
+                            "odrl:leftOperand": "cdif:scope",
+                            "odrl:operator": "odrl:eq",
+                            "odrl:rightOperand": "cdif:sourceCodeDistribution"
+                        }
+                    ],
+                    "odrl:description": "For source code distribution, must include a complete copy of this Agreement.",
+                    "odrl:target": [
+                        "cdif:agreementNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

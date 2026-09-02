@@ -1,0 +1,160 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "profile": "https://cdif.org/odrl:profile:LGPL-2.0-only",
+    "target": "spdx:LGPL-2.0-only.html",
+    "permission": [
+        {
+            "target": "spdx:LGPL-2.0-only.html",
+            "assigner": "http://www.freedesoft.org/foundation",
+            "action": "odrl:copy"
+        },
+        {
+            "target": "spdx:LGPL-2.0-only.html",
+            "assigner": "http://www.freedesoft.org/foundation",
+            "action": "odrl:distribute"
+        },
+        {
+            "target": "spdx:LGPL-2.0-only.html",
+            "assigner": "http://www.freedesoft.org/foundation",
+            "action": "odrl:use"
+        },
+        {
+            "target": "spdx:LGPL-2.0-only.html",
+            "assigner": "http://www.freedesoft.org/foundation",
+            "action": "odrl:modify"
+        },
+        {
+            "target": "spdx:LGPL-2.0-only.html",
+            "assigner": "http://www.freedesoft.org/foundation",
+            "action": "cdif:merge"
+        },
+        {
+            "target": "spdx:LGPL-2.0-only.html",
+            "assigner": "http://www.freedesoft.org/foundation",
+            "action": "cdif:publish"
+        },
+        {
+            "target": "spdx:LGPL-2.0-only.html",
+            "assigner": "http://www.freedesoft.org/foundation",
+            "action": "cdif:sublicense"
+        },
+        {
+            "target": "spdx:LGPL-2.0-only.html",
+            "assigner": "http://www.freedesoft.org/foundation",
+            "action": "cdif:sell"
+        }
+    ],
+    "duty": [
+        {
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "odrl:copy",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:notice",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyrightNotice"
+                        }
+                    ]
+                },
+                {
+                    "action": "odrl:distribute",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:notice",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:licenseNotice"
+                        }
+                    ]
+                }
+            ],
+            "description": "Must accompany distribution with a copy of the License and appropriate notices."
+        },
+        {
+            "action": "odrl:modify",
+            "duty": [
+                {
+                    "action": "odrl:copy",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:notice",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:warrantyDisclaimer"
+                        }
+                    ]
+                }
+            ],
+            "description": "Modified works must retain warranty disclaimers and notices."
+        },
+        {
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "odrl:provideSourceCode",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:sourceCodeAvailability",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:completeSourceCode"
+                        }
+                    ]
+                },
+                {
+                    "action": "odrl:provideSourceCode",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:sourceCodeAvailability",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:completeSourceCode"
+                        }
+                    ]
+                }
+            ],
+            "description": "Must provide complete source code and object files for relinking."
+        },
+        {
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "odrl:provideWrittenOffer",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:offerValidity",
+                            "operator": "odrl:ge",
+                            "rightOperand": {
+                                "@value": "3",
+                                "@type": "xsd:integer"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "description": "Must provide a written offer for source code access for at least three years."
+        },
+        {
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "odrl:provideNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:notice",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:libraryUsageNotice"
+                        }
+                    ]
+                }
+            ],
+            "description": "Must give prominent notice that the work is based on the Library."
+        }
+    ]
+}

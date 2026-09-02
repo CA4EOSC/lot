@@ -1,0 +1,128 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:LGPL-2.1",
+    "profile": "https://cdif.org/odrl:profile:LGPL-2.1",
+    "target": "spdx:LGPL-2.1.html",
+    "assigner": "http://example.com/org/FreeSoftwareFoundation",
+    "assignee": "http://example.com/person/Everyone",
+    "permission": [
+        {
+            "target": "spdx:LGPL-2.1.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundation",
+            "assignee": "http://example.com/person/Everyone",
+            "action": "odrl:copy",
+            "description": "Permitted to copy and distribute verbatim copies of the license document."
+        },
+        {
+            "target": "spdx:LGPL-2.1.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundation",
+            "assignee": "http://example.com/person/Everyone",
+            "action": "odrl:distribute",
+            "description": "Permitted to distribute verbatim copies of the license document."
+        },
+        {
+            "target": "spdx:LGPL-2.1.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundation",
+            "assignee": "http://example.com/person/Everyone",
+            "action": "odrl:modify",
+            "description": "Permitted to modify the library or any portion of it, forming a work based on the Library."
+        },
+        {
+            "target": "spdx:LGPL-2.1.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundation",
+            "assignee": "http://example.com/person/Everyone",
+            "action": "odrl:use",
+            "description": "Permitted to use the library in non-free programs (work that uses the Library)."
+        },
+        {
+            "target": "spdx:LGPL-2.1.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundation",
+            "assignee": "http://example.com/person/Everyone",
+            "action": "cdif:merge",
+            "description": "Permitted to combine or link the library with other code (creating a combined work)."
+        },
+        {
+            "target": "spdx:LGPL-2.1.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundation",
+            "assignee": "http://example.com/person/Everyone",
+            "action": "odrl:sublicense",
+            "description": "The entire combined work must be licensed under the terms of this License."
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:LGPL-2.1.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundation",
+            "assignee": "http://example.com/person/Everyone",
+            "action": "cdif:provideSourceCode",
+            "duty": [
+                {
+                    "action": "cdif:provideCompleteSourceCode",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:workType",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:workBasedOnLibrary"
+                        }
+                    ]
+                }
+            ],
+            "description": "Must provide complete source code for the library and the combined work."
+        },
+        {
+            "target": "spdx:LGPL-2.1.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundation",
+            "assignee": "http://example.com/person/Everyone",
+            "action": "cdif:provideNotice",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copyOrSubstantialPortion"
+                        }
+                    ]
+                }
+            ],
+            "description": "Must conspicuously and appropriately publish copyright and disclaimer notices."
+        },
+        {
+            "target": "spdx:LGPL-2.1.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundation",
+            "assignee": "http://example.com/person/Everyone",
+            "action": "cdif:ensureFreedom",
+            "duty": [
+                {
+                    "action": "cdif:ensureNoFurtherRestrictions",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:restriction",
+                            "operator": "odrl:ne",
+                            "rightOperand": "odrl:none"
+                        }
+                    ]
+                }
+            ],
+            "description": "Must not impose any further restrictions on the recipients' rights."
+        }
+    ],
+    "prohibition": [
+        {
+            "target": "spdx:LGPL-2.1.html",
+            "assigner": "http://example.com/org/FreeSoftwareFoundation",
+            "assignee": "http://example.com/person/Everyone",
+            "action": "odrl:restrict",
+            "description": "Prohibits changing the license document itself."
+        }
+    ]
+}

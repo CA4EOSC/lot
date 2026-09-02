@@ -1,0 +1,291 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "ex": "https://example.com/",
+    "cdif": "http://www.w3.org/ns/cdif/",
+    "cr": "http://mlcommons.org/croissant/",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "jsonld": "http://json-ld.org#",
+    "Observation": "schema:Observation",
+    "location": {
+      "@id": "schema:location",
+      "@type": "@id"
+    },
+    "value": "schema:value",
+    "value_range": "schema:description",
+    "value_percentage": "schema:description",
+    "value_temperature": "schema:description",
+    "absolute_range": "schema:value",
+    "label": "schema:name",
+    "variable": "schema:variableMeasured",
+    "source": "schema:publisher",
+    "legend": "schema:description",
+    "page": "schema:position",
+    "session_id": "schema:identifier",
+    "original_filename": "schema:name",
+    "variable_page_title": "schema:name",
+    "distribution": {
+      "@type": "schema:Distribution",
+      "schema:description": "The unstructured or semi-structured content related to this semantic dataset."
+    }
+  },
+  "@id": "did:oyd:zQmQR5ApNE16CrVVeR8JKWSqiBJMaLKmZz6PfeoB6LcLLdk",
+  "@type": "schema:Dataset",
+  "schema:name": "datamap_file Content",
+  "schema:description": "The unstructured or semi-structured content related to this semantic dataset.",
+  "schema:url": "https://mcp.dev.codata.org/vault/0Ai0aUfF8e8aka72QszE5g.md",
+  "schema:dateCreated": "2026-08-31T20:52:31.268891Z",
+  "schema:creator": [
+    {
+      "@id": "#zqmqr5ap",
+      "@type": "schema:Person",
+      "schema:name": "did_zQmQR5Ap",
+      "schema:identifier": "did:oyd:zQmQR5ApNE16CrVVeR8JKWSqiBJMaLKmZz6PfeoB6LcLLdk"
+    },
+    {
+      "@id": "#ai-model-datamaps",
+      "@type": "schema:SoftwareApplication",
+      "schema:name": "Datamaps Automation",
+      "schema:dateCreated": "2026-08-31T20:52:31.268891Z"
+    }
+  ],
+  "schema:hasPart": [
+    {
+      "@type": "cr:FileObject",
+      "schema:name": "datamap_file Content",
+      "schema:description": "The unstructured or semi-structured content related to this semantic dataset.",
+      "schema:contentUrl": "https://mcp.dev.codata.org/vault/0Ai0aUfF8e8aka72QszE5g.md",
+      "schema:encodingFormat": "text/markdown",
+      "schema:publisher": {
+        "@id": "#ai-model-datamaps"
+      }
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "ex:metadata_catalog_record",
+    "@type": [
+      "schema:Dataset",
+      "dcat:CatalogRecord"
+    ],
+    "schema:additionalType": [
+      "dcat:CatalogRecord"
+    ],
+    "schema:about": {
+      "@id": "did:oyd:zQmQR5ApNE16CrVVeR8JKWSqiBJMaLKmZz6PfeoB6LcLLdk"
+    },
+    "dcterms:conformsTo": [
+      {"@id": "https://w3id.org/cdif/core/1.1/"},
+      {"@id": "https://w3id.org/cdif/discovery/1.1/"},
+      {"@id": "https://w3id.org/cdif/data_description/1.1/"}
+    ],
+    "schema:identifier": {
+      "@type": "schema:PropertyValue",
+      "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+      "schema:value": "N/A",
+      "schema:url": "N/A"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "ex:observation_1",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Gracias_a_Dios",
+      "schema:name": "Gracias a Dios",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_2",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Bay_Islands",
+      "schema:name": "Bay Islands",
+      "schema:color": "Green",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_3",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Choluteca",
+      "schema:name": "Choluteca",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_4",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Col%C3%B3n",
+      "schema:name": "Colón",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_5",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/El_Para%C3%ADso",
+      "schema:name": "El Paraíso",
+      "schema:color": "Green",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_6",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Olancho",
+      "schema:name": "Olancho",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_7",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Valle",
+      "schema:name": "Valle",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_8",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Atl%C3%A1ntida",
+      "schema:name": "Atlántida",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_9",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Comayagua",
+      "schema:name": "Comayagua",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_10",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Cop%C3%A1n",
+      "schema:name": "Copán",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_11",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Cort%C3%A9s",
+      "schema:name": "Cortés",
+      "schema:color": "Grey",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "No Map",
+      "schema:value": "No Map"
+    },
+    {
+      "@id": "ex:observation_12",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Francisco_Moraz%C3%A1n",
+      "schema:name": "Francisco Morazán",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_13",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Intibuc%C3%A1",
+      "schema:name": "Intibucá",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_14",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/La_Paz",
+      "schema:name": "La Paz",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_15",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Lempira",
+      "schema:name": "Lempira",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_16",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Ocotepeque",
+      "schema:name": "Ocotepeque",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_17",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Santa_B%C3%A1rbara",
+      "schema:name": "Santa Bárbara",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    },
+    {
+      "@id": "ex:observation_18",
+      "@type": "Observation",
+      "schema:location": "http://maps2ai.org/locations/Yoro",
+      "schema:name": "Yoro",
+      "schema:color": "Map White",
+      "schema:anomaly": "Unknown",
+      "schema:value_range": "Unknown",
+      "schema:label": "Unknown",
+      "schema:value": "Unknown (Unknown)"
+    }
+  ]
+}

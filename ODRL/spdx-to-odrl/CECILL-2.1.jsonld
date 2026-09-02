@@ -1,0 +1,121 @@
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "cdif": "https://cdif.org/odrl/",
+        "spdx": "https://spdx.org/licenses/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "jsonld": "http://www.w3.org/ns/json-ld#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:ceciil-2.1",
+    "profile": "https://cdif.org/odrl:profile:CECILL-2.1",
+    "target": "spdx:CECILL-2.1.html",
+    "permission": [
+        {
+            "target": "spdx:CECILL-2.1.html",
+            "assigner": "http://example.com/author:ceciil-authors",
+            "action": "odrl:use",
+            "assignee": "http://example.com/user:licensee"
+        },
+        {
+            "target": "spdx:CECILL-2.1.html",
+            "assigner": "http://example.com/author:ceciil-authors",
+            "action": "odrl:copy",
+            "assignee": "http://example.com/user:licensee"
+        },
+        {
+            "target": "spdx:CECILL-2.1.html",
+            "assigner": "http://example.com/author:ceciil-authors",
+            "action": "odrl:modify",
+            "assignee": "http://example.com/user:licensee"
+        },
+        {
+            "target": "spdx:CECILL-2.1.html",
+            "assigner": "http://example.com/author:ceciil-authors",
+            "action": "cdif:merge",
+            "assignee": "http://example.com/user:licensee"
+        },
+        {
+            "target": "spdx:CECILL-2.1.html",
+            "assigner": "http://example.com/author:ceciil-authors",
+            "action": "odrl:publish",
+            "assignee": "http://example.com/user:licensee"
+        },
+        {
+            "target": "spdx:CECILL-2.1.html",
+            "assigner": "http://example.com/author:ceciil-authors",
+            "action": "odrl:distribute",
+            "assignee": "http://example.com/user:licensee"
+        },
+        {
+            "target": "spdx:CECILL-2.1.html",
+            "assigner": "http://example.com/author:ceciil-authors",
+            "action": "odrl:sell",
+            "assignee": "http://example.com/user:licensee"
+        },
+        {
+            "target": "spdx:CECILL-2.1.html",
+            "assigner": "http://example.com/author:ceciil-authors",
+            "action": "odrl:sublicense",
+            "assignee": "http://example.com/user:licensee"
+        }
+    ],
+    "obligation": [
+        {
+            "target": "spdx:CECILL-2.1.html",
+            "assignee": "http://example.com/user:licensee",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:authorshipNotice",
+                        "cdif:creationDateNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:preserveNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:noticeType",
+                            "operator": "odrl:neq",
+                            "rightOperand": "cdif:removed"
+                        }
+                    ],
+                    "target": [
+                        "cdif:intellectualPropertyNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "spdx:CECILL-2.1.html",
+            "assignee": "http://example.com/user:licensee",
+            "duty": [
+                {
+                    "action": "odrl:provideSourceCodeAccess",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:accessPeriod",
+                            "operator": "odrl:gte",
+                            "rightOperand": {
+                                "@value": "3",
+                                "@type": "xsd:integer"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:sourceCode"
+                    ]
+                }
+            ]
+        }
+    ]
+}

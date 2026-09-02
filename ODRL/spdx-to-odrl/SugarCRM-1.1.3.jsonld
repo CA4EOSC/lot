@@ -1,0 +1,187 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:SugarCRM-1.1.3",
+    "profile": "https://cdif.org/odrl:profile:SugarCRM-1.1.3",
+    "target": "spdx:SugarCRM-1.1.3.html",
+    "description": "The SugarCRM Public License Version 1.1.3, governing rights for Covered Code.",
+    "permission": [
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:SugarCRM-1.1.3.html",
+            "assigner": "http://example.com/contributor:AllContributors",
+            "action": "odrl:use",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                },
+                {
+                    "action": "cdif:makeSourceCodeAvailable",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:availabilityPeriod",
+                            "operator": "odrl:gte",
+                            "rightOperand": {
+                                "@value": "12",
+                                "@type": "xsd:integer"
+                            }
+                        }
+                    ],
+                    "target": [
+                        "cdif:sourceCodeAvailability"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:SugarCRM-1.1.3.html",
+            "assigner": "http://example.com/contributor:AllContributors",
+            "action": "odrl:reproduce",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:SugarCRM-1.1.3.html",
+            "assigner": "http://example.com/contributor:AllContributors",
+            "action": "odrl:modify",
+            "duty": [
+                {
+                    "action": "cdif:documentModification",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:documentationRequired",
+                            "operator": "odrl:eq",
+                            "rightOperand": "true"
+                        }
+                    ],
+                    "target": [
+                        "cdif:modificationFile",
+                        "cdif:dateOfChange"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:SugarCRM-1.1.3.html",
+            "assigner": "http://example.com/contributor:AllContributors",
+            "action": "odrl:display",
+            "duty": [
+                {
+                    "action": "cdif:includeAttribution",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:attributionRequired",
+                            "operator": "odrl:eq",
+                            "rightOperand": "true"
+                        }
+                    ],
+                    "target": [
+                        "cdif:poweredBySugarCRMLogo",
+                        "cdif:copyrightNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:SugarCRM-1.1.3.html",
+            "assigner": "http://example.com/contributor:AllContributors",
+            "action": "odrl:perform",
+            "duty": [
+                {
+                    "action": "cdif:indemnify",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:indemnityRequired",
+                            "operator": "odrl:eq",
+                            "rightOperand": "true"
+                        }
+                    ],
+                    "target": [
+                        "cdif:indemnifyInitialDeveloper",
+                        "cdif:indemnifyContributor"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:SugarCRM-1.1.3.html",
+            "assigner": "http://example.com/contributor:AllContributors",
+            "action": "odrl:sublicense",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "odrl:Permission",
+            "target": "spdx:SugarCRM-1.1.3.html",
+            "assigner": "http://example.com/contributor:AllContributors",
+            "action": "odrl:distribute",
+            "duty": [
+                {
+                    "action": "cdif:includeNotice",
+                    "constraint": [
+                        {
+                            "leftOperand": "cdif:scope",
+                            "operator": "odrl:eq",
+                            "rightOperand": "cdif:copiesOrSubstantialPortions"
+                        }
+                    ],
+                    "target": [
+                        "cdif:copyrightNotice",
+                        "cdif:permissionNotice"
+                    ]
+                }
+            ]
+        }
+    ]
+}

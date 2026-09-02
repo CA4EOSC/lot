@@ -1,0 +1,106 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl/2/": "odrl",
+        "https://cdif.org/odrl/": "cdif",
+        "https://spdx.org/licenses/": "spdx",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "@vocab": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@type": "Policy",
+    "uid": "http://example.com/policy:RPL-1.1",
+    "profile": "https://cdif.org/odrl:profile:RPL-1.1",
+    "target": "spdx:RPL-1.1.html",
+    "description": "Reciprocal Public License, version 1.1. Grants broad rights for use, modification, and distribution, requiring source code sharing and notice preservation.",
+    "permission": [
+        {
+            "target": "spdx:RPL-1.1.html",
+            "assigner": "http://example.com/org/technical-pursuit-inc",
+            "action": "odrl:use",
+            "assignee": "http://example.com/user:any"
+        },
+        {
+            "target": "spdx:RPL-1.1.html",
+            "assigner": "http://example.com/org/technical-pursuit-inc",
+            "action": "odrl:copy",
+            "assignee": "http://example.com/user:any"
+        },
+        {
+            "target": "spdx:RPL-1.1.html",
+            "assigner": "http://example.com/org/technical-pursuit-inc",
+            "action": "odrl:modify",
+            "assignee": "http://example.com/user:any"
+        },
+        {
+            "target": "spdx:RPL-1.1.html",
+            "assigner": "http://example.com/org/technical-pursuit-inc",
+            "action": "odrl:display",
+            "assignee": "http://example.com/user:any"
+        },
+        {
+            "target": "spdx:RPL-1.1.html",
+            "assigner": "http://example.com/org/technical-pursuit-inc",
+            "action": "odrl:perform",
+            "assignee": "http://example.com/user:any"
+        },
+        {
+            "target": "spdx:RPL-1.1.html",
+            "assigner": "http://example.com/org/technical-pursuit-inc",
+            "action": "odrl:sublicense",
+            "assignee": "http://example.com/user:any"
+        },
+        {
+            "target": "spdx:RPL-1.1.html",
+            "assigner": "http://example.com/org/technical-pursuit-inc",
+            "action": "odrl:distribute",
+            "assignee": "http://example.com/user:any"
+        },
+        {
+            "target": "spdx:RPL-1.1.html",
+            "assigner": "http://example.com/org/technical-pursuit-inc",
+            "action": "cdif:merge",
+            "assignee": "http://example.com/user:any"
+        }
+    ],
+    "duty": [
+        {
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:copiesOrSubstantialPortions"
+                }
+            ],
+            "target": [
+                "cdif:copyrightNotice",
+                "cdif:permissionNotice"
+            ]
+        },
+        {
+            "action": "cdif:documentChanges",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:modifications"
+                }
+            ],
+            "target": [
+                "CHANGES"
+            ]
+        },
+        {
+            "action": "cdif:makeSourceCodeAvailable",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:scope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:extensions"
+                }
+            ],
+            "target": [
+                "Electronic Distribution Mechanism"
+            ]
+        }
+    ]
+}

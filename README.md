@@ -2,6 +2,8 @@
 
 **CLIMATE-ADAPT4EOSC** (Project No: 101188248) is a Horizon Europe project dedicated to establishing a seamless, EOSC-centred collaborative research environment for climate change adaptation.
 
+This repository specifically implements the **Legal and Organizational Interoperability (LOT)** framework for the project, providing automated tools for converting licenses into standardized, machine-readable ODRL policies.
+
 ## Project Overview
 
 The project aims to break down existing barriers to climate data access and facilitate meaningful interactions between EOSC and various EU and national climate data spaces. By aligning with EOSC’s infrastructure plan, CLIMATE-ADAPT4EOSC ensures that data management practices are compliant with legal standards, semantically aligned for cross-disciplinary research, and technically robust.
@@ -46,3 +48,12 @@ The project operates under a root DID: [DID](https://dev.uniresolver.io/#did:oyd
 | 16 | BRGM | BUREAU DE RECHERCHES GEOLOGIQUES ET MINIERES | France | [DID](https://dev.uniresolver.io/#did:oyd:zQmR9CZUoFqBAt9TyPqMrjs3KBXBky3LPJd8UvMuPTASdvz) | [DID](https://dev.uniresolver.io/#did:oyd:zQmPhUABeBZp7egwXSPJicMiJ3QPHXTejicfthPU5DcUwrm) | [DID](https://dev.uniresolver.io/#did:oyd:zQmaAerL9gGvgBYtau5SR7TXvnYYZryVt2dj2eqDDM8JAuh) | Geological survey expert; end-user validation for UC3 (clay risk), hydrogeological expertise. |
 | 17 | SIKT | SIKT - KUNNSKAPSSEKTORENS TJENESTELEVERANDOR | Norway | [DID](https://dev.uniresolver.io/#did:oyd:zQmR9CZUoFqBAt9TyPqMrjs3KBXBky3LPJd8UvMuPTASdvz) | [DID](https://dev.uniresolver.io/#did:oyd:zQmZvZTwGjt63br3L7DTWMFb6FWAy77NdZjhg3FPvfzRMT1) | [DID](https://dev.uniresolver.io/#did:oyd:zQmPQyJ6uSvMwP77gKd971X9317EAFADaNqfZY6CbLocf2h) | Data sharing/open research services; CDIF collaboration, organizational interoperability framework. |
 | 18 | IANUS | IANUS TECHNOLOGIES LTD | Cyprus | [DID](https://dev.uniresolver.io/#did:oyd:zQmR9CZUoFqBAt9TyPqMrjs3KBXBky3LPJd8UvMuPTASdvz) | [DID](https://dev.uniresolver.io/#did:oyd:zQmd2dFohbChVEhM2H1SSqjst1UoRAbcgmjpPCgXmzczrdV) | [DID](https://dev.uniresolver.io/#did:oyd:zQmWtXNW429c5jtgeU3ywsGfHD3mNherrv5NpN6hyS8RmJm) | Digital tools for risk management; urban vulnerability software, IT support, replication (Cyprus). |
+
+## Legal and Organizational Interoperability (LOT)
+
+As a core part of the CLIMATE-ADAPT4EOSC mission to build interoperability frameworks, this repository implements the **Legal and Organizational Interoperability (LOT)** framework. 
+
+A central component of this framework is the automated translation of complex software and data licenses into machine-readable **ODRL (Open Digital Rights Language)** policies. 
+By converting these diverse legal constraints into standardized, CDIF-compliant ODRL profiles, the LOT framework ensures that automated systems can reliably parse, understand, and enforce data rights and organizational compliance across the EOSC ecosystem.
+
+The tools, models, and scripts used to perform this automated ODRL conversion—as well as the resulting generated JSON-LD policy files—are hosted inside the `ODRL/` directory within this submodule.

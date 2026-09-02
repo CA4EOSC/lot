@@ -1,0 +1,89 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix cdif: <https://cdif.org/odrl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# SHACL Shape for ODRL Set/Policy
+cdif:PolicyShape
+    a sh:NodeShape ;
+    sh:targetClass odrl:Set ;
+    sh:targetClass odrl:Policy ;
+    sh:property [
+        sh:path odrl:profile ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRIOrLiteral ;
+        sh:pattern "^https://cdif.org/" ;
+        sh:message "An ODRL Policy MUST have a profile starting with https://cdif.org/." ;
+    ] ;
+    sh:property [
+        sh:path odrl:permission ;
+        sh:minCount 1 ;
+        sh:node cdif:PermissionShape ;
+        sh:message "An ODRL Policy MUST have at least one permission." ;
+    ] .
+
+# SHACL Shape for ODRL Permission
+cdif:PermissionShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path odrl:action ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRIOrLiteral ;
+        sh:message "A Permission MUST specify an action." ;
+    ] ;
+    sh:property [
+        sh:path odrl:target ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRIOrLiteral ;
+        sh:pattern "^(https://spdx.org/licenses/|https://cdif.org/software/)" ;
+        sh:message "A Permission MUST specify a target starting with https://spdx.org/licenses/ or https://cdif.org/software/." ;
+    ] ;
+    sh:property [
+        sh:path odrl:duty ;
+        sh:minCount 1 ;
+        sh:node cdif:DutyShape ;
+        sh:message "A Permission MUST contain at least one duty (e.g. cdif:includeNotice)." ;
+    ] .
+
+# SHACL Shape for ODRL Duty
+cdif:DutyShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path odrl:action ;
+        sh:minCount 1 ;
+        sh:hasValue cdif:includeNotice ;
+        sh:message "A CDIF Duty MUST have the action cdif:includeNotice." ;
+    ] ;
+    sh:property [
+        sh:path odrl:constraint ;
+        sh:minCount 1 ;
+        sh:node cdif:ConstraintShape ;
+        sh:message "A Duty MUST have a constraint defining its scope." ;
+    ] ;
+    sh:property [
+        sh:path odrl:target ;
+        sh:nodeKind sh:IRIOrLiteral ;
+        sh:message "A Duty MUST specify a target (e.g. cdif:copyrightNotice)." ;
+    ] .
+
+# SHACL Shape for ODRL Constraint
+cdif:ConstraintShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path odrl:leftOperand ;
+        sh:hasValue "cdif:scope" ;
+        sh:minCount 1 ;
+        sh:message "A CDIF Constraint MUST have leftOperand 'cdif:scope'." ;
+    ] ;
+    sh:property [
+        sh:path odrl:operator ;
+        sh:hasValue "odrl:eq" ;
+        sh:minCount 1 ;
+        sh:message "A CDIF Constraint MUST have operator 'odrl:eq'." ;
+    ] ;
+    sh:property [
+        sh:path odrl:rightOperand ;
+        sh:hasValue "cdif:copiesOrSubstantialPortions" ;
+        sh:minCount 1 ;
+        sh:message "A CDIF Constraint MUST have rightOperand 'cdif:copiesOrSubstantialPortions'." ;
+    ] .

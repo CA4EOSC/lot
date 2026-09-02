@@ -1,0 +1,129 @@
+{
+    "@context": {
+        "http://www.w3.org/ns/odrl.jsonld": "odrl:",
+        "https://cdif.org/odrl/": "cdif:",
+        "https://spdx.org/licenses/": "spdx:",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdf:",
+        "http://www.w3.org/2200/01/rdf-schema#": "rdfs:",
+        "http://www.w3.org/2001/XMLSchema#": "xsd:",
+        "http://www.w3.org/ns/odrl/2/": "odrl:",
+        "http://cdif.org/odrl/": "cdif:"
+    },
+    "@type": "Policy",
+    "uid": "https://cdif.org/policy/lgpl-2.0-or-later",
+    "profile": "https://cdif.org/odrl:profile:LGPL-2.0-or-later",
+    "target": "spdx:LGPL-2.0-or-later.html",
+    "description": "The GNU Library General Public License, Version 2, governing use, modification, and distribution of the library.",
+    "permission": [
+        {
+            "target": "spdx:LGPL-2.0-or-later.html",
+            "assigner": "Free Software Foundation, Inc.",
+            "action": "odrl:copy",
+            "description": "Permits copying of the library source code."
+        },
+        {
+            "target": "spdx:LGPL-2.0-or-later.html",
+            "assigner": "Free Software Foundation, Inc.",
+            "action": "odrl:distribute",
+            "description": "Permits distribution of the library and derivative works."
+        },
+        {
+            "target": "spdx:LGPL-2.0-or-later.html",
+            "assigner": "Free Software Foundation, Inc.",
+            "action": "odrl:modify",
+            "description": "Permits modification of the library source code."
+        },
+        {
+            "target": "spdx:LGPL-2.0-or-later.html",
+            "assigner": "Free Software Foundation, Inc.",
+            "action": "odrl:use",
+            "description": "Permits using the library in a program (work that uses the library)."
+        },
+        {
+            "target": "spdx:LGPL-2.0-or-later.html",
+            "assigner": "Free Software Foundation, Inc.",
+            "action": "cdif:merge",
+            "description": "Permits merging or combining the library with other code."
+        },
+        {
+            "target": "spdx:LGPL-2.0-or-later.html",
+            "assigner": "Free Software Foundation, Inc.",
+            "action": "odrl:publish",
+            "description": "Permits publishing the library or derived works."
+        },
+        {
+            "target": "spdx:LGPL-2.0-or-later.html",
+            "assigner": "Free Software Foundation, Inc.",
+            "action": "odrl:sublicense",
+            "description": "Permits granting rights to third parties."
+        },
+        {
+            "target": "spdx:LGPL-2.0-or-later.html",
+            "assigner": "Free Software Foundation, Inc.",
+            "action": "odrl:sell",
+            "description": "Permits commercial distribution (charging a fee)."
+        }
+    ],
+    "duty": [
+        {
+            "description": "Upon distribution, the recipient must receive all rights granted by the licensor.",
+            "action": "cdif:passThroughRights",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:distributionContext",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:allRightsPassed"
+                }
+            ]
+        },
+        {
+            "description": "When distributing modified works, the whole work must be licensed at no charge to all third parties.",
+            "action": "cdif:licenseAtNoCharge",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:workScope",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:entireWork"
+                }
+            ]
+        },
+        {
+            "description": "When distributing object code, complete object files must be provided for relinking.",
+            "action": "cdif:provideObjectFiles",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:distributionType",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:objectCode"
+                }
+            ]
+        },
+        {
+            "description": "Upon distribution, the recipient must receive the complete source code.",
+            "action": "cdif:provideSourceCode",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:distributionType",
+                    "operator": "odrl:eq",
+                    "rightOperand": "cdif:anyDistribution"
+                }
+            ]
+        },
+        {
+            "description": "All copies must conspicuously publish copyright notice and disclaimer of warranty, and include a copy of this License.",
+            "action": "cdif:includeNotice",
+            "constraint": [
+                {
+                    "leftOperand": "cdif:noticeRequirement",
+                    "operator": "odrl:and",
+                    "rightOperand": {
+                        "@type": "odrl:Constraint",
+                        "leftOperand": "cdif:copyrightNotice",
+                        "operator": "odrl:and",
+                        "rightOperand": "cdif:disclaimerOfWarranty"
+                    }
+                }
+            ]
+        }
+    ]
+}
