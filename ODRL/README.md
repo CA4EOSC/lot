@@ -1,6 +1,6 @@
 # Ollama Models for Semantic Croissant
 
-**This is a Legal Interoperability framework supporting the conversion of any software or data license into a standard ODRL profile.**
+**This is a Legal Interoperability Framework supported by ODRL policies, implemented as CDIF for access profile.**
 
 This directory contains Ollama `Modelfile` definitions (with `.md` extensions) used to instantiate specialized AI agents for the Semantic Croissant ecosystem. These models have custom system prompts, context parameters, and temperature settings baked in.
 
